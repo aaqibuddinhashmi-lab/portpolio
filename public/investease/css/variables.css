@@ -1,0 +1,74 @@
+/* ===== DESIGN TOKENS ===== */
+:root {
+  /* Primary Palette */
+  --primary: #3B6BF5;
+  --primary-dark: #2A52CC;
+  --primary-light: #6B93FF;
+  --primary-bg: #EFF3FF;
+
+  /* Accent */
+  --accent-gold: #FFD700;
+  --accent-orange: #FF8C42;
+  --accent-green: #00C48C;
+  --accent-red: #FF4D4F;
+
+  /* Neutrals */
+  --bg: #F8FAFC;
+  --surface: #FFFFFF;
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-tertiary: #94A3B8;
+  --border: #E2E8F0;
+  --divider: #F1F5F9;
+
+  /* Typography */
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --fs-xs: 0.6875rem;   /* 11px */
+  --fs-sm: 0.75rem;     /* 12px */
+  --fs-base: 0.875rem;  /* 14px */
+  --fs-md: 1rem;        /* 16px */
+  --fs-lg: 1.25rem;     /* 20px */
+  --fs-xl: 1.5rem;      /* 24px */
+  --fs-2xl: 2rem;       /* 32px */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+
+  /* Spacing (4px base) */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-pill: 999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(59, 107, 245, 0.06);
+  --shadow-md: 0 4px 12px rgba(59, 107, 245, 0.08);
+  --shadow-lg: 0 8px 24px rgba(59, 107, 245, 0.12);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.04);
+
+  /* Z-index */
+  --z-nav: 100;
+  --z-modal: 200;
+  --z-overlay: 150;
+
+  /* Animation */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --duration-fast: 200ms;
+  --duration-normal: 350ms;
+  --duration-slow: 500ms;
+}

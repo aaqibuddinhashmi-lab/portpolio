@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>InvestEase — Manage Accounts & Investments</title>
+  <meta name="description" content="InvestEase consolidates your bank accounts, investments, and financial goals into one beautiful dashboard. Track your net worth, monitor markets, and grow your wealth." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/investments.css" />
+  <link rel="stylesheet" href="css/banks.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>💰</text></svg>" />
+</head>
+<body>
+  <div class="app-container">
+    <!-- Status Bar -->
+    <div class="status-bar">
+      <span class="status-time" id="status-time">9:41</span>
+      <div class="status-icons">
+        <svg width="16" height="12" viewBox="0 0 16 12" fill="none"><rect x="0" y="4" width="3" height="8" rx="1" fill="white"/><rect x="4.5" y="2.5" width="3" height="9.5" rx="1" fill="white"/><rect x="9" y="0.5" width="3" height="11.5" rx="1" fill="white"/><rect x="13.5" y="0" width="2.5" height="12" rx="1" fill="white"/></svg>
+        <svg width="16" height="12" viewBox="0 0 16 12" fill="none"><path d="M8 3.5C9.9 3.5 11.6 4.3 12.8 5.5L14 4.3C12.5 2.8 10.4 1.8 8 1.8C5.6 1.8 3.5 2.8 2 4.3L3.2 5.5C4.4 4.3 6.1 3.5 8 3.5Z" fill="white"/><path d="M8 6.5C9.2 6.5 10.3 7 11 7.8L12.2 6.6C11.2 5.5 9.7 4.8 8 4.8C6.3 4.8 4.8 5.5 3.8 6.6L5 7.8C5.7 7 6.8 6.5 8 6.5Z" fill="white"/><circle cx="8" cy="10" r="1.5" fill="white"/></svg>
+        <svg width="24" height="12" viewBox="0 0 24 12" fill="none"><rect x="0" y="1" width="20" height="10" rx="2" stroke="white" stroke-width="1.2"/><rect x="1.5" y="2.5" width="14" height="7" rx="1" fill="white"/><rect x="21" y="4" width="2.5" height="4" rx="1" fill="white"/></svg>
+      </div>
+    </div>
+
+    <!-- ===== HOME SCREEN ===== -->
+    <div class="screen active" id="screen-home">
+      <div class="header-gradient">
+        <div class="header-top">
+          <div class="user-info">
+            <div class="avatar" id="user-avatar">P</div>
+            <span class="greeting">Hello, <strong>Pragya!</strong></span>
+          </div>
+          <div class="header-icons">
+            <button class="icon-btn" aria-label="Search">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+            </button>
+            <button class="icon-btn" aria-label="Notifications">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+              <span class="notif-badge">3</span>
+            </button>
+          </div>
+        </div>
+        <div class="net-worth-section">
+          <p class="net-worth-label">My Total Worth</p>
+          <h1 class="net-worth-value">₹ <span id="net-worth-amount">3,60,000</span></h1>
+          <span class="net-worth-change positive">+10%</span>
+        </div>
+        <canvas id="net-worth-chart" width="380" height="100"></canvas>
+        <div class="chart-timeline">
+          <span>Monthly ▾</span>
+          <div class="timeline-months">
+            <span>July</span>
+            <span>Aug</span>
+            <span>Sept</span>
+            <span>Oct</span>
+            <span class="active-month">Nov</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="screen-content">
+        <!-- Asset Rows -->
+        <div class="asset-list" id="asset-list">
+          <!-- Populated by JS -->
+        </div>
+
+        <button class="btn-primary btn-add-investments" id="btn-add-investments">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+          Add other Investments
+        </button>
+
+        <!-- Market Indices -->
+        <div class="section-block">
+          <h2 class="section-title">Market Indices</h2>
+          <div class="indices-grid">
+            <div class="index-card" id="nifty-card">
+              <h3>Nifty 50</h3>
+              <canvas id="nifty-chart" width="140" height="50"></canvas>
+              <div class="index-value">
+                <span class="value">19,676</span>
+                <span class="change positive">+109.6 (12.67%)</span>
+              </div>
+            </div>
+            <div class="index-card" id="banknifty-card">
+              <h3>Bank Nifty</h3>
+              <canvas id="banknifty-chart" width="140" height="50"></canvas>
+              <div class="index-value">
+                <span class="value">12,376</span>
+                <span class="change positive">+96.5 (2.5%)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trending Stocks -->
+        <div class="section-block">
+          <div class="section-header">
+            <h2 class="section-title">Trending Stocks</h2>
+            <button class="view-more-btn">View More</button>
+          </div>
+          <div class="trending-tabs">
+            <button class="tab-btn active" data-tab="most-invested">Most Invested</button>
+            <button class="tab-btn" data-tab="high-dividend">High Dividend</button>
+          </div>
+          <div class="trending-list" id="trending-list">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <!-- What if you invested -->
+        <div class="section-block">
+          <h2 class="section-title">What if you invested</h2>
+          <div class="whatif-cards" id="whatif-cards">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <!-- Learn with InvestEase -->
+        <div class="section-block">
+          <h2 class="section-title">Learn with InvestEase</h2>
+          <div class="learn-cards" id="learn-cards">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <!-- Recommendations -->
+        <div class="section-block">
+          <h2 class="section-title">Recommendations</h2>
+          <div class="recommendation-list" id="recommendation-list">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== INVESTMENTS SCREEN ===== -->
+    <div class="screen" id="screen-investments">
+      <div class="header-gradient">
+        <div class="header-top">
+          <div class="user-info">
+            <div class="avatar">P</div>
+            <span class="greeting">Hello, <strong>Pragya!</strong></span>
+          </div>
+          <div class="header-icons">
+            <button class="icon-btn" aria-label="Search">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+            </button>
+            <button class="icon-btn" aria-label="Notifications">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="net-worth-section">
+          <p class="net-worth-label">My Total Investment</p>
+          <h1 class="net-worth-value">₹ <span>3,40,000</span></h1>
+          <span class="net-worth-change positive">+12%</span>
+        </div>
+        <canvas id="investment-chart" width="380" height="100"></canvas>
+        <div class="chart-timeline">
+          <span>Monthly ▾</span>
+          <div class="timeline-months">
+            <span>July</span>
+            <span>Aug</span>
+            <span>Sept</span>
+            <span>Oct</span>
+            <span class="active-month">Nov</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="screen-content">
+        <!-- Investment Filter Tabs -->
+        <div class="investment-filter-tabs">
+          <button class="filter-tab active" data-filter="stocks">Stocks Portfolio</button>
+          <button class="filter-tab" data-filter="mutual-funds">Mutual Funds</button>
+          <button class="filter-tab" data-filter="other">Other</button>
+        </div>
+
+        <!-- Holdings List -->
+        <div class="holdings-section" id="holdings-stocks">
+          <div class="holdings-list" id="stocks-list"></div>
+        </div>
+        <div class="holdings-section hidden" id="holdings-mutual-funds">
+          <div class="holdings-list" id="mf-list"></div>
+        </div>
+        <div class="holdings-section hidden" id="holdings-other">
+          <div class="empty-state">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#B0BEC5" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 15h8M9 9h.01M15 9h.01"/></svg>
+            <p>No other investments added yet</p>
+            <button class="btn-primary btn-small">Add Investment</button>
+          </div>
+        </div>
+
+        <!-- Top Recommended -->
+        <div class="section-block">
+          <div class="section-header">
+            <h2 class="section-title">Top Recommended</h2>
+            <button class="view-more-btn">View All</button>
+          </div>
+          <div class="recommended-list" id="recommended-list"></div>
+        </div>
+
+        <!-- Top Collection -->
+        <div class="section-block">
+          <h2 class="section-title">Top Collection</h2>
+          <div class="collections-grid" id="collections-grid"></div>
+        </div>
+
+        <!-- Browse by Category -->
+        <div class="section-block">
+          <h2 class="section-title">Browse by Category</h2>
+          <div class="category-grid" id="category-grid"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== BANKS SCREEN ===== -->
+    <div class="screen" id="screen-banks">
+      <div class="header-gradient header-gradient-banks">
+        <div class="header-top">
+          <div class="user-info">
+            <div class="avatar">P</div>
+            <span class="greeting">Hello, <strong>Pragya!</strong></span>
+          </div>
+          <div class="header-icons">
+            <button class="icon-btn" aria-label="Search">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+            </button>
+            <button class="icon-btn" aria-label="Notifications">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="net-worth-section">
+          <p class="net-worth-label">My Total Balance</p>
+          <h1 class="net-worth-value">₹ <span>20,000</span></h1>
+        </div>
+      </div>
+
+      <div class="screen-content">
+        <h2 class="section-title" style="margin-top:8px;">Bank Accounts</h2>
+        <div class="bank-accounts-list" id="bank-accounts-list"></div>
+
+        <button class="btn-outline btn-add-bank" id="btn-add-bank">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+          Add Another Bank Account...
+        </button>
+
+        <!-- Bank Detail Modal -->
+        <div class="bank-detail-modal" id="bank-detail-modal">
+          <div class="modal-backdrop" id="modal-backdrop"></div>
+          <div class="modal-content" id="modal-content">
+            <div class="modal-header">
+              <button class="modal-back" id="modal-back">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              </button>
+              <h2>Bank Details</h2>
+              <div style="width:20px;"></div>
+            </div>
+            <div class="modal-body" id="modal-body">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav" id="bottom-nav">
+      <button class="nav-item active" data-screen="home" id="nav-home">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <span>Home</span>
+      </button>
+      <button class="nav-item" data-screen="investments" id="nav-investments">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        <span>Investments</span>
+      </button>
+      <button class="nav-item" data-screen="banks" id="nav-banks">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"/></svg>
+        <span>Banks</span>
+      </button>
+    </nav>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/investments.js"></script>
+  <script src="js/banks.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

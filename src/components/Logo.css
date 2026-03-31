@@ -1,0 +1,163 @@
+/* ========================================
+   ANIMATED LOGO COMPONENT STYLES
+   ======================================== */
+
+.logo {
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    position: relative;
+    padding: 8px 4px;
+}
+
+/* Background circle effect */
+.logo-bg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(125, 249, 255, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+}
+
+.logo:hover .logo-bg {
+    width: 120px;
+    height: 120px;
+}
+
+/* Letter styling */
+.logo-letter {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--pure-white);
+    display: inline-block;
+    transform-origin: center bottom;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+/* Staggered entrance animation */
+@keyframes letterSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px) rotateX(90deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotateX(0deg);
+    }
+}
+
+.logo-a {
+    animation: letterSlideIn 0.6s ease-out 0.1s both;
+}
+
+.logo-u {
+    animation: letterSlideIn 0.6s ease-out 0.2s both;
+}
+
+.logo-h {
+    animation: letterSlideIn 0.6s ease-out 0.3s both;
+}
+
+/* Hover effects - staggered wave */
+.logo:hover .logo-a {
+    transform: translateY(-4px) scale(1.1);
+    color: var(--neon-accent);
+    text-shadow: 0 0 20px rgba(125, 249, 255, 0.5);
+    transition-delay: 0s;
+}
+
+.logo:hover .logo-u {
+    transform: translateY(-4px) scale(1.1);
+    color: var(--neon-accent);
+    text-shadow: 0 0 20px rgba(125, 249, 255, 0.5);
+    transition-delay: 0.05s;
+}
+
+.logo:hover .logo-h {
+    transform: translateY(-4px) scale(1.1);
+    color: var(--neon-accent);
+    text-shadow: 0 0 20px rgba(125, 249, 255, 0.5);
+    transition-delay: 0.1s;
+}
+
+/* Animated dot */
+.logo-dot {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 4px;
+    animation: letterSlideIn 0.6s ease-out 0.4s both;
+}
+
+.dot-inner {
+    width: 6px;
+    height: 6px;
+    background: var(--pure-white);
+    border-radius: 50%;
+    display: block;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+/* Dot pulse animation on hover */
+.logo:hover .dot-inner {
+    background: var(--neon-accent);
+    box-shadow: 0 0 15px rgba(125, 249, 255, 0.8), 0 0 30px rgba(125, 249, 255, 0.4);
+    animation: dotPulse 1s ease-in-out infinite;
+}
+
+@keyframes dotPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 15px rgba(125, 249, 255, 0.8), 0 0 30px rgba(125, 249, 255, 0.4);
+    }
+
+    50% {
+        transform: scale(1.3);
+        box-shadow: 0 0 25px rgba(125, 249, 255, 1), 0 0 50px rgba(125, 249, 255, 0.6);
+    }
+}
+
+/* Underline animation */
+.logo::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--neon-accent), transparent);
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo:hover::after {
+    width: 100%;
+}
+
+/* Click effect */
+.logo:active .logo-letter {
+    transform: scale(0.95);
+}
+
+/* Remove old nav-logo styles conflict */
+.logo.nav-logo {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}

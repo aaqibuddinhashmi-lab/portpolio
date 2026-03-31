@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvestEase | A Premium Fintech Experience</title>
+    <meta name="description" content="InvestEase — A UX case study simplifying the management of multiple investment accounts and banking into one unified, premium mobile experience. Designed through a 5-day Google Ventures Design Sprint.">
+    <!-- Modern Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="dark-theme">
+    
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Background Effects -->
+    <div class="bg-glow circle-1"></div>
+    <div class="bg-glow circle-2"></div>
+    <div class="bg-glow circle-3"></div>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <div class="brand">
+                <i data-lucide="layers" class="brand-icon"></i>
+                <span>Invest<span class="gradient-text">Ease</span></span>
+            </div>
+            <div class="nav-links">
+                <a href="#overview" class="nav-link">Overview</a>
+                <a href="#problem" class="nav-link">Problem</a>
+                <a href="#research" class="nav-link">Research</a>
+                <a href="#showcase" class="nav-link">Showcase</a>
+                <a href="#sprint-intro" class="nav-link">Sprint</a>
+                <a href="#testing" class="nav-link">Testing</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#prototype" class="nav-link">Prototype</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+        <div class="hero-content">
+            <div class="badge fade-in-up" style="animation-delay: 0.1s">
+                <span class="pulse-dot"></span>
+                UX CASE STUDY 
+            </div>
+            <h1 class="hero-title fade-in-up" style="animation-delay: 0.2s">
+                Next-Generation<br>
+                <span class="gradient-text outline-text">Financial Focus.</span>
+            </h1>
+            <p class="hero-subtitle fade-in-up" style="animation-delay: 0.3s">
+                Simplifying the management of multiple accounts and investments through a unified, premium mobile experience.
+            </p>
+            
+            <div class="hero-meta fade-in-up" style="animation-delay: 0.4s">
+                <div class="meta-item">
+                    <span class="meta-label">ROLE</span>
+                    <span class="meta-value">Product Designer</span>
+                </div>
+                <div class="meta-divider"></div>
+                <div class="meta-item">
+                    <span class="meta-label">TIMELINE</span>
+                    <span class="meta-value">5-Day Sprint</span>
+                </div>
+                <div class="meta-divider"></div>
+                <div class="meta-item">
+                    <span class="meta-label">PLATFORM</span>
+                    <span class="meta-value">iOS / Android</span>
+                </div>
+            </div>
+
+            <div class="scroll-indicator fade-in-up" style="animation-delay: 0.6s">
+                <span>Scroll to explore</span>
+                <i data-lucide="chevron-down" class="bounce"></i>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="mockup-cluster">
+                <img src="images/behance_ui_2.png" alt="Investments" class="mockup-img side left float-slow" style="animation-delay: 0s;">
+                <img src="images/behance_ui_1.png" alt="Home Screen" class="mockup-img center float-medium" style="animation-delay: 1s;">
+                <img src="images/behance_ui_3.png" alt="Banks" class="mockup-img side right float-fast" style="animation-delay: 2s;">
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Context -->
+    <section class="section" id="overview">
+        <div class="container auto-grid">
+            <div class="text-column reveal-left">
+                <h2 class="section-heading">Fragmented <span class="gradient-text">Finance</span></h2>
+                <p class="lead-text">Modern retail investors face severe account fatigue. Managing 3-5+ banking platforms, demat accounts, and disparate investment apps creates a cognitive load that prevents clear financial decision-making.</p>
+                <p>InvestEase was born from a Google Ventures 5-day Design Sprint methodology. The goal: architect a secure, unified view that consolidates banking and investments into one breathtaking, intuitive dashboard without sacrificing institutional trust.</p>
+            </div>
+            <div class="stats-column reveal-right">
+                <div class="glass-card stat-card">
+                    <div class="stat-icon"><i data-lucide="users"></i></div>
+                    <div class="stat-number">25-40</div>
+                    <div class="stat-label">Target Age Demographic</div>
+                </div>
+                <div class="glass-card stat-card glow">
+                    <div class="stat-icon"><i data-lucide="layers"></i></div>
+                    <div class="stat-number">3-5+</div>
+                    <div class="stat-label">Accounts Per User</div>
+                </div>
+                <div class="glass-card stat-card">
+                    <div class="stat-icon"><i data-lucide="target"></i></div>
+                    <div class="stat-number">1 Unified</div>
+                    <div class="stat-label">Dashboard View</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Problem Space -->
+    <section class="section glass-bg" id="problem">
+        <div class="container auto-grid">
+            <div class="problem-text reveal-left">
+                <div class="badge inline">THE PROBLEM</div>
+                <h2 class="section-heading">Account <span class="gradient-text">Fatigue</span></h2>
+                <p class="lead-text">Modern investors face scattered financial data across multiple banking platforms, demat accounts, and investment apps. There is no unified view of net worth, holdings, and transactions.</p>
+                <ul class="feature-list" style="margin-top: 2rem;">
+                    <li><i data-lucide="alert-circle" style="color: var(--semantic-danger)"></i> Users manage 3–5+ financial accounts on average</li>
+                    <li><i data-lucide="alert-circle" style="color: var(--semantic-danger)"></i> No single app consolidates investments & banking together</li>
+                    <li><i data-lucide="alert-circle" style="color: var(--semantic-danger)"></i> Information overload leads to poor financial decisions</li>
+                    <li><i data-lucide="alert-circle" style="color: var(--semantic-danger)"></i> Competitive gaps exist in major apps (Groww, Kuvera)</li>
+                </ul>
+            </div>
+            <div class="problem-visual reveal-right tilt-card">
+                <div class="glass-card glow" style="padding: 3rem; text-align: center;">
+                    <i data-lucide="pie-chart" style="width: 64px; height: 64px; color: var(--brand-primary); margin-bottom: 1.5rem;"></i>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Fragmented Data</h3>
+                    <p style="color: var(--text-sec); font-size: 1.1rem; line-height: 1.8;">Users want <strong>one-tap</strong> access to net worth and portfolio health, preferring OTP-based login for frictionless security.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Visual Showcase -->
+    <section class="section presentation-section" id="showcase">
+        <div class="container section-header reveal-up">
+            <div class="badge inline">PIXEL PERFECT</div>
+            <h2 class="section-heading">The <span class="gradient-text">Experience</span></h2>
+        </div>
+
+        <div class="showcase-grid container">
+            <!-- Feature 1 -->
+            <div class="feature-row reveal-up">
+                <div class="feature-text">
+                    <div class="feature-number">01</div>
+                    <h3 class="feature-title">The Command Center</h3>
+                    <p>A unified dashboard tracking total net worth across all fragmented institutions. Real-time market indices, trending stocks, and personalized financial insights sit neatly below the fold.</p>
+                    <ul class="feature-list">
+                        <li><i data-lucide="check-circle-2"></i> Instant Net Worth Calculation</li>
+                        <li><i data-lucide="check-circle-2"></i> Custom Market Watchlist</li>
+                        <li><i data-lucide="check-circle-2"></i> Educational Content Integration</li>
+                    </ul>
+                </div>
+                <div class="feature-visual tilt-card">
+                    <img src="images/behance_ui_1.png" alt="Home Dashboard Deep View" class="app-screenshot">
+                    <div class="glow-backdrop" style="background: var(--brand-primary)"></div>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="feature-row reverse reveal-up">
+                <div class="feature-text">
+                    <div class="feature-number">02</div>
+                    <h3 class="feature-title">Granular Investment Insights</h3>
+                    <p>Dive deep into individual stock performance. The investments detail view unpacks complex portfolio allocations using visual sparklines and clear typographic hierarchy.</p>
+                    <ul class="feature-list">
+                        <li><i data-lucide="check-circle-2"></i> Contextual Performance Graphs</li>
+                        <li><i data-lucide="check-circle-2"></i> Seamless SIP Wizard Setup</li>
+                        <li><i data-lucide="check-circle-2"></i> Automated Risk Assessment</li>
+                    </ul>
+                </div>
+                <div class="feature-visual tilt-card">
+                    <img src="images/behance_ui_2.png" alt="Investments Detail View" class="app-screenshot">
+                    <div class="glow-backdrop" style="background: var(--semantic-success)"></div>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="feature-row reveal-up">
+                <div class="feature-text">
+                    <div class="feature-number">03</div>
+                    <h3 class="feature-title">Frictionless Bank Sync</h3>
+                    <p>A unified timeline of all banking transactions across connected accounts. We formatted high-volume data into elegant, scannable lists using Indian numeral formatting (₹).</p>
+                    <ul class="feature-list">
+                        <li><i data-lucide="check-circle-2"></i> Multi-Bank Aggregation</li>
+                        <li><i data-lucide="check-circle-2"></i> AI-Categorized Transactions</li>
+                        <li><i data-lucide="check-circle-2"></i> Secure OTP Authentication</li>
+                    </ul>
+                </div>
+                <div class="feature-visual tilt-card">
+                    <img src="images/behance_ui_3.png" alt="Bank Transactions" class="app-screenshot">
+                    <div class="glow-backdrop" style="background: var(--brand-navy)"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Research -->
+    <section class="section" id="research">
+        <div class="container section-header center reveal-up">
+            <div class="badge inline" style="background: rgba(46, 204, 113, 0.2); color: var(--semantic-success); border: none;">DISCOVERY</div>
+            <h2 class="section-heading">User <span class="gradient-text">Research</span></h2>
+            <p class="subtitle">Conducting in-depth research for a Greenfield project to understand the problem space, target audience, and the overall scope.</p>
+        </div>
+
+        <div class="container auto-grid" style="margin-bottom: 4rem;">
+            <!-- Text Content -->
+            <div class="reveal-left">
+                <div class="glass-card step-card">
+                    <div class="card-header">
+                        <i data-lucide="microscope" class="step-icon"></i>
+                        <h3>Comprehensive Analysis</h3>
+                    </div>
+                    <p style="color: var(--text-sec); font-size: 0.95rem; line-height: 1.6; margin-top: 1rem; margin-bottom: 1.5rem;">
+                        As we had to build an experience from scratch, we gathered immense data and synthesized every finding onto a FigJam board to establish a rock-solid foundation.
+                    </p>
+                    <ul class="feature-list" style="margin-top: 1rem;">
+                        <li style="align-items: flex-start; margin-bottom: 0.5rem;"><i data-lucide="book-open" style="margin-top: 2px;"></i> <span style="font-size: 0.95rem; color: var(--text-sec)"><strong>Desk Research:</strong> Explored industry standards to thoroughly understand the complex nuances of wealth management.</span></li>
+                        <li style="align-items: flex-start; margin-bottom: 0.5rem;"><i data-lucide="crosshair" style="margin-top: 2px;"></i> <span style="font-size: 0.95rem; color: var(--text-sec)"><strong>Competitive Analysis:</strong> Assessed strategies of key existing platforms to identify market gaps and opportunities.</span></li>
+                        <li style="align-items: flex-start; margin-bottom: 0.5rem;"><i data-lucide="bar-chart-3" style="margin-top: 2px;"></i> <span style="font-size: 0.95rem; color: var(--text-sec)"><strong>Quantitative Surveys:</strong> Distributed wide-scale surveys to gather statistical insights on audience preferences.</span></li>
+                        <li style="align-items: flex-start;"><i data-lucide="users" style="margin-top: 2px;"></i> <span style="font-size: 0.95rem; color: var(--text-sec)"><strong>Qualitative Interviews:</strong> Executed 1-on-1 interviews to deeply empathize with users and pinpoint specific account-management pain points.</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Image Content -->
+            <div class="reveal-right">
+                <div class="glass-card step-card" style="padding: 0; overflow: hidden; height: 100%;">
+                    <img src="images/user_research.png" alt="User Research Board" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; border: 1px solid var(--glass-border);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5-Day Sprint Intro -->
+    <section class="section dark-bg" id="sprint-intro" style="padding-bottom: 2rem;">
+        <div class="container section-header center reveal-up">
+            <div class="badge inline" style="background: rgba(0, 98, 255, 0.2); border: none;">METHODOLOGY</div>
+            <h2 class="section-heading">The 5-Day Sprint</h2>
+            <p class="subtitle">Structured innovation from problem definition to high-fidelity prototype.</p>
+        </div>
+        <div class="container reveal-up" style="margin-bottom: 4rem;">
+            <div class="tilt-card" style="border-radius: 16px; overflow: hidden; border: 1px solid var(--glass-border); max-width: 1000px; margin: 0 auto; box-shadow: 0 20px 40px rgba(0,0,0,0.6);">
+                <img src="images/sprint_intro.png" alt="The 5-Day Sprint Methodology" style="width: 100%; display: block; background: #fff;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Process Sprint: Day 1 -->
+    <section class="section glass-bg" id="day-1">
+        <div class="container section-header center reveal-up">
+            <div class="badge inline">MAP & UNDERSTAND</div>
+            <h2 class="section-heading">Design Sprint <span class="gradient-text">Day 1</span></h2>
+            <p class="subtitle">Defining the core problems of managing multiple accounts and setting sprint goals.</p>
+        </div>
+        <div class="container auto-grid" style="margin-bottom: 4rem;">
+            <div class="reveal-left">
+                <div class="glass-card step-card">
+                    <div class="card-header">
+                        <i data-lucide="map" class="step-icon"></i>
+                        <h3>Map & Understand</h3>
+                    </div>
+                    <ul class="feature-list" style="margin-top: 1rem;">
+                        <li style="align-items: flex-start; margin-bottom: 0.5rem;"><i data-lucide="check-circle-2" style="margin-top: 2px;"></i> <span style="font-size: 0.95rem; color: var(--text-sec)"><strong>How Might We:</strong> Reframed problems into opportunities (e.g., "HMW ensure security and trust?").</span></li>
+                        <li style="align-items: flex-start; margin-bottom: 0.5rem;"><i data-lucide="check-circle-2" style="margin-top: 2px;"></i> <span style="font-size: 0.95rem; color: var(--text-sec)"><strong>Sprint Goals:</strong> Finalized objectives like designing a unified dashboard.</span></li>
+                        <li style="align-items: flex-start; margin-bottom: 0.5rem;"><i data-lucide="check-circle-2" style="margin-top: 2px;"></i> <span style="font-size: 0.95rem; color: var(--text-sec)"><strong>Sprint Questions:</strong> Asked critical "Can We" questions regarding user trust.</span></li>
+                        <li style="align-items: flex-start;"><i data-lucide="check-circle-2" style="margin-top: 2px;"></i> <span style="font-size: 0.95rem; color: var(--text-sec)"><strong>Journey Mapping:</strong> Concluded Day 1 by creating User Task Flows.</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="reveal-right">
+                <div class="glass-card step-card" style="padding: 0; overflow: hidden; height: 100%;">
+                    <img src="images/day1_map.png" alt="Day 1 Mapping" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; border: 1px solid var(--glass-border);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Process Sprint: Day 2 -->
+    <section class="section dark-bg" id="day-2">
+        <div class="container section-header center reveal-up">
+            <div class="badge inline">SKETCH & DIVERGE</div>
+            <h2 class="section-heading">Design Sprint <span class="gradient-text">Day 2</span></h2>
+            <p class="subtitle">Generating solutions through rapid ideation and prioritizing key ideas.</p>
+        </div>
+        <div class="container auto-grid" style="margin-bottom: 4rem;">
+            <div class="reveal-left">
+                <div class="glass-card step-card">
+                    <div class="card-header">
+                        <i data-lucide="pen-tool" class="step-icon"></i>
+                        <h3>Sketch & Diverge</h3>
+                    </div>
+                    <ul class="feature-list" style="margin-top: 1rem;">
+                        <li style="align-items: flex-start; margin-bottom: 0.5rem;"><i data-lucide="check-circle-2" style="margin-top: 2px;"></i> <span style="font-size: 0.95rem; color: var(--text-sec)"><strong>Ideation Sessions:</strong> Lightning talks and a fast-paced Crazy 8 Exercise.</span></li>
+                        <li style="align-items: flex-start; margin-bottom: 0.5rem;"><i data-lucide="check-circle-2" style="margin-top: 2px;"></i> <span style="font-size: 0.95rem; color: var(--text-sec)"><strong>Solution Sketches:</strong> Finalized detailed sketches using dot voting.</span></li>
+                        <li style="align-items: flex-start; margin-bottom: 0.5rem;"><i data-lucide="check-circle-2" style="margin-top: 2px;"></i> <span style="font-size: 0.95rem; color: var(--text-sec)"><strong>Speed Critique Round:</strong> Everyone shared their rationale behind votes.</span></li>
+                        <li style="align-items: flex-start;"><i data-lucide="check-circle-2" style="margin-top: 2px;"></i> <span style="font-size: 0.95rem; color: var(--text-sec)"><strong>Super Vote:</strong> Concluded with a 'Super Vote' by our mentor.</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="reveal-right">
+                <div class="glass-card step-card" style="padding: 0; overflow: hidden; height: 100%;">
+                    <img src="images/day2_sketch.jpg" alt="Day 2 Solution Sketches" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; border: 1px solid var(--glass-border);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Process Sprint: Day 3 -->
+    <section class="section glass-bg" id="day-3">
+        <div class="container section-header center reveal-up">
+            <div class="badge inline">DECIDE & BRAND</div>
+            <h2 class="section-heading">Design Sprint <span class="gradient-text">Day 3</span></h2>
+            <p class="subtitle">Establishing the Information Architecture, storyboarding, and finalizing visual branding.</p>
+        </div>
+        <div class="container auto-grid" style="margin-bottom: 4rem;">
+            <div class="reveal-left">
+                <div class="glass-card step-card">
+                    <div class="card-header">
+                        <i data-lucide="check-square" class="step-icon"></i>
+                        <h3>Structure & Story</h3>
+                    </div>
+                    <p style="color: var(--text-sec); font-size: 0.95rem; line-height: 1.6; margin-top: 1rem; margin-bottom: 1.5rem;">
+                        Established the Information Architecture (IA) to organize the product's structure and navigation, followed by Storyboarding to visualize the user experience.
+                    </p>
+                    <img src="images/day3_decide.jpg" alt="Day 3 IA and Storyboarding" style="width: 100%; border-radius: 12px; border: 1px solid var(--glass-border);">
+                </div>
+            </div>
+            <div class="reveal-right">
+                <div class="glass-card step-card">
+                    <div class="card-header">
+                        <i data-lucide="palette" class="step-icon"></i>
+                        <h3>Visual Branding</h3>
+                    </div>
+                    <p style="color: var(--text-sec); font-size: 0.95rem; line-height: 1.6; margin-top: 1rem; margin-bottom: 1.5rem;">
+                        Created a moodboard and finalized the visual branding including the product’s name, colors, typography, logo, and iconography.
+                    </p>
+                    <img src="images/day3_moodboard.jpg" alt="Mood Board Glimpse" style="width: 100%; border-radius: 12px; border: 1px solid var(--glass-border);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Process Sprint: Day 4 -->
+    <section class="section dark-bg" id="day-4">
+        <div class="container section-header center reveal-up">
+            <div class="badge inline">PROTOTYPE & DESIGN SYSTEM</div>
+            <h2 class="section-heading">Design Sprint <span class="gradient-text">Day 4</span></h2>
+            <p class="subtitle">Bringing finalized solution sketches to life with a robust Design System.</p>
+        </div>
+        <div class="container auto-grid" style="margin-bottom: 4rem;">
+            <div class="reveal-left">
+                <div class="glass-card step-card">
+                    <div class="card-header">
+                        <i data-lucide="layers" class="step-icon"></i>
+                        <h3>Design Foundation</h3>
+                    </div>
+                    <ul class="feature-list" style="margin-top: 1rem;">
+                        <li style="align-items: flex-start; margin-bottom: 0.5rem;"><i data-lucide="check-circle-2" style="margin-top: 2px;"></i> <span style="font-size: 0.95rem; color: var(--text-sec)"><strong>Design Tokens:</strong> Created semantic tokens for backgrounds, text, alerts, and elements.</span></li>
+                        <li style="align-items: flex-start; margin-bottom: 0.5rem;"><i data-lucide="check-circle-2" style="margin-top: 2px;"></i> <span style="font-size: 0.95rem; color: var(--text-sec)"><strong>Color Palette:</strong> Selected a sophisticated palette conveying financial success.</span></li>
+                        <li style="align-items: flex-start; margin-bottom: 0.5rem;"><i data-lucide="check-circle-2" style="margin-top: 2px;"></i> <span style="font-size: 0.95rem; color: var(--text-sec)"><strong>Component UI:</strong> Built robust components for form inputs, navigation, and buttons.</span></li>
+                        <li style="align-items: flex-start;"><i data-lucide="check-circle-2" style="margin-top: 2px;"></i> <span style="font-size: 0.95rem; color: var(--text-sec)"><strong>Prototyping:</strong> Connected components into a seamless interactive prototype.</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="reveal-right">
+                <div class="glass-card step-card" style="padding: 0; overflow: hidden; height: 100%;">
+                    <img src="images/day4_design_system.jpg" alt="Day 4 Design System" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; border: 1px solid var(--glass-border);">
+                </div>
+            </div>
+        </div>
+
+        <!-- Design Architecture -->
+        <div class="container auto-grid" style="margin-top: 2rem;">
+            <div class="system-text reveal-left">
+                <div class="badge inline">FOUNDATION</div>
+                <h2 class="section-heading">Design <br>Architecture</h2>
+                <p>The UI relies on an ultra-accessible contrast system (WCAG AAA) specifically engineered to instill trust.</p>
+                <div class="system-colors">
+                    <div class="color-swatch-xl" style="background: #0062FF">
+                        <span>Primary</span>
+                        <span>#0062FF</span>
+                    </div>
+                    <div class="color-swatch-xl" style="background: #0A1F44">
+                        <span>Navy</span>
+                        <span>#0A1F44</span>
+                    </div>
+                    <div class="color-swatch-xl" style="background: #2ECC71; color: #000">
+                        <span>Success</span>
+                        <span>#2ECC71</span>
+                    </div>
+                </div>
+                <div class="typography-spec">
+                    <h3>Typography</h3>
+                    <div class="type-sample">
+                        <span class="font-name">IBM Plex Sans</span>
+                        <div class="weights">Semibold · Medium · Regular</div>
+                    </div>
+                    <p class="type-notes">Used exclusively in the mobile interface to convey numerical data cleanly.</p>
+                </div>
+            </div>
+
+            <div class="system-components reveal-right">
+                <div class="glass-panel">
+                    <h3>Component Library DNA</h3>
+                    <div class="component-tags">
+                        <span class="tag">Bottom Navigation</span>
+                        <span class="tag">Net Worth Card</span>
+                        <span class="tag">Market Indicies</span>
+                        <span class="tag">Sparkline Graph</span>
+                        <span class="tag">OTP Inputs</span>
+                        <span class="tag">Action Sheets</span>
+                    </div>
+                    <div class="accessibility-note">
+                        <i data-lucide="shield-check"></i>
+                        <p><strong>Accessible Design:</strong> Never relying solely on color (▲▼ indicators for trends), maintaining >4.5:1 text contrast ratios, and ensuring minimum 44px tap targets across iOS/Android.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Validation & Testing -->
+    <section class="section glass-bg" id="testing">
+        <div class="container section-header center reveal-up">
+            <div class="badge inline">USABILITY TEST</div>
+            <h2 class="section-heading">Design Sprint <span class="gradient-text">Day 5</span></h2>
+            <p class="subtitle">Validating the prototype with real target users to collect actionable feedback.</p>
+        </div>
+
+        <div class="container auto-grid" style="margin-bottom: 4rem;">
+            <div class="reveal-left">
+                <div class="glass-card step-card">
+                    <div class="card-header">
+                        <i data-lucide="help-circle" class="step-icon"></i>
+                        <h3>User Testing Questions</h3>
+                    </div>
+                    <p>Crafted a set of specific, open-ended questions aimed at understanding user interactions, preferences, pain points, and overall satisfaction with the design. Questions were designed to elicit actionable insights for improvements.</p>
+                </div>
+            </div>
+            
+            <div class="reveal-right">
+                <div class="glass-card step-card">
+                    <div class="card-header">
+                        <i data-lucide="bar-chart-2" class="step-icon"></i>
+                        <h3>Metrics for Evaluation</h3>
+                    </div>
+                    <p>Established clear and measurable metrics aligned with usability goals, such as task completion rates, time taken to perform specific actions, user satisfaction scores, and qualitative feedback to quantify the usability and effectiveness of the design.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container section-header center reveal-up">
+            <h3 class="section-heading">Insights from <span class="gradient-text">Testing</span></h3>
+        </div>
+
+        <div class="container auto-grid">
+            
+            <div class="glass-card stat-card reveal-up" style="transition-delay: 0.1s">
+                <div class="stat-number gradient-text">100%</div>
+                <div class="stat-label" style="font-size: 1.1rem; font-weight: 600; color: #fff; margin-bottom: 0.5rem;">Onboarding Success</div>
+                <p style="color: var(--text-sec); font-size: 0.95rem;">Users successfully completed the onboarding process.</p>
+            </div>
+
+            <div class="glass-card stat-card reveal-up" style="transition-delay: 0.2s">
+                <div class="stat-number gradient-text">90%</div>
+                <div class="stat-label" style="font-size: 1.1rem; font-weight: 600; color: #fff; margin-bottom: 0.5rem;">Task Independence</div>
+                <p style="color: var(--text-sec); font-size: 0.95rem;">Most tasks were completed by the user without questions while they were in the process of task completion.</p>
+            </div>
+
+            <div class="glass-card stat-card reveal-up" style="transition-delay: 0.3s">
+                <div class="stat-number gradient-text">100%</div>
+                <div class="stat-label" style="font-size: 1.1rem; font-weight: 600; color: #fff; margin-bottom: 0.5rem;">Adding Investment</div>
+                <p style="color: var(--text-sec); font-size: 0.95rem;">After exploration users encountered no issues when adding investment and completed the task quickly.</p>
+            </div>
+
+            <div class="glass-card stat-card reveal-up" style="transition-delay: 0.4s">
+                <div class="stat-number gradient-text">90%</div>
+                <div class="stat-label" style="font-size: 1.1rem; font-weight: 600; color: #fff; margin-bottom: 0.5rem;">Buy & Sell Stocks</div>
+                <p style="color: var(--text-sec); font-size: 0.95rem;">Reviews shows that users found information relevant and easily accessible within a single platform.</p>
+            </div>
+
+            <div class="glass-card stat-card reveal-up" style="transition-delay: 0.5s">
+                <div class="stat-number gradient-text">90%</div>
+                <div class="stat-label" style="font-size: 1.1rem; font-weight: 600; color: #fff; margin-bottom: 0.5rem;">Tracking Investments</div>
+                <p style="color: var(--text-sec); font-size: 0.95rem;">Asked users with verifying the ease of tracking their investments through the review of individual portfolios, profit and loss analysis, as well as managing watchlists and orders.</p>
+            </div>
+
+            <div class="glass-card stat-card reveal-up" style="transition-delay: 0.6s">
+                <div class="stat-number gradient-text">99%</div>
+                <div class="stat-label" style="font-size: 1.1rem; font-weight: 600; color: #fff; margin-bottom: 0.5rem;">Bank Transactions</div>
+                <p style="color: var(--text-sec); font-size: 0.95rem;">Assigned the task of locating their transactions and downloading statements. Users easily found their transactions, but one user expressed security concerns in the banking section.</p>
+            </div>
+            
+        </div>
+
+        <div class="container section-header center reveal-up" style="margin-top: 6rem;">
+            <div class="badge inline" style="background: rgba(0, 98, 255, 0.2); border: none;">TEST FINDINGS</div>
+            <h3 class="section-heading">User Test <span class="gradient-text">Flows</span></h3>
+            <p class="subtitle">A visual summary of the testing observations across 8 key app scenarios.</p>
+        </div>
+        <div class="container reveal-up" style="margin-bottom: 4rem;">
+            <div class="tilt-card" style="border-radius: 16px; overflow: hidden; border: 1px solid var(--glass-border); max-width: 1200px; margin: 0 auto; box-shadow: 0 20px 40px rgba(0,0,0,0.6);">
+                <img src="images/day5_test.png" alt="Day 5 Testing Flows" style="width: 100%; display: block; background: #fff;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Complete UI Gallery -->
+    <section class="section" id="gallery">
+        <!-- UI Design Gallery -->
+        <div class="container section-header center reveal-up" style="margin-top: 4rem;">
+            <div class="badge inline">UI GALLERY</div>
+            <h3 class="section-heading">Complete <span class="gradient-text">App Flow</span></h3>
+            <p class="subtitle">A comprehensive look at the InvestEase interface.</p>
+        </div>
+        <div class="container gallery-grid">
+            <div class="gallery-item tilt-card reveal-up" style="transition-delay: 0.1s">
+                <img src="images/ui_gallery_1.png" alt="Onboarding & Home (New User)" class="gallery-img" style="max-width: 100%; border-radius: 12px; margin-bottom: 1rem;">
+                <div class="gallery-caption" style="font-weight: 600; font-size: 1.1rem; margin-top: 1rem;">Onboarding & Home (New User)</div>
+            </div>
+            <div class="gallery-item tilt-card reveal-up" style="transition-delay: 0.2s">
+                <img src="images/ui_gallery_2.png" alt="Investment Screens" class="gallery-img" style="max-width: 100%; border-radius: 12px; margin-bottom: 1rem;">
+                <div class="gallery-caption" style="font-weight: 600; font-size: 1.1rem; margin-top: 1rem;">Investment Options</div>
+            </div>
+            <div class="gallery-item tilt-card reveal-up" style="transition-delay: 0.3s">
+                <img src="images/ui_gallery_3.png" alt="Home (Existing User) & Bank Account" class="gallery-img" style="max-width: 100%; border-radius: 12px; margin-bottom: 1rem;">
+                <div class="gallery-caption" style="font-weight: 600; font-size: 1.1rem; margin-top: 1rem;">Dashboard & Bank Details</div>
+            </div>
+        </div>
+        
+        <div class="container section-header center reveal-up" style="margin-top: 8rem;">
+            <div class="badge inline" style="background: rgba(46, 204, 113, 0.2); color: var(--semantic-success); border: none;">ANATOMY</div>
+            <h3 class="section-heading">Screen <span class="gradient-text">Breakdowns</span></h3>
+            <p class="subtitle">Detailed anatomical views of the core interface and modular architecture.</p>
+        </div>
+        <div class="container reveal-up" style="margin-bottom: 4rem;">
+            <div class="tilt-card" style="border-radius: 16px; overflow: hidden; border: 1px solid var(--glass-border); margin-bottom: 4rem; max-width: 1200px; margin-left: auto; margin-right: auto; box-shadow: 0 20px 40px rgba(0,0,0,0.6);">
+                <img src="images/ui_breakdown_1.png" alt="Home Screen Detailed Anatomy" style="width: 100%; display: block; background: #fff;">
+            </div>
+            <div class="tilt-card" style="border-radius: 16px; overflow: hidden; border: 1px solid var(--glass-border); max-width: 1200px; margin-left: auto; margin-right: auto; box-shadow: 0 20px 40px rgba(0,0,0,0.6);">
+                <img src="images/ui_breakdown_2.png" alt="Bank Screen Detailed Anatomy" style="width: 100%; display: block; background: #fff;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Prototype Section -->
+    <section class="section dark-bg" id="prototype">
+        <div class="container section-header center reveal-up">
+            <div class="badge inline" style="background: rgba(0, 98, 255, 0.2); border: none;">
+                <span class="pulse-dot"></span>
+                LIVE PROTOTYPE
+            </div>
+            <h2 class="section-heading">Experience <span class="gradient-text">InvestEase</span></h2>
+            <p class="subtitle">Interact with the fully working UI prototype below. Navigate between Home, Investments, and Banks screens.</p>
+        </div>
+
+        <div class="container reveal-up">
+            <div class="prototype-showcase">
+                <div class="prototype-phone-frame">
+                    <div class="prototype-phone-notch">
+                        <div class="prototype-phone-speaker"></div>
+                        <div class="prototype-phone-camera"></div>
+                    </div>
+                    <iframe
+                        src="../index.html"
+                        title="InvestEase Interactive Prototype"
+                        class="prototype-iframe"
+                        allow="fullscreen"
+                    ></iframe>
+                    <div class="prototype-home-indicator">
+                        <div class="prototype-home-bar"></div>
+                    </div>
+                </div>
+
+                <div class="prototype-info">
+                    <div class="glass-card" style="text-align: center;">
+                        <i data-lucide="smartphone" style="width: 40px; height: 40px; color: var(--brand-primary); margin-bottom: 1rem;"></i>
+                        <h3 style="font-size: 1.3rem; margin-bottom: 0.75rem;">Interactive Demo</h3>
+                        <p style="color: var(--text-sec); font-size: 0.95rem; line-height: 1.6;">This is a fully functional coded prototype. Tap the bottom navigation to switch between <strong>Home</strong>, <strong>Investments</strong>, and <strong>Banks</strong> screens. Scroll within to explore all features.</p>
+                    </div>
+                    <div class="prototype-features">
+                        <div class="proto-feature">
+                            <i data-lucide="layout-dashboard" style="color: var(--brand-primary);"></i>
+                            <span>3 Core Screens</span>
+                        </div>
+                        <div class="proto-feature">
+                            <i data-lucide="bar-chart-3" style="color: var(--semantic-success);"></i>
+                            <span>Live Charts</span>
+                        </div>
+                        <div class="proto-feature">
+                            <i data-lucide="mouse-pointer-click" style="color: #00C6FF;"></i>
+                            <span>Fully Interactive</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <i data-lucide="layers"></i>
+                <span>InvestEase</span>
+            </div>
+            <p class="footer-credit">A concept design by <strong>Aaqib Uddin Hashmi</strong></p>
+            <div class="footer-socials">
+                <a href="#" class="social-btn"><i data-lucide="dribbble"></i></a>
+                <a href="#" class="social-btn"><i data-lucide="linkedin"></i></a>
+                <a href="#" class="social-btn"><i data-lucide="twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

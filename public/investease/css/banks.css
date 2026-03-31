@@ -1,0 +1,268 @@
+/* ===== BANKS SCREEN ===== */
+
+.header-gradient-banks {
+  padding-bottom: var(--sp-6);
+}
+
+.bank-accounts-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  margin-top: var(--sp-3);
+}
+
+.bank-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-4) var(--sp-5);
+  box-shadow: var(--shadow-md);
+  transition: all var(--duration-fast) var(--ease-out);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.bank-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+}
+
+.bank-card:nth-child(1)::before { background: #1976D2; }
+.bank-card:nth-child(2)::before { background: #D32F2F; }
+.bank-card:nth-child(3)::before { background: #388E3C; }
+.bank-card:nth-child(4)::before { background: #F57C00; }
+
+.bank-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.bank-card:active {
+  transform: scale(0.98);
+}
+
+.bank-info {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+.bank-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: white;
+  font-weight: var(--fw-bold);
+  flex-shrink: 0;
+}
+
+.bank-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.bank-name {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-semibold);
+  color: var(--text-primary);
+}
+
+.bank-account-number {
+  font-size: var(--fs-xs);
+  color: var(--text-secondary);
+}
+
+.bank-balance-value {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-bold);
+  color: var(--text-primary);
+  text-align: right;
+}
+
+.btn-add-bank {
+  margin-top: var(--sp-4);
+}
+
+/* ===== BANK DETAIL MODAL ===== */
+.bank-detail-modal {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  display: none;
+}
+
+.bank-detail-modal.open {
+  display: block;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  animation: fadeIn var(--duration-fast) var(--ease-out);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.modal-content {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 430px;
+  max-height: 80vh;
+  background: var(--bg);
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  overflow-y: auto;
+  animation: slideUp var(--duration-normal) var(--ease-spring);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--sp-4) var(--sp-5);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.modal-header h2 {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-semibold);
+}
+
+.modal-back {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  transition: background var(--duration-fast);
+}
+
+.modal-back:hover { background: var(--border); }
+
+.modal-body {
+  padding: var(--sp-4) var(--sp-5) var(--sp-8);
+}
+
+/* Transaction List */
+.transaction-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: var(--sp-4) 0 var(--sp-3);
+}
+
+.transaction-header h3 {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-semibold);
+}
+
+.txn-filter-btn {
+  padding: var(--sp-1) var(--sp-3);
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-xs);
+  background: var(--primary-bg);
+  color: var(--primary);
+  font-weight: var(--fw-medium);
+}
+
+.transaction-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.transaction-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--sp-3) var(--sp-4);
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+
+.txn-info {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+.txn-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.txn-icon.credit { background: rgba(0, 196, 140, 0.1); }
+.txn-icon.debit  { background: rgba(255, 77, 79, 0.1); }
+
+.txn-name {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+}
+
+.txn-date {
+  font-size: var(--fs-xs);
+  color: var(--text-tertiary);
+}
+
+.txn-amount {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-base);
+}
+
+/* Bank Detail Summary */
+.bank-detail-summary {
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  padding: var(--sp-4);
+  box-shadow: var(--shadow-card);
+}
+
+.bank-detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--sp-2) 0;
+}
+
+.bank-detail-row:not(:last-child) {
+  border-bottom: 1px solid var(--divider);
+}
+
+.bank-detail-row .label {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+}
+
+.bank-detail-row .value {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--text-primary);
+}
