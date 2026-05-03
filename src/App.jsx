@@ -5,6 +5,7 @@ import ContactModal from './components/ContactModal'
 import { ToolIcons } from './components/ToolIcons'
 import MagazineModal from './components/MagazineModal'
 import InvestEaseModal from './components/InvestEaseModal'
+import IITDelhiLMSModal from './components/IITDelhiLMSModal'
 
 
 // Project data
@@ -13,8 +14,9 @@ const projects = [
     id: 1,
     label: 'EdTech Platform',
     title: 'Govt LMS (IIT Delhi)',
-    description: 'Designed a comprehensive Learning Management System for government education initiative, focusing on accessibility and seamless learning experience for diverse user groups.',
-    image: '/images/project-lms.png'
+    description: 'Led end-to-end UX design for a 3-platform LMS ecosystem (Student, Faculty, Admin) at IIT Delhi under CSC e-Governance. Delivered full Information Architecture, scalable Design System, and high-fidelity prototypes serving Jharkhand University.',
+    image: '/images/project-lms.png',
+    isIITDelhiLMS: true
   },
   {
     id: 2,
@@ -24,31 +26,43 @@ const projects = [
     image: '/images/project-investease.png',
     isInvestEase: true
   },
-
   {
     id: 3,
-    label: 'E-commerce',
-    title: 'Premium Shoe E-commerce',
-    description: 'Crafted a premium shopping experience for a luxury footwear brand with focus on visual storytelling and seamless checkout flow.',
-    image: '/images/project-ecommerce.png'
+    label: 'AgriTech / AI',
+    title: 'FarmAI',
+    description: 'Built an intelligent AI farming companion featuring crop health monitoring, leaf disease detection, hyper-local weather insights, and smart alerts — with voice and multilingual support for rural accessibility.',
+    image: '/images/project-farmai.png',
+    link: 'http://localhost:3001'
   },
   {
     id: 4,
     label: 'Magazine (New)',
-    title: 'THIS ISN\'T HORROR',
+    title: "THIS ISN'T HORROR",
     description: 'A visual exploration into the macabre through a crafted interactive magazine reflecting the inevitable crush of the corporate machine. Open the book to read.',
     image: '/images/magazine/1-cover.png',
-    isMagazine: true
+    isMagazine: true,
+    isCreativity: true
+  },
+  {
+    id: 5,
+    label: 'Game / Interactive',
+    title: "Flying Dragon",
+    subtitle: 'An arcade-style game inspired by Flappy Bird, redesigned with a dragon concept and improved gameplay experience.',
+    description: 'Navigate a fire-breathing dragon through procedurally generated obstacles. Features 3 dragon skins, dynamic sky themes, particle effects, and responsive touch/keyboard controls.',
+    image: '/images/project-flying-dragon.png',
+    link: '/flying-dragon/index.html',
+    isCreativity: true,
+    isPlayable: true
   }
 ]
 
 // Experience data
 const experiences = [
-  { date: '2025-Present', title: 'Lovely Professional University', role: 'Assistant Professor', description: 'Guiding research proposals, supporting patent development, and improving design curriculum. Also coordinating NICHE International Conference! 🎓' },
-  { date: 'Apr-Jul 2025', title: 'IIT Delhi', role: 'UI/UX Designer (SRP)', description: 'Designed and delivered UI/UX training curriculum covering research, interaction design, and prototyping. Got a recommendation from Dr. Jyoti Kumar, HOD Design! ✨' },
-  { date: 'Apr-Jul 2025', title: 'IIT Delhi', role: 'UI/UX Designer (Intern)', description: 'Designed the UX/UI for a government LMS under CSC. Making govt tech look like it belongs in this century! 🏛️' },
-  { date: 'Nov 2024-Apr 2025', title: 'DBSE (School of Specialised Excellence)', role: 'UI/UX Designer (SRP)', description: 'Developed UI/UX curriculum and mentored students in Design Thinking using Figma, Adobe Suite, and Miro. 🎒' },
-  { date: 'Jan 2022-Sep 2023', title: 'Ezy Foodz', role: 'UI/UX Designer', description: 'Led packaging and branding redesign, increasing brand recognition by 20%. Designing food apps while getting hungry — professional hazard! 🍔' }
+  { date: 'Sep 2025–Present', title: 'Lovely Professional University', role: 'Assistant Professor', description: 'Guided research proposals, supported patent development, and improved design curriculum aligned with industry practices. Conducted Faculty Development Programs (FDPs) and coordinated NICHE International Conference. 🎓' },
+  { date: 'Nov 2024–Apr 2025', title: 'School of Specialised Excellence (DBSE)', role: 'UI/UX Designer (SRP)', description: 'Developed and delivered UI/UX curriculum integrating UX research, information architecture, and prototyping. Mentored students in UX Design, Interaction Design, and Design Thinking using Figma, Adobe Suite, and Miro. 🎒' },
+  { date: 'Apr 2024–Jul 2024', title: 'IIT Delhi', role: 'UI/UX Designer (SRP)', description: 'Designed and delivered UI/UX training curriculum covering research, interaction design, and prototyping. Received a Letter of Recommendation from Dr. Jyoti Kumar, HOD, Department of Design, IIT Delhi. ✨' },
+  { date: 'Oct 2023–Apr 2024', title: 'IIT Delhi', role: 'UI/UX Designer (Intern)', description: 'Contributed to the UX/UI design of a Learning Management System (LMS) for Jharkhand University under CSC Government Services Pvt. Ltd. Supported Digital Media & Design curriculum development, creating interactive learning content. 🏛️' },
+  { date: 'Jan 2022–Oct 2023', title: 'Ezy Foodz', role: 'UI/UX Designer', description: 'Led packaging and branding redesign, increasing brand recognition by 20%. Designed visual assets and UI concepts using Figma and Adobe Creative Suite. 🍔' }
 ]
 
 // Skills data
@@ -99,7 +113,7 @@ const certificates = [
   }
 ]
 
-// Process words - fun and catchy
+// Process words
 const processWords = ['🔍 Stalk Users', '✏️ Scribble Ideas', '🎨 Make It Pretty', '🧪 Break Things', '✨ Ship Magic']
 
 function App() {
@@ -108,26 +122,32 @@ function App() {
   const [activeProcess, setActiveProcess] = useState(0)
   const [progressWidth, setProgressWidth] = useState(0)
   const [copied, setCopied] = useState(false)
-  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 })
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [isMagazineOpen, setIsMagazineOpen] = useState(false)
   const [isInvestEaseOpen, setIsInvestEaseOpen] = useState(false)
-
+  const [isIITDelhiLMSOpen, setIsIITDelhiLMSOpen] = useState(false)
 
   const processRef = useRef(null)
+  const cursorDotRef = useRef(null)
+  const cursorRingRef = useRef(null)
+  const cursorSpotRef = useRef(null)
+
+  // Toggle modal-open class on body to hide custom cursor over modals
+  useEffect(() => {
+    const anyModalOpen = isModalOpen || isMagazineOpen || isInvestEaseOpen || isIITDelhiLMSOpen
+    document.body.classList.toggle('modal-open', anyModalOpen)
+  }, [isModalOpen, isMagazineOpen, isInvestEaseOpen, isIITDelhiLMSOpen])
 
   // Scroll effects
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
 
-      // Process section animation - faster progression
+      // Process section animation
       if (processRef.current) {
         const rect = processRef.current.getBoundingClientRect()
         const windowHeight = window.innerHeight
-
         if (rect.top < windowHeight && rect.bottom > 0) {
-          // Speed multiplier of 2.5x to complete animation faster
           const rawProgress = (windowHeight - rect.top) / (windowHeight * 0.5)
           const progress = Math.min(1, Math.max(0, rawProgress))
           setProgressWidth(progress * 100)
@@ -135,52 +155,77 @@ function App() {
         }
       }
 
-      // Fade in animations
-      document.querySelectorAll('.fade-in, .blur-in').forEach(el => {
+      // Trigger all animation types on scroll
+      document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right, .scale-in, .blur-in').forEach(el => {
         const rect = el.getBoundingClientRect()
-        if (rect.top < window.innerHeight - 100) {
+        if (rect.top < window.innerHeight - 60) {
           el.classList.add('visible')
         }
       })
     }
 
     window.addEventListener('scroll', handleScroll)
-    handleScroll() // Initial check
+    handleScroll()
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Cursor spotlight
+  // Smooth cursor using RAF
   useEffect(() => {
-    const handleMouseMove = (e) => {
-      setCursorPos({ x: e.clientX, y: e.clientY })
+    let mouseX = 0, mouseY = 0
+    let ringX = 0, ringY = 0
+    let rafId
+
+    const onMouseMove = (e) => {
+      mouseX = e.clientX
+      mouseY = e.clientY
+      if (cursorDotRef.current) {
+        cursorDotRef.current.style.left = mouseX + 'px'
+        cursorDotRef.current.style.top = mouseY + 'px'
+      }
+      if (cursorSpotRef.current) {
+        cursorSpotRef.current.style.left = mouseX + 'px'
+        cursorSpotRef.current.style.top = mouseY + 'px'
+      }
     }
-    window.addEventListener('mousemove', handleMouseMove)
-    return () => window.removeEventListener('mousemove', handleMouseMove)
+
+    const lerp = (a, b, t) => a + (b - a) * t
+    const animateRing = () => {
+      ringX = lerp(ringX, mouseX, 0.12)
+      ringY = lerp(ringY, mouseY, 0.12)
+      if (cursorRingRef.current) {
+        cursorRingRef.current.style.left = ringX + 'px'
+        cursorRingRef.current.style.top = ringY + 'px'
+      }
+      rafId = requestAnimationFrame(animateRing)
+    }
+
+    window.addEventListener('mousemove', onMouseMove)
+    rafId = requestAnimationFrame(animateRing)
+    return () => {
+      window.removeEventListener('mousemove', onMouseMove)
+      cancelAnimationFrame(rafId)
+    }
   }, [])
-
-
 
   return (
     <>
       {/* Cursor Spotlight */}
-      <div
-        className="cursor-spotlight"
-        style={{ left: cursorPos.x, top: cursorPos.y }}
-      />
+      <div ref={cursorSpotRef} className="cursor-spotlight" />
+      <div ref={cursorDotRef} className="cursor-dot" />
+      <div ref={cursorRingRef} className="cursor-ring" />
 
       {/* Navigation */}
       <nav className={`nav ${scrolled ? 'scrolled' : ''}`}>
         <div className="container nav-container">
           <Logo />
-
           <ul className={`nav-links ${mobileMenuOpen ? 'open' : ''}`}>
             <li><a href="#work" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Work</a></li>
+            <li><a href="#creativity" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Creativity</a></li>
             <li><a href="#process" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Process</a></li>
             <li><a href="#about" className="nav-link" onClick={() => setMobileMenuOpen(false)}>About</a></li>
             <li><a href="#experience" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Experience</a></li>
             <li><a href="#contact" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Contact</a></li>
           </ul>
-
           <button className="mobile-menu-btn" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
             <span></span>
             <span></span>
@@ -191,24 +236,53 @@ function App() {
 
       {/* Hero Section */}
       <section className="hero" id="hero">
+        <div className="hero-bg-grid" />
         <div className="hero-content">
-          <h1 className="display-xl hero-title fade-in">
+          <div className="hero-badge fade-in">
+            <span className="hero-badge-dot" />
+            Available for freelance work
+          </div>
+          <h1 className="display-xl hero-title fade-in delay-1">
             I design interfaces<br />
             <span className="text-outline">that feel effortless.</span>
           </h1>
-          <p className="hero-subtitle fade-in delay-1">
+          <p className="hero-subtitle fade-in delay-2">
             UI/UX Designer crafting clean, accessible and product-ready experiences.
           </p>
-          <div className="hero-buttons fade-in delay-2">
+          <div className="hero-buttons fade-in delay-3">
             <a href="#work" className="btn btn-primary btn-magnetic">
               Explore Work <span>↓</span>
             </a>
-            <a href="#" className="btn btn-secondary btn-magnetic">
+            <a
+              href="./Aaqib_Uddin_Hashmi_CV.pdf"
+              download="Aaqib_Uddin_Hashmi_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-secondary btn-magnetic"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{marginRight:'4px'}}><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
               Download Resume
             </a>
           </div>
 
-          <a href="#work" className="scroll-indicator fade-in delay-3">
+          <div className="hero-stats fade-in delay-4">
+            <div className="hero-stat">
+              <span className="hero-stat-number">4+</span>
+              <span className="hero-stat-label">Years Experience</span>
+            </div>
+            <div className="hero-stat-divider" />
+            <div className="hero-stat">
+              <span className="hero-stat-number">15+</span>
+              <span className="hero-stat-label">Projects Shipped</span>
+            </div>
+            <div className="hero-stat-divider" />
+            <div className="hero-stat">
+              <span className="hero-stat-number">3</span>
+              <span className="hero-stat-label">Institutions Trained</span>
+            </div>
+          </div>
+
+          <a href="#work" className="scroll-indicator fade-in delay-5">
             <div className="scroll-indicator-mouse">
               <div className="scroll-indicator-wheel"></div>
             </div>
@@ -220,62 +294,107 @@ function App() {
       {/* Selected Work Section */}
       <section className="works" id="work">
         <div className="container">
-          <div className="section-header fade-in">
+          <div className="section-header fade-in" style={{ textAlign: 'center' }}>
             <span className="section-label">Selected Work</span>
             <h2 className="display-lg">Featured Projects</h2>
+            <p className="section-subtitle fade-in delay-1">A curated selection spanning EdTech, FinTech, and beyond.</p>
           </div>
 
           <div className="projects-grid">
-            {projects.map((project, index) => (
+            {projects.filter(p => !p.isCreativity).map((project, index) => (
               <article
                 key={project.id}
-                className={`project-card glow fade-in delay-${index + 1}`}
+                className={`project-card glow scale-in delay-${index + 1}`}
                 onClick={() => {
-                  if (project.isMagazine) setIsMagazineOpen(true);
-                  if (project.isInvestEase) setIsInvestEaseOpen(true);
-                  if (project.link) window.open(project.link, '_blank');
+                  if (project.isMagazine) setIsMagazineOpen(true)
+                  if (project.isInvestEase) setIsInvestEaseOpen(true)
+                  if (project.isIITDelhiLMS) setIsIITDelhiLMSOpen(true)
+                  if (project.link) window.open(project.link, '_blank')
                 }}
-                style={(project.isMagazine || project.isInvestEase || project.link) ? { cursor: 'pointer' } : {}}
+                style={(project.isMagazine || project.isInvestEase || project.isIITDelhiLMS || project.link) ? { cursor: 'pointer' } : {}}
               >
-
-                <div className="project-image-wrapper" style={project.isMagazine ? { backgroundColor: '#111' } : {}}>
-                  <span className="bg-number" style={{ right: '-20px', top: '-40px' }}>
-                    0{project.id}
-                  </span>
+                <div className={`project-image-wrapper ${project.isMagazine ? 'project-image-wrapper--magazine' : ''}`}>
+                  <span className="project-index">0{project.id}</span>
                   <img
                     src={project.image}
                     alt={project.title}
                     className="project-image"
-                    style={(project.isMagazine || project.link) ? { objectFit: 'contain' } : {}}
                   />
-                  {project.isMagazine && (
+                  {(project.isMagazine || project.isInvestEase || project.isIITDelhiLMS || project.link) && (
                     <div className="magazine-overlay-hint">
-                      <span>Click to Read</span>
+                      <span>{project.isMagazine ? 'Click to Read' : 'Click to View'}</span>
                     </div>
                   )}
-                  {project.isInvestEase && (
-                    <div className="magazine-overlay-hint">
-                      <span>Click to View</span>
-                    </div>
-                  )}
-                  {project.link && (
-                    <div className="magazine-overlay-hint">
-                      <span>Click to View</span>
-                    </div>
-                  )}
-
                 </div>
                 <div className="project-content">
                   <span className="project-label">{project.label}</span>
                   <h3 className="project-title">{project.title}</h3>
                   <p className="project-desc">{project.description}</p>
+                  {(project.isMagazine || project.isInvestEase || project.isIITDelhiLMS || project.link) && (
+                    <span className="project-cta">View Case Study →</span>
+                  )}
                 </div>
               </article>
             ))}
           </div>
         </div>
       </section>
+      
+      {/* Creativity Section */}
+      <section className="creativity" id="creativity">
+        <div className="container">
+          <div className="section-header fade-in" style={{ textAlign: 'center' }}>
+            <span className="section-label">Beyond Interfaces</span>
+            <h2 className="display-lg">Creative Exploration</h2>
+            <p className="section-subtitle fade-in delay-1">Experiments in visual storytelling and interactive media.</p>
+          </div>
 
+          <div className="projects-grid">
+            {projects.filter(p => p.isCreativity).map((project, index) => (
+              <article
+                key={project.id}
+                className={`project-card glow scale-in delay-${index + 1} ${project.isPlayable ? 'project-card--playable' : ''}`}
+                onClick={() => {
+                  if (project.isMagazine) setIsMagazineOpen(true)
+                  else if (project.link) window.open(project.link, '_blank', 'noopener,noreferrer')
+                }}
+                style={{ cursor: 'pointer' }}
+                tabIndex={0}
+                role="link"
+                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); if (project.isMagazine) setIsMagazineOpen(true); else if (project.link) window.open(project.link, '_blank', 'noopener,noreferrer'); } }}
+              >
+                <div className={`project-image-wrapper ${project.isMagazine ? 'project-image-wrapper--magazine' : ''}`}>
+                  <span className="project-index">0{project.id}</span>
+                  {project.isPlayable && (
+                    <span className="project-tag-live">🎮 Playable Demo</span>
+                  )}
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="project-image"
+                  />
+                  <div className="magazine-overlay-hint">
+                    <span>{project.isMagazine ? 'Click to Read' : project.isPlayable ? '▶ Play Now' : 'View Project'}</span>
+                  </div>
+                </div>
+                <div className="project-content">
+                  <span className="project-label">{project.label}</span>
+                  <h3 className="project-title">{project.title}</h3>
+                  {project.subtitle && <p className="project-subtitle">{project.subtitle}</p>}
+                  <p className="project-desc">{project.description}</p>
+                  {project.isPlayable ? (
+                    <span className="project-cta project-cta--play">
+                      Play Live Game <span className="cta-external-icon">↗</span>
+                    </span>
+                  ) : (
+                    <span className="project-cta">{project.isMagazine ? 'Read Magazine →' : 'View Project →'}</span>
+                  )}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Process Section */}
       <section className="process" id="process" ref={processRef}>
@@ -300,10 +419,7 @@ function App() {
           </div>
 
           <div className="progress-bar">
-            <div
-              className="progress-fill"
-              style={{ width: `${progressWidth}%` }}
-            ></div>
+            <div className="progress-fill" style={{ width: `${progressWidth}%` }}></div>
           </div>
         </div>
       </section>
@@ -312,40 +428,32 @@ function App() {
       <section className="about" id="about">
         <div className="container">
           <div className="about-content">
-            <div className="about-text fade-in">
+            <div className="about-text fade-in-left">
               <span className="section-label">About Me</span>
-              <h2 className="display-md">Aaqib Uddin Hashmi</h2>
-              <p className="body-lg">
-                <strong>Product Designer | UX Researcher | Design Educator</strong>
+              <h2 className="display-md" style={{ marginTop: '16px', marginBottom: '24px' }}>Aaqib Uddin Hashmi</h2>
+              <p className="body-lg" style={{ marginBottom: '16px' }}>
+                <strong>Product Designer · UX Researcher · Design Educator</strong>
               </p>
-              <p>
-                Curious about how people think, behave, and interact with the products around them.
+              <p style={{ color: 'var(--soft-gray)', lineHeight: 1.8, marginBottom: '14px' }}>
+                Curious about how people think, behave, and interact with products. That curiosity evolved into a career in UX design and research.
               </p>
-              <p>
-                That curiosity naturally evolved into a path in UX design and research, where understanding
-                people is just as important as designing interfaces. I enjoy exploring problems through user
-                research, observation, and experimentation, uncovering patterns in human behavior, and
-                translating those insights into thoughtful digital experiences.
+              <p style={{ color: 'var(--soft-gray)', lineHeight: 1.8, marginBottom: '14px' }}>
+                My work sits at the intersection of design, psychology, and problem-solving — looking beyond the interface to understand why users behave the way they do.
               </p>
-              <p>
-                My work often sits at the intersection of design, psychology, and problem-solving—looking
-                beyond the interface to understand why users behave the way they do and how systems can
-                better support them.
+              <p style={{ color: 'var(--soft-gray)', lineHeight: 1.8, marginBottom: '32px' }}>
+                Outside of design, I enjoy psychology, documentaries, photography, and visual storytelling.
               </p>
-              <p>
-                Outside of design, I enjoy exploring psychology, documentaries, photography, and visual
-                storytelling, interests that constantly shape the way I observe people, environments, and
-                the subtle details that influence everyday experiences.
-              </p>
+
             </div>
 
-            <div className="about-image fade-in delay-1">
+            <div className="about-image fade-in-right">
               <div className="profile-image-wrapper">
                 <img
                   src="/images/profile.jpg"
                   alt="Aaqib Uddin Hashmi"
                   className="profile-image"
                 />
+                <div className="profile-image-glow" />
               </div>
             </div>
           </div>
@@ -358,30 +466,47 @@ function App() {
         </div>
       </section>
 
-      {/* Experience Timeline */}
+      {/* Experience Section */}
       <section className="experience" id="experience">
         <div className="container">
           <div className="section-header fade-in" style={{ textAlign: 'center' }}>
             <span className="section-label">Experience</span>
             <h2 className="display-lg">My Journey</h2>
           </div>
+        </div>
 
-          <div className="experience-grid">
-            {experiences.map((exp, index) => (
-              <div key={index} className={`experience-card fade-in delay-${Math.min(index + 1, 5)}`}>
-                <div className="card-inner">
-                  <div className="card-front">
-                    <span className="exp-date">{exp.date}</span>
-                    <h3>{exp.title}</h3>
-                    <div className="exp-role">{exp.role}</div>
-                  </div>
-                  <div className="card-back">
+        <div className="timeline-wrapper fade-in delay-1">
+          <div className="timeline-scroll-container">
+            {experiences.map((exp, index) => {
+              const yearMatch = exp.date.match(/\d{4}/);
+              const year = yearMatch ? yearMatch[0] : '2024';
+              
+              let badgeClass = 'badge-outline';
+              if (index === 0) badgeClass = 'badge-gradient-cyan';
+              else if (index === 1) badgeClass = 'badge-solid-blue';
+              else if (index === 2) badgeClass = 'badge-gradient-green';
+              else if (index === 3) badgeClass = 'badge-solid-purple';
+              else if (index === 4) badgeClass = 'badge-gradient-orange';
+
+              return (
+                <div key={index} className="timeline-item">
+                  <div className={`timeline-badge ${badgeClass}`}>{year}</div>
+                  <div className={`timeline-card ${index % 2 === 1 ? 'card-highlight' : ''}`}>
+                    <h3>{exp.title} — {exp.role}</h3>
                     <p>{exp.description}</p>
                   </div>
+                  <div className="timeline-connector"></div>
+                  <div className="timeline-node"></div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
+          <div className="timeline-line-track"></div>
+        </div>
+        
+        <div className="timeline-scroll-hint fade-in delay-2">
+          <div className="scroll-hint-line"></div>
+          <span className="scroll-hint-text">Scroll horizontally →</span>
         </div>
       </section>
 
@@ -390,7 +515,7 @@ function App() {
         <div className="container">
           <div className="section-header fade-in" style={{ textAlign: 'center' }}>
             <span className="section-label">Expertise</span>
-            <h2 className="display-lg">Skills & Tools</h2>
+            <h2 className="display-lg">Skills &amp; Tools</h2>
           </div>
 
           <div className="skills-category fade-in delay-1">
@@ -426,7 +551,7 @@ function App() {
 
           <div className="certificates-grid">
             {certificates.map((cert, index) => (
-              <div key={index} className={`certificate-card fade-in delay-${index + 1}`}>
+              <div key={index} className={`certificate-card scale-in delay-${index + 1}`}>
                 <div className="cert-logo-wrapper">
                   <img src={cert.logo} alt={cert.issuer} className="cert-logo" />
                 </div>
@@ -455,7 +580,7 @@ function App() {
 
           <div className="contact-buttons fade-in delay-1">
             <a href="mailto:aaqibuddinhashmi@gmail.com" className="btn btn-primary btn-magnetic">
-              Email Me
+              ✉ Email Me
             </a>
             <a href="https://www.linkedin.com/in/aaqib-uddin-hashmi/" target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-magnetic">
               LinkedIn
@@ -463,13 +588,12 @@ function App() {
             <a href="https://www.behance.net/aaqibuddin" target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-magnetic">
               Behance
             </a>
-
             <button onClick={() => {
-              navigator.clipboard.writeText('aaqibuddinhashmi@gmail.com');
-              setCopied(true);
-              setTimeout(() => setCopied(false), 2000);
+              navigator.clipboard.writeText('aaqibuddinhashmi@gmail.com')
+              setCopied(true)
+              setTimeout(() => setCopied(false), 2000)
             }} className="btn btn-secondary btn-magnetic">
-              {copied ? 'Copied!' : 'Copy Email'}
+              {copied ? '✓ Copied!' : '⎘ Copy Email'}
             </button>
           </div>
         </div>
@@ -477,15 +601,20 @@ function App() {
 
       {/* Footer */}
       <footer className="footer">
-        <div className="container">
+        <div className="container footer-inner">
           <p>© {new Date().getFullYear()} Aaqib Uddin Hashmi. Designed with passion.</p>
+          <div className="footer-links">
+            <a href="https://www.linkedin.com/in/aaqib-uddin-hashmi/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://www.behance.net/aaqibuddin" target="_blank" rel="noopener noreferrer">Behance</a>
+            <a href="mailto:aaqibuddinhashmi@gmail.com">Email</a>
+          </div>
         </div>
       </footer>
 
       <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <MagazineModal isOpen={isMagazineOpen} onClose={() => setIsMagazineOpen(false)} />
       <InvestEaseModal isOpen={isInvestEaseOpen} onClose={() => setIsInvestEaseOpen(false)} />
-
+      <IITDelhiLMSModal isOpen={isIITDelhiLMSOpen} onClose={() => setIsIITDelhiLMSOpen(false)} />
 
       {/* Copy Feedback Toast */}
       <div className={`copy-feedback ${copied ? 'show' : ''}`}>

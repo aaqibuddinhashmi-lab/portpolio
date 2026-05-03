@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIT Delhi LMS — Full UI/UX Case Study</title>
+    <meta name="description" content="A comprehensive Learning Management System designed at IIT Delhi featuring full IA, Design System, and high-fidelity prototype flows across 3 integrated platforms.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=9">
+</head>
+<body>
+    <!-- Ambient Background -->
+    <div class="ambient-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="mainNav">
+        <div class="nav-brand">
+            <div class="nav-logo">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                    <rect width="28" height="28" rx="8" fill="url(#navGrad)"/>
+                    <path d="M8 14L12 10L16 14L12 18Z" fill="white" opacity="0.9"/>
+                    <path d="M12 10L20 14L12 18" fill="white" opacity="0.5"/>
+                    <defs><linearGradient id="navGrad" x1="0" y1="0" x2="28" y2="28"><stop stop-color="#38bdf8"/><stop offset="1" stop-color="#3B82F6"/></linearGradient></defs>
+                </svg>
+            </div>
+            <span>UI/UX Case Study</span>
+        </div>
+        
+    </nav>
+
+    <!-- Slide Container -->
+    <div class="presentation" id="presentation">
+
+        <!-- SECTION 1: Cover -->
+        <section class="slide slide-cover" id="slide-1" data-slide="1">
+            <div class="slide-content">
+                <div class="cover-layout">
+                    <div class="cover-text">
+                        <div class="cover-badge animate-in" data-delay="0">
+                            <span class="badge-dot"></span>
+                            Complete System Overhaul
+                        </div>
+                        <h1 class="cover-title animate-in" data-delay="1">
+                            <span class="title-line">IIT Delhi</span>
+                            <span class="title-line gradient-text">LMS Design</span>
+                        </h1>
+                        <p class="cover-subtitle animate-in" data-delay="2">
+                            A comprehensive UX case study featuring deep Information Architecture, scalable Design Systems, and multi-user prototypes.
+                        </p>
+                        <div class="cover-meta animate-in" data-delay="3">
+                            <div class="meta-item">
+                                <span class="meta-label">Role</span>
+                                <span class="meta-value">UI/UX Designer</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Platforms</span>
+                                <span class="meta-value">Admin, Faculty, Student</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <!-- SECTION 2: About Project -->
+        <section class="slide" id="slide-2" data-slide="2">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <span class="slide-number">02</span>
+                    <h2 class="slide-title animate-in" data-delay="0">About <span class="gradient-text">Project</span></h2>
+                </div>
+                <div style="width: 100%; max-width: 900px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: center; height: 100%; min-height: 50vh;">
+                    <div class="overview-text animate-in" data-delay="1" style="width: 100%; text-align: left;">
+                        <p style="font-size: 1.15rem; line-height: 1.6; color: #e2e8f0; font-weight: 300;">Designed for <strong style="color: #fff; font-weight: 600;">CSC e-Governance Services India Limited</strong> at <strong style="color: #fff; font-weight: 600;">IIT Delhi</strong>, this Learning Management System (LMS) is a unified digital platform built to streamline academic operations through three dedicated interfaces — Student, Faculty, and Admin.</p>
+                        <p style="font-size: 1.15rem; line-height: 1.6; color: #e2e8f0; font-weight: 300; margin-top: 24px;">Each module is tailored to its users while remaining seamlessly connected within one centralized ecosystem. The project focused on scalable workflows, intuitive user experiences, course management, assessments, and system-wide consistency through a robust design system.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Information Architecture -->
+        <section class="slide" id="slide-3" data-slide="3">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <span class="slide-number">03</span>
+                    <h2 class="slide-title animate-in" data-delay="0">Information <span class="gradient-text">Architecture</span></h2>
+                </div><div style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                    <div class="overview-text animate-in" data-delay="1" style="width: 100%; text-align: center; margin-bottom: 40px;">
+                        <p style="max-width: 800px; margin: 0 auto;">Structuring three distinct platforms into a singular ecosystem required strict data hierarchy tracking. The entire information architecture maps dynamically to the definitive work segmentation logic.</p>
+                    </div>
+
+
+
+
+
+<div class="ia-flow-container" style="background: transparent; padding: 40px; border-radius: 8px; font-family: 'Inter', sans-serif; position: relative; color: #f8fafc; margin-top: 40px;">
+    
+    <!-- Legend -->
+    <div style="position: absolute; top: 40px; right: 40px; border: 1px solid rgba(255,255,255,0.2); padding: 12px 16px; border-radius: 6px; font-size: 10px; background: rgba(255,255,255,0.03); z-index: 10;">
+        <div style="margin-bottom: 8px; font-weight: 700; color: #e2e8f0; text-align: center;">ROLE SEGMENTATION</div>
+        <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;"><div style="width:24px; height:12px; border: 1px solid #3B82F6; background: rgba(59,130,246,0.1); border-radius:2px;"></div> STUDENT</div>
+        <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;"><div style="width:24px; height:12px; border: 1px solid #EA580C; background: rgba(234,88,12,0.1); border-radius:2px;"></div> FACULTY</div>
+        <div style="display:flex; align-items:center; gap:8px;"><div style="width:24px; height:12px; border: 1px solid #EF4444; background: rgba(239,68,68,0.1); border-radius:2px;"></div> ADMIN</div>
+    </div>
+
+    <!-- Top Flow -->
+    <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 0; position: relative; z-index: 2;">
+        <div style="border: 1px solid #3B82F6; padding: 8px 32px; font-weight: 600; border-radius: 20px; font-size: 12px; background: rgba(59,130,246,0.1); color: #fff; display: flex; align-items: center; gap: 8px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            LOGIN
+        </div>
+        <div style="height: 16px; border-left: 1px solid rgba(255,255,255,0.4); position: relative;"><span style="position:absolute; bottom:-4px; left:-4.5px; font-size:10px; color: rgba(255,255,255,0.4);">▼</span></div>
+        <div style="border: 1px solid rgba(255,255,255,0.2); padding: 10px 40px; font-weight: 600; border-radius: 4px; font-size: 12px; background: rgba(255,255,255,0.05); color: #fff;">
+            ADMIN DASHBOARD / ROUTING
+        </div>
+    </div>
+
+    <!-- Routing Lines from Dashboard to Columns -->
+    <div style="position:relative; height: 30px; margin-bottom: 20px;">
+        <div style="position:absolute; left:50%; top:0; width:1px; height:15px; background: rgba(255,255,255,0.4);"></div>
+        <div style="position:absolute; left:14%; right:17%; top:15px; height:1px; background: rgba(255,255,255,0.4);"></div>
+        <div style="position:absolute; left:14%; top:15px; height:15px; width:1px; background: rgba(255,255,255,0.4);"><span style="position:absolute; bottom:-4px; left:-4.5px; font-size:10px; color: rgba(255,255,255,0.4);">▼</span></div>
+        <div style="position:absolute; left:50%; top:15px; height:15px; width:1px; background: rgba(255,255,255,0.4);"><span style="position:absolute; bottom:-4px; left:-4.5px; font-size:10px; color: rgba(255,255,255,0.4);">▼</span></div>
+        <div style="position:absolute; right:17%; top:15px; height:15px; width:1px; background: rgba(255,255,255,0.4);"><span style="position:absolute; bottom:-4px; left:-4.5px; font-size:10px; color: rgba(255,255,255,0.4);">▼</span></div>
+    </div>
+
+    <!-- 3 Columns Grid -->
+    <div style="display: grid; grid-template-columns: 28% 1fr 34%; gap: 3%; margin-bottom: 20px; position: relative;">
+        
+        <!-- ======================= STUDENT COLUMN ======================= -->
+        <div style="display: flex; flex-direction: column; position: relative;">
+            <div style="border: 1px solid #3B82F6; border-radius: 8px; padding: 16px 16px 16px 40px; background: rgba(59,130,246,0.02); position: relative; height: 100%;">
+                
+                <!-- Student Spine Line -->
+                <div style="position: absolute; left: 16px; top: 70px; bottom: 40px; width: 1px; background: #3B82F6;"></div>
+
+                <div style="text-align: center; margin-bottom: 24px; margin-left: -24px; border: 1px solid #3B82F6; padding: 12px; border-radius: 24px; background: #fff; color: #1E3A8A; display: flex; align-items: center; justify-content: center; gap: 8px; position: relative; z-index: 2;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                    <div style="text-align: left; line-height: 1.2;">
+                        <div style="font-weight: 800; font-size: 12px;">STUDENT SYSTEM</div>
+                        <div style="font-size: 8px; font-weight: 500;">(For Students)</div>
+                    </div>
+                </div>
+
+                <!-- Box Template Start -->
+                <div style="border: 1px solid #3B82F6; border-radius: 4px; margin-bottom: 12px; background: rgba(0,0,0,0.2); position: relative;">
+                    <div style="position: absolute; left: -24px; top: 16px; width: 24px; height: 1px; background: #3B82F6;"><span style="position:absolute; right:-2px; top:-4.5px; font-size:10px; color:#3B82F6;">▶</span></div>
+                    <div style="padding: 8px; border-bottom: 1px solid rgba(59,130,246,0.3); font-size: 9px; font-weight: 700; color: #93C5FD;">USER MANAGEMENT</div>
+                    <div style="padding: 10px; display: flex; flex-direction: column; gap: 4px; font-size: 8px; color: #E2E8F0;">
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Student Account</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">View Profile</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Edit Profile</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Enrollment History</div>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #3B82F6; border-radius: 4px; margin-bottom: 12px; background: rgba(0,0,0,0.2); position: relative;">
+                    <div style="position: absolute; left: -24px; top: 16px; width: 24px; height: 1px; background: #3B82F6;"><span style="position:absolute; right:-2px; top:-4.5px; font-size:10px; color:#3B82F6;">▶</span></div>
+                    <div style="padding: 8px; border-bottom: 1px solid rgba(59,130,246,0.3); font-size: 9px; font-weight: 700; color: #93C5FD;">COURSE MANAGEMENT</div>
+                    <div style="padding: 10px; display: flex; flex-direction: column; gap: 4px; font-size: 8px; color: #E2E8F0;">
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Course Listings</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Ongoing Courses</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Upcoming Courses</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Completed Courses</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Banned / Archived Courses</div>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #3B82F6; border-radius: 4px; margin-bottom: 12px; background: rgba(0,0,0,0.2); position: relative;">
+                    <div style="position: absolute; left: -24px; top: 16px; width: 24px; height: 1px; background: #3B82F6;"><span style="position:absolute; right:-2px; top:-4.5px; font-size:10px; color:#3B82F6;">▶</span></div>
+                    <div style="padding: 8px; border-bottom: 1px solid rgba(59,130,246,0.3); font-size: 9px; font-weight: 700; color: #93C5FD;">ENROLLMENTS</div>
+                    <div style="padding: 10px; display: flex; flex-direction: column; gap: 4px; font-size: 8px; color: #E2E8F0;">
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Manual Enrollment</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Assigned Courses</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Joined Courses</div>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #3B82F6; border-radius: 4px; margin-bottom: 12px; background: rgba(0,0,0,0.2); position: relative;">
+                    <div style="position: absolute; left: -24px; top: 16px; width: 24px; height: 1px; background: #3B82F6;"><span style="position:absolute; right:-2px; top:-4.5px; font-size:10px; color:#3B82F6;">▶</span></div>
+                    <div style="padding: 8px; border-bottom: 1px solid rgba(59,130,246,0.3); font-size: 9px; font-weight: 700; color: #93C5FD;">PROGRESS STATUS</div>
+                    <div style="padding: 10px; display: flex; flex-direction: column; gap: 4px; font-size: 8px; color: #E2E8F0;">
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Attendance</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Assignment Completion</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Course Completion %</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Exam Progress</div>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #3B82F6; border-radius: 4px; margin-bottom: 12px; background: rgba(0,0,0,0.2); position: relative;">
+                    <div style="position: absolute; left: -24px; top: 16px; width: 24px; height: 1px; background: #3B82F6;"><span style="position:absolute; right:-2px; top:-4.5px; font-size:10px; color:#3B82F6;">▶</span></div>
+                    <div style="padding: 8px; border-bottom: 1px solid rgba(59,130,246,0.3); font-size: 9px; font-weight: 700; color: #93C5FD;">ASSIGNMENTS</div>
+                    <div style="padding: 10px; display: flex; flex-direction: column; gap: 4px; font-size: 8px; color: #E2E8F0;">
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">View Assignments</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Submit Assignments</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Submission History</div>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #3B82F6; border-radius: 4px; background: rgba(0,0,0,0.2); position: relative;">
+                    <div style="position: absolute; left: -24px; top: 16px; width: 24px; height: 1px; background: #3B82F6;"><span style="position:absolute; right:-2px; top:-4.5px; font-size:10px; color:#3B82F6;">▶</span></div>
+                    <div style="padding: 8px; border-bottom: 1px solid rgba(59,130,246,0.3); font-size: 9px; font-weight: 700; color: #93C5FD;">ASSESSMENT</div>
+                    <div style="padding: 10px; display: flex; flex-direction: column; gap: 4px; font-size: 8px; color: #E2E8F0;">
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Scheduled Exams</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Take Exam</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Results / Marksheets</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ======================= MIDDLE COLUMN ======================= -->
+        <div style="display: flex; flex-direction: column; align-items: center; position: relative;">
+            
+            <!-- Hexagon with Lateral Lines -->
+            <div style="position: relative; width: 160px; height: 90px; display: flex; align-items: center; justify-content: center; flex-direction: column; margin-top: 10px;">
+                <!-- Line pointing left to Student Spine -->
+                <div style="position: absolute; left: -140px; top: 50%; width: 140px; height: 1px; background: rgba(255,255,255,0.4); z-index: 0;">
+                    <span style="position:absolute; left:-2px; top:-4.5px; font-size:10px; color:rgba(255,255,255,0.4);">◀</span>
+                </div>
+                <!-- Line pointing right to Admin Spine -->
+                <div style="position: absolute; right: -155px; top: 50%; width: 155px; height: 1px; background: rgba(255,255,255,0.4); z-index: 0;">
+                    <span style="position:absolute; right:-2px; top:-4.5px; font-size:10px; color:rgba(255,255,255,0.4);">▶</span>
+                </div>
+
+                <!-- Hexagon CSS shape hack -->
+                <div style="position: absolute; top:0; left:0; width:100%; height:100%; clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); border: 1px solid #8B5CF6; background: rgba(139,92,246,0.1); z-index: 1;"></div>
+                <div style="position: absolute; top:1px; left:1px; right:1px; bottom:1px; clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); background: rgba(0,0,0,0.5); z-index: 2;"></div>
+                
+                <div style="z-index: 3; text-align: center; color: #C4B5FD;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin: 0 auto 4px;"><path d="M3 21h18M5 21V7l8-4v18M13 21V11l8 4v6M7 11h2M7 15h2M15 15h2"/></svg>
+                    <div style="font-weight: 700; font-size: 10px;">ADMIN SYSTEM</div>
+                </div>
+            </div>
+
+            <div style="height: 30px; border-left: 1px solid rgba(255,255,255,0.4); position: relative;"><span style="position:absolute; bottom:-4px; left:-4.5px; font-size:10px; color: rgba(255,255,255,0.4);">▼</span></div>
+
+            <!-- Faculty Inner Box -->
+            <div style="border: 1px solid #EA580C; border-radius: 8px; padding: 16px 16px 16px 40px; background: rgba(234,88,12,0.02); width: 100%; position: relative;">
+                
+                <!-- Faculty Spine Line -->
+                <div style="position: absolute; left: 16px; top: 60px; bottom: 40px; width: 1px; background: #EA580C;"></div>
+
+                <div style="text-align: center; margin-bottom: 16px; margin-left: -24px; border: 1px solid #EA580C; padding: 12px; border-radius: 24px; background: #fff; color: #9A3412; display: flex; align-items: center; justify-content: center; gap: 8px; position: relative; z-index: 2;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                    <div style="text-align: left; line-height: 1.2;">
+                        <div style="font-weight: 800; font-size: 12px;">FACULTY SYSTEM</div>
+                        <div style="font-size: 8px; font-weight: 500;">(For Faculty/Instructors)</div>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #EA580C; border-radius: 4px; margin-bottom: 12px; background: rgba(0,0,0,0.2); position: relative;">
+                    <div style="position: absolute; left: -24px; top: 12px; width: 24px; height: 1px; background: #EA580C;"><span style="position:absolute; right:-2px; top:-4.5px; font-size:10px; color:#EA580C;">▶</span></div>
+                    <div style="padding: 8px; border-bottom: 1px solid rgba(234,88,12,0.3); font-size: 9px; font-weight: 700; color: #FDBA74;">USER MANAGEMENT</div>
+                    <div style="padding: 10px; display: flex; flex-direction: column; gap: 4px; font-size: 8px; color: #E2E8F0;">
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Faculty Account</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">View / Edit Profile</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Preferences</div>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #EA580C; border-radius: 4px; margin-bottom: 12px; background: rgba(0,0,0,0.2); position: relative;">
+                    <div style="position: absolute; left: -24px; top: 12px; width: 24px; height: 1px; background: #EA580C;"><span style="position:absolute; right:-2px; top:-4.5px; font-size:10px; color:#EA580C;">▶</span></div>
+                    <div style="padding: 8px; border-bottom: 1px solid rgba(234,88,12,0.3); font-size: 9px; font-weight: 700; color: #FDBA74;">COURSE MANAGEMENT</div>
+                    <div style="padding: 10px; display: flex; flex-direction: column; gap: 4px; font-size: 8px; color: #E2E8F0;">
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">My Courses</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Course Listings</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Edit Course</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Review Course</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Publish Course</div>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #EA580C; border-radius: 4px; margin-bottom: 12px; background: rgba(0,0,0,0.2); position: relative;">
+                    <div style="position: absolute; left: -24px; top: 12px; width: 24px; height: 1px; background: #EA580C;"><span style="position:absolute; right:-2px; top:-4.5px; font-size:10px; color:#EA580C;">▶</span></div>
+                    <div style="padding: 8px; border-bottom: 1px solid rgba(234,88,12,0.3); font-size: 9px; font-weight: 700; color: #FDBA74;">STUDENT MANAGEMENT</div>
+                    <div style="padding: 10px; display: flex; flex-direction: column; gap: 4px; font-size: 8px; color: #E2E8F0;">
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Enrolled Students</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Attendance Tracking</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Student Progress</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Student Performance</div>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #EA580C; border-radius: 4px; margin-bottom: 12px; background: rgba(0,0,0,0.2); position: relative;">
+                    <div style="position: absolute; left: -24px; top: 12px; width: 24px; height: 1px; background: #EA580C;"><span style="position:absolute; right:-2px; top:-4.5px; font-size:10px; color:#EA580C;">▶</span></div>
+                    <div style="padding: 8px; border-bottom: 1px solid rgba(234,88,12,0.3); font-size: 9px; font-weight: 700; color: #FDBA74;">ASSIGNMENTS & GRADING</div>
+                    <div style="padding: 10px; display: flex; flex-direction: column; gap: 4px; font-size: 8px; color: #E2E8F0;">
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Create Assignment</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Review Submissions</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Grade Assignments</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Provide Feedback</div>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #EA580C; border-radius: 4px; margin-bottom: 12px; background: rgba(0,0,0,0.2); position: relative;">
+                    <div style="position: absolute; left: -24px; top: 12px; width: 24px; height: 1px; background: #EA580C;"><span style="position:absolute; right:-2px; top:-4.5px; font-size:10px; color:#EA580C;">▶</span></div>
+                    <div style="padding: 8px; border-bottom: 1px solid rgba(234,88,12,0.3); font-size: 9px; font-weight: 700; color: #FDBA74;">SALES & REPORTS / ANALYTICS</div>
+                    <div style="padding: 10px; display: flex; flex-direction: column; gap: 4px; font-size: 8px; color: #E2E8F0;">
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Revenue Reports</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Enrollment Analytics</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Course Performance</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Earnings</div>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #EA580C; border-radius: 4px; margin-bottom: 12px; background: rgba(0,0,0,0.2); position: relative;">
+                    <div style="position: absolute; left: -24px; top: 12px; width: 24px; height: 1px; background: #EA580C;"><span style="position:absolute; right:-2px; top:-4.5px; font-size:10px; color:#EA580C;">▶</span></div>
+                    <div style="padding: 8px; border-bottom: 1px solid rgba(234,88,12,0.3); font-size: 9px; font-weight: 700; color: #FDBA74;">ASSESSMENT</div>
+                    <div style="padding: 10px; display: flex; flex-direction: column; gap: 4px; font-size: 8px; color: #E2E8F0;">
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Schedule Exams</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Question Bank</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Conduct Exams</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Grade Exams</div>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #EA580C; border-radius: 4px; background: rgba(0,0,0,0.2); position: relative;">
+                    <div style="position: absolute; left: -24px; top: 12px; width: 24px; height: 1px; background: #EA580C;"><span style="position:absolute; right:-2px; top:-4.5px; font-size:10px; color:#EA580C;">▶</span></div>
+                    <div style="padding: 8px; border-bottom: 1px solid rgba(234,88,12,0.3); font-size: 9px; font-weight: 700; color: #FDBA74;">PROFILE & SETTINGS</div>
+                    <div style="padding: 10px; display: flex; flex-direction: column; gap: 4px; font-size: 8px; color: #E2E8F0;">
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Account Settings</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Linked Accounts</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Notifications</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ======================= RIGHT COLUMN (ADMIN) ======================= -->
+        <div style="display: flex; flex-direction: column; position: relative;">
+            <div style="border: 1px solid #EF4444; border-radius: 8px; padding: 16px 16px 16px 40px; background: rgba(239,68,68,0.02); height: 100%; position: relative;">
+                
+                <!-- Admin Spine Line -->
+                <div style="position: absolute; left: 16px; top: 70px; bottom: 40px; width: 1px; background: #EF4444;"></div>
+
+                <div style="text-align: center; margin-bottom: 24px; margin-left: -24px; border: 1px solid #EF4444; padding: 12px; border-radius: 24px; background: #fff; color: #991B1B; display: flex; align-items: center; justify-content: center; gap: 8px; position: relative; z-index: 2;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                    <div style="text-align: left; line-height: 1.2;">
+                        <div style="font-weight: 800; font-size: 12px;">ADMIN SYSTEM</div>
+                        <div style="font-size: 8px; font-weight: 500;">(For Admins)</div>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #EF4444; border-radius: 4px; margin-bottom: 12px; background: rgba(0,0,0,0.2); position: relative;">
+                    <div style="position: absolute; left: -24px; top: 12px; width: 24px; height: 1px; background: #EF4444;"><span style="position:absolute; right:-2px; top:-4.5px; font-size:10px; color:#EF4444;">▶</span></div>
+                    <div style="padding: 8px; border-bottom: 1px solid rgba(239,68,68,0.3); font-size: 9px; font-weight: 700; color: #FCA5A5;">USER MANAGEMENT</div>
+                    <div style="padding: 10px; display: flex; flex-direction: column; gap: 4px; font-size: 8px; color: #E2E8F0;">
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Student Accounts</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Faculty Accounts</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Bulk Upload (Excel)</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Filters & Sorting</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Role Management</div>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #EF4444; border-radius: 4px; margin-bottom: 12px; background: rgba(0,0,0,0.2); position: relative;">
+                    <div style="position: absolute; left: -24px; top: 12px; width: 24px; height: 1px; background: #EF4444;"><span style="position:absolute; right:-2px; top:-4.5px; font-size:10px; color:#EF4444;">▶</span></div>
+                    <div style="padding: 8px; border-bottom: 1px solid rgba(239,68,68,0.3); font-size: 9px; font-weight: 700; color: #FCA5A5;">COURSE MANAGEMENT</div>
+                    <div style="padding: 10px; display: flex; flex-direction: column; gap: 4px; font-size: 8px; color: #E2E8F0;">
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Course Listings</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">• Ongoing</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">• Upcoming</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">• Completed</div>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #EF4444; border-radius: 4px; margin-bottom: 12px; background: rgba(0,0,0,0.2); position: relative;">
+                    <div style="position: absolute; left: -24px; top: 12px; width: 24px; height: 1px; background: #EF4444;"><span style="position:absolute; right:-2px; top:-4.5px; font-size:10px; color:#EF4444;">▶</span></div>
+                    <div style="padding: 8px; border-bottom: 1px solid rgba(239,68,68,0.3); font-size: 9px; font-weight: 700; color: #FCA5A5;">COURSE CREATION</div>
+                    <div style="padding: 10px; display: flex; flex-direction: column; gap: 4px; font-size: 8px; color: #E2E8F0;">
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Title</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Description</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Thumbnail</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Start Date / End Date</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Category</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Code</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Language</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Mandatory / Elective</div>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #EF4444; border-radius: 4px; margin-bottom: 12px; background: rgba(0,0,0,0.2); position: relative;">
+                    <div style="position: absolute; left: -24px; top: 12px; width: 24px; height: 1px; background: #EF4444;"><span style="position:absolute; right:-2px; top:-4.5px; font-size:10px; color:#EF4444;">▶</span></div>
+                    <div style="padding: 8px; border-bottom: 1px solid rgba(239,68,68,0.3); font-size: 9px; font-weight: 700; color: #FCA5A5;">FACULTY ASSIGNMENT</div>
+                    <div style="padding: 10px; display: flex; flex-direction: column; gap: 4px; font-size: 8px; color: #E2E8F0;">
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Assign Faculty</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Change Faculty</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Remove Faculty</div>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #EF4444; border-radius: 4px; margin-bottom: 12px; background: rgba(0,0,0,0.2); position: relative;">
+                    <div style="position: absolute; left: -24px; top: 12px; width: 24px; height: 1px; background: #EF4444;"><span style="position:absolute; right:-2px; top:-4.5px; font-size:10px; color:#EF4444;">▶</span></div>
+                    <div style="padding: 8px; border-bottom: 1px solid rgba(239,68,68,0.3); font-size: 9px; font-weight: 700; color: #FCA5A5;">STUDENT MAPPING</div>
+                    <div style="padding: 10px; display: flex; flex-direction: column; gap: 4px; font-size: 8px; color: #E2E8F0;">
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Assign Students to Courses</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Cohort Creation</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Batch Allocation</div>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #EF4444; border-radius: 4px; margin-bottom: 12px; background: rgba(0,0,0,0.2); position: relative;">
+                    <div style="position: absolute; left: -24px; top: 12px; width: 24px; height: 1px; background: #EF4444;"><span style="position:absolute; right:-2px; top:-4.5px; font-size:10px; color:#EF4444;">▶</span></div>
+                    <div style="padding: 8px; border-bottom: 1px solid rgba(239,68,68,0.3); font-size: 9px; font-weight: 700; color: #FCA5A5;">ENROLLMENT SYSTEM</div>
+                    <div style="padding: 10px; display: flex; flex-direction: column; gap: 4px; font-size: 8px; color: #E2E8F0;">
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Manual Enrollment</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Bulk Enrollment</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">API Integration</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">ERP Sync</div>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #EF4444; border-radius: 4px; margin-bottom: 12px; background: rgba(0,0,0,0.2); position: relative;">
+                    <div style="position: absolute; left: -24px; top: 12px; width: 24px; height: 1px; background: #EF4444;"><span style="position:absolute; right:-2px; top:-4.5px; font-size:10px; color:#EF4444;">▶</span></div>
+                    <div style="padding: 8px; border-bottom: 1px solid rgba(239,68,68,0.3); font-size: 9px; font-weight: 700; color: #FCA5A5;">CONTENT MANAGEMENT</div>
+                    <div style="padding: 10px; display: flex; flex-direction: column; gap: 4px; font-size: 8px; color: #E2E8F0;">
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Content Library</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Upload Resources</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Approve Resources</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Articles</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">PDFs</div>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #EF4444; border-radius: 4px; margin-bottom: 12px; background: rgba(0,0,0,0.2); position: relative;">
+                    <div style="position: absolute; left: -24px; top: 12px; width: 24px; height: 1px; background: #EF4444;"><span style="position:absolute; right:-2px; top:-4.5px; font-size:10px; color:#EF4444;">▶</span></div>
+                    <div style="padding: 8px; border-bottom: 1px solid rgba(239,68,68,0.3); font-size: 9px; font-weight: 700; color: #FCA5A5;">ASSESSMENT SYSTEM</div>
+                    <div style="padding: 10px; display: flex; flex-direction: column; gap: 4px; font-size: 8px; color: #E2E8F0;">
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Create Exams</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Upload Templates</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Scheduling (Date / Month / Year)</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Assign Faculty</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Question Bank</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Completed Exams</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Marksheet Database</div>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #EF4444; border-radius: 4px; margin-bottom: 12px; background: rgba(0,0,0,0.2); position: relative;">
+                    <div style="position: absolute; left: -24px; top: 12px; width: 24px; height: 1px; background: #EF4444;"><span style="position:absolute; right:-2px; top:-4.5px; font-size:10px; color:#EF4444;">▶</span></div>
+                    <div style="padding: 8px; border-bottom: 1px solid rgba(239,68,68,0.3); font-size: 9px; font-weight: 700; color: #FCA5A5;">ANALYTICS / REPORTS</div>
+                    <div style="padding: 10px; display: flex; flex-direction: column; gap: 4px; font-size: 8px; color: #E2E8F0;">
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Revenue Reports</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Enrollment Analytics</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Course Performance</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Usage Reports</div>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #EF4444; border-radius: 4px; margin-bottom: 12px; background: rgba(0,0,0,0.2); position: relative;">
+                    <div style="position: absolute; left: -24px; top: 12px; width: 24px; height: 1px; background: #EF4444;"><span style="position:absolute; right:-2px; top:-4.5px; font-size:10px; color:#EF4444;">▶</span></div>
+                    <div style="padding: 8px; border-bottom: 1px solid rgba(239,68,68,0.3); font-size: 9px; font-weight: 700; color: #FCA5A5;">SYSTEM SETTINGS</div>
+                    <div style="padding: 10px; display: flex; flex-direction: column; gap: 4px; font-size: 8px; color: #E2E8F0;">
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">API Integration</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Backup & Restore</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Template Management</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Global Configurations</div>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #EF4444; border-radius: 4px; margin-bottom: 12px; background: rgba(0,0,0,0.2); position: relative;">
+                    <div style="position: absolute; left: -24px; top: 12px; width: 24px; height: 1px; background: #EF4444;"><span style="position:absolute; right:-2px; top:-4.5px; font-size:10px; color:#EF4444;">▶</span></div>
+                    <div style="padding: 8px; border-bottom: 1px solid rgba(239,68,68,0.3); font-size: 9px; font-weight: 700; color: #FCA5A5;">PERMISSIONS</div>
+                    <div style="padding: 10px; display: flex; flex-direction: column; gap: 4px; font-size: 8px; color: #E2E8F0;">
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Admin Full Access</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Faculty Controlled Access</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Student Limited Access</div>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #EF4444; border-radius: 4px; margin-bottom: 12px; background: rgba(0,0,0,0.2); position: relative;">
+                    <div style="position: absolute; left: -24px; top: 12px; width: 24px; height: 1px; background: #EF4444;"><span style="position:absolute; right:-2px; top:-4.5px; font-size:10px; color:#EF4444;">▶</span></div>
+                    <div style="padding: 8px; border-bottom: 1px solid rgba(239,68,68,0.3); font-size: 9px; font-weight: 700; color: #FCA5A5;">APPROVAL FLOW</div>
+                    <div style="padding: 10px; display: flex; flex-direction: column; gap: 4px; align-items: center; font-size: 8px; color: #E2E8F0;">
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 12px; width: 100%; text-align: center;">Faculty Request</div>
+                        <div style="color: #F87171;">↓</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 12px; width: 100%; text-align: center;">HOD Approval</div>
+                        <div style="color: #F87171;">↓</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 12px; width: 100%; text-align: center;">FOT Approval</div>
+                        <div style="color: #F87171;">↓</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 12px; width: 100%; text-align: center;">Final Approval</div>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #EF4444; border-radius: 4px; background: rgba(0,0,0,0.2); position: relative;">
+                    <div style="position: absolute; left: -24px; top: 12px; width: 24px; height: 1px; background: #EF4444;"><span style="position:absolute; right:-2px; top:-4.5px; font-size:10px; color:#EF4444;">▶</span></div>
+                    <div style="padding: 8px; border-bottom: 1px solid rgba(239,68,68,0.3); font-size: 9px; font-weight: 700; color: #FCA5A5;">SUPPORT SYSTEM</div>
+                    <div style="padding: 10px; display: flex; flex-direction: column; gap: 4px; font-size: 8px; color: #E2E8F0;">
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">View Tickets</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Open / Resolved</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Escalation</div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); padding: 4px; border-radius: 2px;">Technical Support</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ERP / API INTEGRATION -->
+    <div style="border: 1px solid rgba(167,139,250,0.3); border-radius: 8px; padding: 16px; margin-bottom: 20px; background: rgba(167,139,250,0.05); text-align: center; position: relative;">
+        <!-- Dashed lines connecting up to the 3 columns -->
+        <div style="position: absolute; top: -20px; left: 16%; width: 1px; height: 20px; border-left: 1px dashed rgba(255,255,255,0.4);"></div>
+        <div style="position: absolute; top: -20px; left: 50%; width: 1px; height: 20px; border-left: 1px dashed rgba(255,255,255,0.4);"></div>
+        <div style="position: absolute; top: -20px; right: 16%; width: 1px; height: 20px; border-left: 1px dashed rgba(255,255,255,0.4);"></div>
+
+        <div style="font-weight: 700; font-size: 12px; margin-bottom: 12px; color: #C4B5FD;">ERP / API INTEGRATION</div>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+            <div style="padding: 6px 16px; border: 1px solid rgba(167,139,250,0.3); border-radius: 20px; font-size: 10px; color: #E2E8F0; background: rgba(0,0,0,0.2);">Student Data Sync</div>
+            <div style="padding: 6px 16px; border: 1px solid rgba(167,139,250,0.3); border-radius: 20px; font-size: 10px; color: #E2E8F0; background: rgba(0,0,0,0.2);">Course Mapping</div>
+            <div style="padding: 6px 16px; border: 1px solid rgba(167,139,250,0.3); border-radius: 20px; font-size: 10px; color: #E2E8F0; background: rgba(0,0,0,0.2);">Mandatory / Elective Structure</div>
+            <div style="padding: 6px 16px; border: 1px solid rgba(167,139,250,0.3); border-radius: 20px; font-size: 10px; color: #E2E8F0; background: rgba(0,0,0,0.2);">Registration Sync</div>
+            <div style="padding: 6px 16px; border: 1px solid rgba(167,139,250,0.3); border-radius: 20px; font-size: 10px; color: #E2E8F0; background: rgba(0,0,0,0.2);">Attendance Sync</div>
+        </div>
+    </div>
+
+    <!-- CROSS SYSTEM CONNECTIVITY -->
+    <div style="border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; padding: 16px; margin-bottom: 20px; background: rgba(255,255,255,0.02);">
+        <div style="font-weight: 700; font-size: 12px; margin-bottom: 16px; color: #E2E8F0; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">CROSS SYSTEM CONNECTIVITY</div>
+        
+        <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px;">
+            <div style="padding: 8px; background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; text-align: center;">
+                <div style="font-size: 10px; font-weight: 700; color: #FCA5A5; margin-bottom: 6px;">Admin → Faculty</div>
+                <div style="font-size: 9px; color: #9CA3AF; line-height: 1.4;">Assign Courses<br>Permissions<br>Faculty Management</div>
+            </div>
+            
+            <div style="padding: 8px; background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; text-align: center;">
+                <div style="font-size: 10px; font-weight: 700; color: #FCA5A5; margin-bottom: 6px;">Admin → Student</div>
+                <div style="font-size: 9px; color: #9CA3AF; line-height: 1.4;">Enrollment<br>Access Rights<br>Course Allocation</div>
+            </div>
+            
+            <div style="padding: 8px; background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; text-align: center;">
+                <div style="font-size: 10px; font-weight: 700; color: #FDBA74; margin-bottom: 6px;">Faculty → Student</div>
+                <div style="font-size: 9px; color: #9CA3AF; line-height: 1.4;">Assignments<br>Exams<br>Feedback<br>Course Delivery</div>
+            </div>
+
+            <div style="padding: 8px; background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; text-align: center;">
+                <div style="font-size: 10px; font-weight: 700; color: #93C5FD; margin-bottom: 6px;">Student → Faculty</div>
+                <div style="font-size: 9px; color: #9CA3AF; line-height: 1.4;">Submissions<br>Participation<br>Performance</div>
+            </div>
+
+            <div style="padding: 8px; background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; text-align: center;">
+                <div style="font-size: 10px; font-weight: 700; color: #CBD5E1; margin-bottom: 6px;">System → Admin</div>
+                <div style="font-size: 9px; color: #9CA3AF; line-height: 1.4;">Analytics<br>Logs<br>Reports<br>Usage Data</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FULL SYSTEM LOOP -->
+    <div style="border: 1px solid rgba(16,185,129,0.3); border-radius: 8px; padding: 16px; background: rgba(16,185,129,0.05); text-align: center;">
+        <div style="font-weight: 700; font-size: 12px; margin-bottom: 16px; color: #6EE7B7;">FULL SYSTEM LOOP</div>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap;">
+            <div style="padding: 6px 12px; border: 1px solid rgba(16,185,129,0.5); border-radius: 4px; font-size: 9px; background: rgba(0,0,0,0.2);">Admin Creates System</div>
+            <div style="color: #6EE7B7;">→</div>
+            <div style="padding: 6px 12px; border: 1px solid rgba(16,185,129,0.5); border-radius: 4px; font-size: 9px; background: rgba(0,0,0,0.2);">Faculty Operates Courses</div>
+            <div style="color: #6EE7B7;">→</div>
+            <div style="padding: 6px 12px; border: 1px solid rgba(16,185,129,0.5); border-radius: 4px; font-size: 9px; background: rgba(0,0,0,0.2);">Student Learns & Submits</div>
+            <div style="color: #6EE7B7;">→</div>
+            <div style="padding: 6px 12px; border: 1px solid rgba(16,185,129,0.5); border-radius: 4px; font-size: 9px; background: rgba(0,0,0,0.2);">Data Generated</div>
+            <div style="color: #6EE7B7;">→</div>
+            <div style="padding: 6px 12px; border: 1px solid rgba(16,185,129,0.5); border-radius: 4px; font-size: 9px; background: rgba(0,0,0,0.2);">Analytics Produced</div>
+            <div style="color: #6EE7B7;">→</div>
+            <div style="padding: 6px 12px; border: 1px solid rgba(16,185,129,0.5); border-radius: 4px; font-size: 9px; background: rgba(0,0,0,0.2);">Admin Improves System</div>
+        </div>
+    </div>
+
+</div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- SECTION 6: Enterprise Design System Documentation -->
+        <section class="slide" id="slide-4" data-slide="4" style="height: auto; min-height: 100vh; overflow-y: auto; padding-bottom: 15vw;">
+            <div class="slide-content" style="max-width: 1400px; padding: 0 40px;">
+                <div class="slide-header" style="margin-bottom: 60px;">
+                    <span class="slide-number">04</span>
+                    <h2 class="slide-title animate-in" data-delay="0">Engineering <span class="gradient-text">Design System</span></h2>
+                    <p class="slide-subtitle animate-in" data-delay="1" style="margin-top: 10px; opacity: 0.7; font-size: 1.1rem;">A scalable architecture for Admin, Faculty, and Student environments.</p>
+                </div>
+
+                <div class="ds-container animate-in" data-delay="2">
+                    
+                    <!-- FOUNDATION BLOCK -->
+                    <div class="ds-block">
+                        <h3 class="ds-block-title">01. Foundations & Tokens</h3>
+                        <div class="ds-flex-grid">
+                            <!-- Colors -->
+                            <div class="ds-sub-card">
+                                <h4>Color Palette</h4>
+                                <div class="color-row">
+                                    <div class="swatch-group"><div class="swatch" style="background:#3B82F6;"></div><span>Admin Blue</span><small>#3B82F6</small></div>
+                                    <div class="swatch-group"><div class="swatch" style="background:#FFB15F;"></div><span>Student Org</span><small>#FFB15F</small></div>
+                                    <div class="swatch-group"><div class="swatch" style="background:#22C55E;"></div><span>Success</span><small>#22C55E</small></div>
+                                    <div class="swatch-group"><div class="swatch" style="background:#EF4444;"></div><span>Error</span><small>#EF4444</small></div>
+                                </div>
+                            </div>
+                            <!-- Typography -->
+                            <div class="ds-sub-card">
+                                <h4>Typography Scale</h4>
+                                <div class="type-spec" style="font-family: 'Space Grotesk', sans-serif; font-size: 32px; font-weight: 700; color: #fff;">H2 / Section Title / 32px</div>
+                                <div class="type-spec" style="font-family: 'Inter', sans-serif; font-size: 16px; opacity: 0.7; line-height: 1.6;">Body / Base / 16px / Regular. Integrated for optimal legibility across information-heavy dashboards.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- COMPONENT LIBRARY BLOCK -->
+                    <div class="ds-block">
+                        <h3 class="ds-block-title">02. Atomic Component Library</h3>
+                        <div class="ds-flex-grid">
+                            <!-- Actionable -->
+                            <div class="ds-sub-card">
+                                <h4>Actions & Buttons</h4>
+                                <div class="comp-preview">
+                                    <div class="btn-stack">
+                                        <button class="lib-btn prim-blue">Primary Action</button>
+                                        <button class="lib-btn prim-orange">Student Click</button>
+                                        <button class="lib-btn ghost-btn">Secondary</button>
+                                    </div>
+                                    <div class="state-labels"><span>Default</span><span>Hover (+10%)</span><span>Active (Inset)</span></div>
+                                </div>
+                            </div>
+                            <!-- Inputs -->
+                            <div class="ds-sub-card">
+                                <h4>Forms & Validation</h4>
+                                <div class="comp-preview">
+                                    <input type="text" class="lib-input" placeholder="Search Database...">
+                                    <div class="input-error-wrapper">
+                                        <input type="text" class="lib-input err-border" value="Invalid student ID">
+                                        <span class="err-text">Check ID format (B12XXX)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ds-flex-grid" style="margin-top: 24px;">
+                            <!-- Data -->
+                            <div class="ds-sub-card" style="flex: 2;">
+                                <h4>Data & Table Patterns</h4>
+                                <div class="table-mockup">
+                                    <div class="table-head"><span>Course Name</span><span>Enrollment</span><span>Status</span></div>
+                                    <div class="table-row"><span>Cybersecurity</span><span class="badg-blue">26/30</span><span class="badg-green">Ongoing</span></div>
+                                    <div class="table-row"><span>Mobile Dev</span><span class="badg-blue">14/20</span><span class="badg-orange">Draft</span></div>
+                                </div>
+                            </div>
+                            <!-- Interaction -->
+                            <div class="ds-sub-card">
+                                <h4>Interaction & Focus</h4>
+                                <ul class="patterns-list">
+                                    <li><strong>8px Grid:</strong> All spacing (4, 8, 16, 24).</li>
+                                    <li><strong>Radius:</strong> 12px for inputs, 20px for cards.</li>
+                                    <li><strong>Motion:</strong> 300ms cubic-bezier transition.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ROLE MAPPING -->
+                    <div class="ds-block">
+                        <h3 class="ds-block-title">03. Role-Based Governance</h3>
+                        <div class="ds-table-wrapper">
+                            <table class="role-matrix">
+                                <thead>
+                                    <tr><th>System Module</th><th>Admin Profile</th><th>Faculty Profile</th><th>Student Profile</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Course Management</td><td>Create / Assign</td><td>Edit Content</td><td>View / Enroll</td></tr>
+                                    <tr><td>Evaluations</td><td>Audit Ledger</td><td>Grade / Annotate</td><td>Self-Reporting</td></tr>
+                                    <tr><td>Global Settings</td><td>Full Governance</td><td>Read Only</td><td>Disabled</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Design System styles moved to styles.css -->
+            </div>
+        </section>
+
+        <!-- SECTION 6: Prototypes - Student -->
+        <!-- SECTION 07: Student Working Prototype -->
+        <section class="slide" id="slide-5" data-slide="5">
+            <div class="slide-content" style="max-width: 1400px; padding: 0 40px;">
+                <div class="slide-header">
+                    <span class="slide-number">05</span>
+                    <h2 class="slide-title animate-in" data-delay="0">Student <span class="gradient-text">Environment</span></h2>
+                    <p class="slide-subtitle animate-in" data-delay="1" style="margin-top: 10px; opacity: 0.7; font-size: 1rem;">Experiencing the student journey: Dashboard, Grades, and Assignments.</p>
+                </div>
+
+                <div class="prototype-explorer student-proto animate-in" data-delay="2" data-prototype="student">
+                    <div class="explorer-toolbar" style="justify-content: flex-start;">
+                        <div class="role-indicator student-theme">Student Profile</div>
+                        <div class="flow-selector" id="studentFlows"></div>
+                    </div>
+                    <div class="explorer-body">
+                        <div class="screens-sidebar" id="studentSidebar"></div>
+                        <div class="prototype-stage">
+                            <div class="device-frame" style="border: 2px solid rgba(255, 177, 95, 0.3);">
+                                <div class="device-bar">
+                                    <div class="dots"><span style="background: #FFB15F; opacity: 0.4;"></span><span style="background: #FFB15F; opacity: 0.4;"></span><span style="background: #FFB15F; opacity: 0.4;"></span></div>
+                                    <div class="browser-url">iit-lms.edu/student/portal</div>
+                                </div>
+                                <div class="screen-preview-area">
+                                    <!-- Working UI Application Shell -->
+                                    <div class="prototype-app-shell hidden-ui" id="studentAppShell" style="--role-color: #FFB15F;">
+                                        <aside class="lms-sidebar">
+                                            <div class="sidebar-logo">
+                                                <div style="background: var(--role-color); width: 24px; height: 24px; border-radius: 6px;"></div>
+                                                IITD LMS
+                                            </div>
+                                            <nav class="sidebar-nav">
+                                                <div class="nav-item active" data-view="dashboard">Dashboard</div>
+                                                <div class="nav-item" data-view="courses">Courses</div>
+                                                <div class="nav-item" data-view="grades">Grades</div>
+                                                <div class="nav-item" data-view="assignments">Assignments</div>
+                                                <div class="nav-item" data-view="calendar">Calendar</div>
+                                            </nav>
+                                        </aside>
+                                        <main class="lms-main">
+                                            <header class="lms-app-header">
+                                                <div class="header-search">Search courses, units...</div>
+                                                <div class="header-actions">
+                                                    <div class="user-profile">
+                                                        <div class="profile-avatar" style="color: #FFB15F;">A</div>
+                                                        Aisha Hashmi
+                                                    </div>
+                                                </div>
+                                            </header>
+                                            <div class="app-page-content" id="studentAppContent">
+                                                <!-- Dashboard View (Default) -->
+                                                <div class="dashboard-hero">
+                                                    <h2>Welcome back, Aisha! 👋</h2>
+                                                    <p>You have 3 assignments due this week. Stay focused!</p>
+                                                </div>
+                                                <div class="stats-grid">
+                                                    <div class="stat-card">
+                                                        <div class="stat-label">Total Courses</div>
+                                                        <div class="stat-val">4 Active</div>
+                                                    </div>
+                                                    <div class="stat-card">
+                                                        <div class="stat-label">Attendance</div>
+                                                        <div class="stat-val">94.2%</div>
+                                                    </div>
+                                                    <div class="stat-card">
+                                                        <div class="stat-label">Pending GPA</div>
+                                                        <div class="stat-val">8.4 / 10</div>
+                                                    </div>
+                                                </div>
+                                                <div class="section-title">Ongoing Courses</div>
+                                                <div class="course-grid">
+                                                    <div class="course-card-ui">
+                                                        <div class="course-img" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('IIT UI Work/Student/dashboard/course-1.jpg'); background-size: cover;"></div>
+                                                        <div class="course-info-ui">
+                                                            <span class="course-tag">Computer Science</span>
+                                                            <div class="course-title-ui">Introduction to Cybersecurity</div>
+                                                            <div class="course-progress-bar"><div class="progress-fill" style="width: 75%;"></div></div>
+                                                            <div class="progress-text"><span>Progress</span><span>75%</span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="course-card-ui">
+                                                        <div class="course-img" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('IIT UI Work/Student/dashboard/course-2.jpg'); background-size: cover;"></div>
+                                                        <div class="course-info-ui">
+                                                            <span class="course-tag">Mathematics</span>
+                                                            <div class="course-title-ui">Advanced Linear Algebra</div>
+                                                            <div class="course-progress-bar"><div class="progress-fill" style="width: 40%;"></div></div>
+                                                            <div class="progress-text"><span>Progress</span><span>40%</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </main>
+                                    </div>
+                                    <!-- Image Viewer (Visible by default, sibling of app-shell) -->
+                                    <div class="prototype-image-viewer">
+                                        <img class="mainPreview" src="IIT UI Work/Student/dashboard/student dashboard.jpg" alt="Student View">
+                                    </div>
+                                    <div class="hotspot-nav">
+                                        <button class="prevScreen" title="Previous"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+                                        <button class="nextScreen" title="Next"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="screen-caption"><h4 class="screenTitle">Student Dashboard</h4><p class="screenDesc">Aggregated view of academic progress and schedules.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: Prototypes - Faculty Grading & Annotations -->
+        <!-- SECTION 08: Faculty Working Prototype -->
+        <section class="slide" id="slide-6" data-slide="6">
+            <div class="slide-content" style="max-width: 1400px; padding: 0 40px;">
+                <div class="slide-header">
+                    <span class="slide-number">06</span>
+                    <h2 class="slide-title animate-in" data-delay="0">Faculty <span class="gradient-text">Evaluation Hub</span></h2>
+                    <p class="slide-subtitle animate-in" data-delay="1" style="margin-top: 10px; opacity: 0.7; font-size: 1rem;">Managing academic excellence: Grading, Comms, and Calendaring.</p>
+                </div>
+
+                <div class="prototype-explorer faculty-proto animate-in" data-delay="2" data-prototype="faculty">
+                    <div class="explorer-toolbar" style="justify-content: flex-start;">
+                        <div class="role-indicator faculty-theme">Faculty Profile</div>
+                        <div class="flow-selector" id="facultyFlows"></div>
+                    </div>
+                    <div class="explorer-body">
+                        <div class="screens-sidebar" id="facultySidebar"></div>
+                        <div class="prototype-stage">
+                            <div class="device-frame" style="border: 2px solid rgba(59, 130, 246, 0.3);">
+                                <div class="device-bar">
+                                    <div class="dots"><span style="background: #3B82F6; opacity: 0.4;"></span><span style="background: #3B82F6; opacity: 0.4;"></span><span style="background: #3B82F6; opacity: 0.4;"></span></div>
+                                    <div class="browser-url">iit-lms.edu/faculty/dashboard</div>
+                                </div>
+                                <div class="screen-preview-area">
+                                    <!-- Working UI Application Shell -->
+                                    <div class="prototype-app-shell hidden-ui" id="facultyAppShell" style="--role-color: #3B82F6;">
+                                        <aside class="lms-sidebar">
+                                            <div class="sidebar-logo">
+                                                <div style="background: var(--role-color); width: 24px; height: 24px; border-radius: 6px;"></div>
+                                                IITD Faculty
+                                            </div>
+                                            <nav class="sidebar-nav">
+                                                <div class="nav-item active" data-view="dashboard">Overview</div>
+                                                <div class="nav-item" data-view="grading">Grading</div>
+                                                <div class="nav-item" data-view="students">My Students</div>
+                                                <div class="nav-item" data-view="announcements">Broadcast</div>
+                                                <div class="nav-item" data-view="calendar">Timetable</div>
+                                            </nav>
+                                        </aside>
+                                        <main class="lms-main">
+                                            <header class="lms-app-header">
+                                                <div class="header-search">Search student ID, course...</div>
+                                                <div class="header-actions">
+                                                    <div class="user-profile">
+                                                        <div class="profile-avatar" style="color: #3B82F6;">R</div>
+                                                        Prof. Rajesh Kumar
+                                                    </div>
+                                                </div>
+                                            </header>
+                                            <div class="app-page-content" id="facultyAppContent">
+                                                <!-- Dashboard View -->
+                                                <div class="dashboard-hero">
+                                                    <h2>Engagement Overview</h2>
+                                                    <p>Your current active courses have a 92% submission rate this week.</p>
+                                                </div>
+                                                <div class="stats-grid">
+                                                    <div class="stat-card">
+                                                        <div class="stat-label">Submissions</div>
+                                                        <div class="stat-val">128 Pending</div>
+                                                    </div>
+                                                    <div class="stat-card">
+                                                        <div class="stat-label">Avg. Score</div>
+                                                        <div class="stat-val">7.8 CGPA</div>
+                                                    </div>
+                                                    <div class="stat-card">
+                                                        <div class="stat-label">Live Sessions</div>
+                                                        <div class="stat-val">2 Today</div>
+                                                    </div>
+                                                </div>
+                                                <div class="section-title">My Ongoing Sessions</div>
+                                                <div class="course-grid">
+                                                    <div class="course-card-ui">
+                                                        <div class="course-img" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('IIT UI Work/Faculty/faculty grading students assignments course wise/ongoing course-cybersecurity option 37.jpg'); background-size: cover;"></div>
+                                                        <div class="course-info-ui">
+                                                            <span class="course-tag">B.Tech IT</span>
+                                                            <div class="course-title-ui">Cybersecurity Fundamentals</div>
+                                                            <div class="course-progress-bar"><div class="progress-fill" style="width: 85%;"></div></div>
+                                                            <div class="progress-text"><span>Attendance</span><span>85%</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </main>
+                                    </div>
+                                    <!-- Image Viewer (Visible by default, sibling of app-shell) -->
+                                    <div class="prototype-image-viewer">
+                                        <img class="mainPreview" src="IIT UI Work/Faculty/faculty grading students assignments course wise/ongoing course-cybersecurity option 37.jpg" alt="Faculty View">
+                                    </div>
+                                    <div class="hotspot-nav">
+                                        <button class="prevScreen" title="Previous"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+                                        <button class="nextScreen" title="Next"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="screen-caption"><h4 class="screenTitle">Faculty Grading Master</h4><p class="screenDesc">Centralized view for evaluating student course-work.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 8: Prototypes - Faculty Announcements -->
+        <!-- SECTION 09: Admin Working Prototype -->
+        <section class="slide" id="slide-7" data-slide="7">
+            <div class="slide-content" style="max-width: 1400px; padding: 0 40px;">
+                <div class="slide-header">
+                    <span class="slide-number">07</span>
+                    <h2 class="slide-title animate-in" data-delay="0">Admin <span class="gradient-text">Governance Suite</span></h2>
+                    <p class="slide-subtitle animate-in" data-delay="1" style="margin-top: 10px; opacity: 0.7; font-size: 1rem;">Full system control: Databases, Exams, and Infrastructure config.</p>
+                </div>
+
+                <div class="prototype-explorer admin-proto animate-in" data-delay="2" data-prototype="admin">
+                    <div class="explorer-toolbar" style="justify-content: flex-start;">
+                        <div class="role-indicator admin-theme">System Admin</div>
+                        <div class="flow-selector" id="adminFlows"></div>
+                    </div>
+                    <div class="explorer-body">
+                        <div class="screens-sidebar" id="adminSidebar"></div>
+                        <div class="prototype-stage">
+                            <div class="device-frame" style="border: 2px solid rgba(56, 189, 248, 0.3);">
+                                <div class="device-bar">
+                                    <div class="dots"><span style="background: #38bdf8; opacity: 0.4;"></span><span style="background: #38bdf8; opacity: 0.4;"></span><span style="background: #38bdf8; opacity: 0.4;"></span></div>
+                                    <div class="browser-url">iit-lms.edu/admin/settings</div>
+                                </div>
+                                <div class="screen-preview-area">
+                                    <!-- Working UI Application Shell -->
+                                    <div class="prototype-app-shell hidden-ui" id="adminAppShell" style="--role-color: #38bdf8;">
+                                        <aside class="lms-sidebar">
+                                            <div class="sidebar-logo">
+                                                <div style="background: var(--role-color); width: 24px; height: 24px; border-radius: 6px;"></div>
+                                                IITD Admin
+                                            </div>
+                                            <nav class="sidebar-nav">
+                                                <div class="nav-item active" data-view="dashboard">System Health</div>
+                                                <div class="nav-item" data-view="users">Databases</div>
+                                                <div class="nav-item" data-view="courses">Course Master</div>
+                                                <div class="nav-item" data-view="exams">Exam Master</div>
+                                                <div class="nav-item" data-view="settings">ERP Settings</div>
+                                            </nav>
+                                        </aside>
+                                        <main class="lms-main">
+                                            <header class="lms-app-header">
+                                                <div class="header-search">Global system search...</div>
+                                                <div class="header-actions">
+                                                    <div class="user-profile">
+                                                        <div class="profile-avatar" style="color: #38bdf8;">S</div>
+                                                        Sys Admin
+                                                    </div>
+                                                </div>
+                                            </header>
+                                            <div class="app-page-content" id="adminAppContent">
+                                                <!-- Dashboard View -->
+                                                <div class="dashboard-hero">
+                                                    <h2>Infrastructure Monitor</h2>
+                                                    <p>All nodes are currently healthy. ERP synchronization is active.</p>
+                                                </div>
+                                                <div class="stats-grid">
+                                                    <div class="stat-card">
+                                                        <div class="stat-label">Active Users</div>
+                                                        <div class="stat-val">12,450</div>
+                                                    </div>
+                                                    <div class="stat-card">
+                                                        <div class="stat-label">Server Load</div>
+                                                        <div class="stat-val">42%</div>
+                                                    </div>
+                                                    <div class="stat-card">
+                                                        <div class="stat-label">DB Sync</div>
+                                                        <div class="stat-val">Healthy</div>
+                                                    </div>
+                                                </div>
+                                                <div class="section-title">Critical System Events</div>
+                                                <div style="background: white; border-radius: 12px; padding: 20px; border: 1px solid #e2e8f0;">
+                                                    <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #f1f5f9;">
+                                                        <span>ERP Database Sync</span>
+                                                        <span style="color: #22C55E;">Successful</span>
+                                                    </div>
+                                                    <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #f1f5f9;">
+                                                        <span>End-sem Exam Scheduling</span>
+                                                        <span style="color: #FFB15F;">In Progress</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </main>
+                                    </div>
+                                    <!-- Image Viewer (Visible by default, sibling of app-shell) -->
+                                    <div class="prototype-image-viewer">
+                                        <img class="mainPreview" src="IIT UI Work/Admin/settings/Server.jpg" alt="Admin View">
+                                    </div>
+                                    <div class="hotspot-nav">
+                                        <button class="prevScreen" title="Previous"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+                                        <button class="nextScreen" title="Next"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="screen-caption"><h4 class="screenTitle">Admin Server Config</h4><p class="screenDesc">Managing core system latency and infrastructure health.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 010: Outcome & Takeaways -->
+        <section class="slide" id="slide-8" data-slide="8">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <span class="slide-number">08</span>
+                    <h2 class="slide-title animate-in" data-delay="0">Project <span class="gradient-text">Impact & Outcomes</span></h2>
+                </div>
+                <div class="impact-grid animate-in" data-delay="1">
+                    <div class="impact-card">
+                        <div class="impact-val">100+</div>
+                        <div class="impact-label">UI Screens</div>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-val">3</div>
+                        <div class="impact-label">Integrated Platforms</div>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-val">1</div>
+                        <div class="impact-label">Unified Design System</div>
+                    </div>
+                </div>
+                <div class="takeaways animate-in" data-delay="2">
+                    <div class="takeaway-item">
+                        <div class="takeaway-icon">🎯</div>
+                        <div class="takeaway-text">Successfully mapped complex academic workflows into a singular, intuitive experience.</div>
+                    </div>
+                    <div class="takeaway-item">
+                        <div class="takeaway-icon">⚙️</div>
+                        <div class="takeaway-text">Established a scalable design language ready for immediate enterprise-grade deployment.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 10: Closing -->
+        <section class="slide slide-closing" id="slide-9" data-slide="9">
+            <div class="slide-content">
+                <div class="closing-layout">
+                    <div class="closing-text">
+                        <h2 class="closing-title animate-in" data-delay="0">
+                            Thank <span class="gradient-text">You</span>
+                        </h2>
+                        <div class="closing-designer animate-in" data-delay="2">
+                            <div class="designer-avatar">AUH</div>
+                            <div class="designer-info">
+                                <span class="designer-name">Aaqib Uddin Hashmi</span>
+                                <span class="designer-role">UI/UX Designer</span>
+                            </div>
+                        </div>
+                        <div class="closing-links animate-in" data-delay="3">
+                            <div class="closing-badge">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                                Designed at IIT Delhi
+                            </div>
+                        </div>
+                    </div>
+                    <div class="closing-visual animate-in" data-delay="2">
+                        <div class="closing-rings">
+                            <div class="c-ring c-ring-1"></div>
+                            <div class="c-ring c-ring-2"></div>
+                            <div class="c-ring c-ring-3"></div>
+                            <div class="c-ring-center">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                    <rect width="48" height="48" rx="12" fill="url(#closeGrad)"/>
+                                    <path d="M14 24L20 18L26 24L20 30Z" fill="white" opacity="0.9"/>
+                                    <path d="M20 18L34 24L20 30" fill="white" opacity="0.5"/>
+                                    <defs><linearGradient id="closeGrad" x1="0" y1="0" x2="48" y2="48"><stop stop-color="#38bdf8"/><stop offset="1" stop-color="#3B82F6"/></linearGradient></defs>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar">
+        <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <script src="script.js?v=9"></script>
+</body>
+</html>

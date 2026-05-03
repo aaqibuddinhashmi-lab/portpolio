@@ -25,3 +25,10 @@ dist-ssr
 
 # Local Netlify folder
 .netlify
+
+# Source project folders (not part of the portfolio site)
+Farmi/
+Flying Dragon/
+IIT Delhi LMS/
+Invest Ease/
+public:Aaqib_Uddin_Hashmi_CV.pdf
