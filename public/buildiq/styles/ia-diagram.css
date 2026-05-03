@@ -1,0 +1,432 @@
+/* ============================================
+   BuildIQ — Full Information Architecture Diagram
+   Dark theme + proper connecting lines/arrows
+   ============================================ */
+
+/* --- Container — DARK, no white bg --- */
+.ia-full {
+  background: transparent;
+  border-radius: var(--radius-xl);
+  padding: 40px 0;
+  overflow-x: auto;
+  color: var(--text-primary);
+  font-family: 'Inter', Arial, sans-serif;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.ia-full * { box-sizing: border-box; }
+
+/* --- Title Block --- */
+.ia-full__title-block { text-align: center; margin-bottom: 28px; }
+
+.ia-full__title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.65rem; font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 4px; letter-spacing: -0.01em;
+}
+
+.ia-full__subtitle { font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 2px; }
+.ia-full__tagline { font-size: 0.72rem; color: var(--text-muted); }
+
+/* --- Legend --- */
+.ia-legend {
+  margin: 0 auto 32px auto;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px; padding: 12px 24px;
+  font-size: 0.65rem; z-index: 5;
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: fit-content;
+}
+
+.ia-legend__list {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.ia-legend__title { font-weight: 700; font-size: 0.7rem; margin-bottom: 6px; color: var(--text-primary); }
+.ia-legend__item { display: flex; align-items: center; gap: 8px; color: var(--text-secondary); }
+.ia-legend__swatch { width: 14px; height: 14px; border-radius: 3px; flex-shrink: 0; }
+.ia-legend__swatch--worker { background: #4CAF50; }
+.ia-legend__swatch--engineer { background: #FF9800; }
+.ia-legend__swatch--admin { background: #E53935; }
+.ia-legend__swatch--shared { background: #1E88E5; }
+.ia-legend__swatch--integration { background: #7E57C2; }
+.ia-legend__line { width: 14px; height: 2px; flex-shrink: 0; }
+.ia-legend__line--solid { background: var(--text-secondary); }
+.ia-legend__line--dashed { border-top: 2px dashed var(--text-muted); height: 0; }
+
+/* --- User Roles Row --- */
+.ia-roles { display: flex; justify-content: center; gap: 40px; margin-bottom: 0; position: relative; }
+.ia-role { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.ia-role__icon {
+  width: 48px; height: 48px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem; border: 2.5px solid;
+}
+.ia-role__icon--worker { background: rgba(76,175,80,0.15); border-color: #4CAF50; }
+.ia-role__icon--engineer { background: rgba(255,152,0,0.15); border-color: #FF9800; }
+.ia-role__icon--admin { background: rgba(229,57,53,0.15); border-color: #E53935; }
+.ia-role__icon--client { background: rgba(30,136,229,0.15); border-color: #1E88E5; }
+.ia-role__label { font-size: 0.68rem; font-weight: 700; color: var(--text-primary); text-transform: uppercase; }
+.ia-role__sublabel { font-size: 0.58rem; color: var(--text-muted); margin-top: -2px; }
+
+/* === CONNECTING LINES === */
+
+/* Vertical connector lines */
+.ia-vline {
+  width: 2px; height: 28px;
+  background: var(--text-muted);
+  margin: 0 auto;
+  position: relative;
+}
+.ia-vline--short { height: 18px; }
+.ia-vline--long { height: 36px; }
+
+/* Arrow head at bottom of vertical lines */
+.ia-vline::after {
+  content: '';
+  position: absolute; bottom: -4px; left: 50%;
+  transform: translateX(-50%);
+  width: 0; height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--text-muted);
+}
+
+.ia-roles-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Roles to Login — converging lines */
+.ia-roles::after {
+  content: '';
+  position: absolute;
+  bottom: -28px; left: 50%;
+  transform: translateX(-50%);
+  width: 2px; height: 28px;
+  background: var(--text-muted);
+}
+
+/* Converging horizontal line from all roles */
+.ia-roles::before {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: calc(50% - 160px);
+  width: 320px;
+  height: 2px;
+  background: var(--text-muted);
+}
+
+/* Space for the converging lines */
+.ia-roles-to-login {
+  height: 28px;
+  position: relative;
+}
+
+/* Role individual drop lines */
+.ia-role::after {
+  content: '';
+  display: block;
+  width: 2px; height: 14px;
+  background: var(--text-muted);
+  margin: 4px auto 0;
+}
+
+/* --- Login Portal Node --- */
+.ia-login-node {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  background: rgba(255,255,255,0.05);
+  border: 2px solid var(--text-muted);
+  border-radius: 24px; padding: 10px 32px;
+  font-size: 0.75rem; font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 auto; width: fit-content;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  backdrop-filter: blur(8px);
+}
+.ia-login-node__icon { font-size: 1rem; }
+
+/* --- Role Routing Bar --- */
+.ia-routing-bar {
+  background: rgba(245,166,35,0.08);
+  border: 1px solid rgba(245,166,35,0.25);
+  border-radius: 6px; padding: 10px 24px;
+  text-align: center; font-size: 0.72rem;
+  font-weight: 700; color: var(--accent-yellow);
+  text-transform: uppercase; letter-spacing: 0.06em;
+  margin: 0 auto; width: fit-content;
+}
+
+/* --- Horizontal distribution line from routing to portals --- */
+.ia-hline {
+  height: 2px;
+  background: var(--text-muted);
+  margin: 0 40px;
+  position: relative;
+}
+
+/* 5 drop-down ticks on the horizontal line for each portal */
+.ia-hline::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 10%; right: 10%;
+  height: 2px;
+  background: var(--text-muted);
+}
+
+/* Vertical drops from hline to portals */
+.ia-portal-connectors {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin: 0;
+  width: 100%;
+}
+
+.ia-portal-connector {
+  display: flex;
+  justify-content: center;
+}
+
+.ia-portal-connector::before {
+  content: '';
+  display: block;
+  width: 2px; height: 18px;
+  background: var(--text-muted);
+}
+
+/* --- Main Portals Grid --- */
+.ia-portals {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px; margin-top: 0; align-items: start;
+  width: 100%;
+}
+
+/* --- Portal Column --- */
+.ia-portal {
+  border: 2px solid; border-radius: 10px;
+  padding: 10px 8px; min-width: 0;
+  background: rgba(255,255,255,0.02);
+}
+.ia-portal--worker { border-color: #4CAF50; }
+.ia-portal--engineer { border-color: #FF9800; }
+.ia-portal--core { border-color: #1E88E5; }
+.ia-portal--admin { border-color: #E53935; }
+.ia-portal--client { border-color: #7E57C2; border-style: dashed; }
+
+.ia-portal__header {
+  text-align: center; padding: 8px 4px;
+  margin: -10px -8px 8px -8px;
+  border-radius: 8px 8px 0 0;
+  font-size: 0.7rem; font-weight: 800;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+}
+.ia-portal--worker .ia-portal__header { background: rgba(76,175,80,0.15); color: #66BB6A; }
+.ia-portal--engineer .ia-portal__header { background: rgba(255,152,0,0.15); color: #FFA726; }
+.ia-portal--core .ia-portal__header { background: rgba(30,136,229,0.15); color: #42A5F5; }
+.ia-portal--admin .ia-portal__header { background: rgba(229,57,53,0.15); color: #EF5350; }
+.ia-portal--client .ia-portal__header { background: rgba(126,87,194,0.15); color: #AB47BC; }
+.ia-portal__header-icon { font-size: 0.9rem; }
+.ia-portal__header-sub { font-size: 0.52rem; font-weight: 500; display: block; margin-top: 1px; opacity: 0.7; }
+
+/* --- Module Group --- */
+.ia-module { margin-bottom: 8px; }
+.ia-module__title {
+  display: flex; align-items: center; justify-content: center; gap: 5px;
+  font-size: 0.6rem; font-weight: 700;
+  padding: 5px 8px; border-radius: 4px;
+  margin-bottom: 3px; text-transform: uppercase; letter-spacing: 0.02em;
+}
+.ia-module__title--green { background: rgba(76,175,80,0.12); color: #66BB6A; }
+.ia-module__title--orange { background: rgba(255,152,0,0.12); color: #FFA726; }
+.ia-module__title--blue { background: rgba(30,136,229,0.12); color: #42A5F5; }
+.ia-module__title--red { background: rgba(229,57,53,0.12); color: #EF5350; }
+.ia-module__title--purple { background: rgba(126,87,194,0.12); color: #AB47BC; }
+.ia-module__title--teal { background: rgba(0,150,136,0.12); color: #26A69A; }
+.ia-module__title--gray { background: rgba(255,255,255,0.05); color: var(--text-secondary); }
+.ia-module__title-icon { font-size: 0.72rem; }
+
+.ia-module__items {
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: center;
+}
+.ia-module__item {
+  font-size: 0.55rem; color: var(--text-secondary);
+  line-height: 1.7; position: relative;
+}
+.ia-module__item::before {
+  content: ''; position: absolute; left: -8px; top: 50%;
+  width: 3px; height: 3px; border-radius: 50%;
+  background: var(--text-muted); transform: translateY(-50%);
+}
+
+/* --- AI Services Bar --- */
+.ia-ai-bar {
+  margin-top: 20px;
+  border: 2px dashed rgba(126,87,194,0.5);
+  border-radius: 10px; padding: 14px;
+  background: rgba(126,87,194,0.04);
+  width: 100%;
+}
+.ia-ai-bar__title {
+  text-align: center; font-size: 0.68rem; font-weight: 700;
+  color: #AB47BC; text-transform: uppercase;
+  letter-spacing: 0.05em; margin-bottom: 10px;
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+}
+.ia-ai-bar__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.ia-ai-card {
+  background: rgba(126,87,194,0.1);
+  border: 1px solid rgba(126,87,194,0.25);
+  border-radius: 6px; padding: 10px; text-align: center;
+}
+.ia-ai-card__icon { font-size: 0.9rem; margin-bottom: 3px; }
+.ia-ai-card__title { font-size: 0.58rem; font-weight: 700; color: #AB47BC; margin-bottom: 3px; }
+.ia-ai-card__items { font-size: 0.50rem; color: var(--text-muted); line-height: 1.6; }
+
+/* --- Vertical connector between sections --- */
+.ia-section-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 6px 0;
+}
+.ia-section-connector__line {
+  width: 2px; height: 16px;
+  background: var(--text-muted);
+}
+.ia-section-connector__arrow {
+  width: 0; height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--text-muted);
+}
+
+/* --- Integration Layer Bar --- */
+.ia-integration-bar {
+  margin-top: 0;
+  background: rgba(94,53,177,0.08);
+  border: 1.5px solid rgba(149,117,205,0.3);
+  border-radius: 8px; padding: 12px 16px;
+  width: 100%;
+}
+.ia-integration-bar__title {
+  text-align: center; font-size: 0.65rem; font-weight: 700;
+  color: #B39DDB; text-transform: uppercase;
+  letter-spacing: 0.05em; margin-bottom: 8px;
+}
+.ia-integration-bar__items {
+  display: flex; justify-content: center;
+  gap: 6px; flex-wrap: wrap; align-items: center;
+}
+.ia-integration-bar__item {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(149,117,205,0.25);
+  border-radius: 4px; padding: 5px 12px;
+  font-size: 0.55rem; font-weight: 600; color: #B39DDB;
+}
+.ia-integration-bar__arrow { color: rgba(149,117,205,0.6); font-size: 0.7rem; }
+
+/* --- Database Bar --- */
+.ia-db-bar {
+  margin-top: 0;
+  background: rgba(245,166,35,0.06);
+  border: 1.5px solid rgba(245,166,35,0.2);
+  border-radius: 8px; padding: 12px 16px;
+  width: 100%;
+}
+.ia-db-bar__title {
+  text-align: center; font-size: 0.65rem; font-weight: 700;
+  color: var(--accent-yellow); text-transform: uppercase;
+  letter-spacing: 0.05em; margin-bottom: 8px;
+}
+.ia-db-bar__items { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; }
+.ia-db-bar__item {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(245,166,35,0.2);
+  border-radius: 4px; padding: 5px 12px;
+  font-size: 0.55rem; font-weight: 600; color: var(--accent-yellow);
+}
+
+/* --- Workflow Section --- */
+.ia-workflow {
+  margin-top: 0;
+  border-top: 1px solid var(--glass-border);
+  padding-top: 16px;
+  width: 100%;
+}
+.ia-workflow__title {
+  text-align: center; font-size: 0.72rem; font-weight: 800;
+  color: var(--text-primary); text-transform: uppercase;
+  letter-spacing: 0.06em; margin-bottom: 14px;
+}
+.ia-workflow__rows { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
+.ia-workflow__row {
+  display: flex; align-items: center; gap: 6px;
+  justify-content: center; flex-wrap: wrap;
+}
+.ia-workflow__actor {
+  display: flex; align-items: center; gap: 4px;
+  font-size: 0.55rem; font-weight: 700;
+  padding: 5px 10px; border-radius: 5px; white-space: nowrap;
+}
+.ia-workflow__actor--admin { background: rgba(229,57,53,0.12); color: #EF5350; }
+.ia-workflow__actor--engineer { background: rgba(255,152,0,0.12); color: #FFA726; }
+.ia-workflow__actor--worker { background: rgba(76,175,80,0.12); color: #66BB6A; }
+
+.ia-workflow__step {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--glass-border);
+  border-radius: 4px; padding: 5px 12px;
+  font-size: 0.52rem; font-weight: 600;
+  color: var(--text-secondary); white-space: nowrap;
+}
+.ia-workflow__arrow { color: var(--text-muted); font-size: 0.75rem; flex-shrink: 0; }
+
+/* --- Workflow Legend --- */
+.ia-workflow__legend {
+  display: flex; justify-content: center; gap: 16px;
+  flex-wrap: wrap; padding-top: 10px;
+  border-top: 1px solid var(--glass-border);
+}
+.ia-workflow__legend-item {
+  display: flex; align-items: center; gap: 5px;
+  font-size: 0.52rem; color: var(--text-muted); font-weight: 500;
+}
+.ia-workflow__legend-line { width: 16px; height: 2px; }
+.ia-workflow__legend-line--normal { background: var(--text-secondary); }
+.ia-workflow__legend-line--data { background: #1E88E5; }
+.ia-workflow__legend-line--worker-action { background: #4CAF50; }
+.ia-workflow__legend-line--engineer-action { background: #FF9800; }
+.ia-workflow__legend-line--admin-action { background: #E53935; }
+.ia-workflow__legend-line--client { background: #7E57C2; }
+.ia-workflow__legend-swatch { width: 12px; height: 12px; border-radius: 2px; flex-shrink: 0; }
+.ia-workflow__legend-swatch--system { background: rgba(255,255,255,0.08); border: 1px solid var(--glass-border); }
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .ia-full { padding: 24px 0; }
+  .ia-portals { grid-template-columns: 1fr; gap: 16px; }
+  .ia-portal-connectors { grid-template-columns: 1fr; }
+  .ia-legend { position: static; margin: 0 auto 16px; width: fit-content; }
+  .ia-ai-bar__grid { grid-template-columns: repeat(2, 1fr); }
+}

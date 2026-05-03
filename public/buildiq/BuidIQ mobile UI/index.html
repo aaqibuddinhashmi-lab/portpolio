@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>BuildIQ Mobile</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+<div class="app-shell">
+  <!-- Status Bar -->
+  <div class="status-bar">
+    <div class="status-bar__time" id="status-time">09:41</div>
+    <div class="status-bar__icons">
+      <span>📶</span>
+      <span>LTE</span>
+      <span>🔋</span>
+    </div>
+  </div>
+
+  <!-- ==================== ROLE SELECTOR ==================== -->
+  <div class="screen active" id="screen-role-select">
+    <div class="screen-body" style="justify-content: center; align-items: center; text-align: center;">
+      <div style="width: 80px; height: 80px; background: var(--primary); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 40px; margin-bottom: var(--space-md); font-weight: bold; color: black;">B</div>
+      <h1 style="font-family: var(--font-display); font-size: var(--fs-2xl); margin-bottom: var(--space-sm);">BuildIQ</h1>
+      <p class="text-tertiary mb-md">Select your role to continue</p>
+      
+      <div class="w-full flex-col gap-sm">
+        <button class="btn btn--secondary btn--full" onclick="switchRole('worker')">👷 Worker Portal</button>
+        <button class="btn btn--secondary btn--full" onclick="switchRole('engineer')">👨‍💼 Engineer Portal</button>
+        <button class="btn btn--secondary btn--full" onclick="switchRole('client')">🏠 Client Portal</button>
+        <button class="btn btn--secondary btn--full" onclick="switchRole('admin')">🛡️ Admin Portal</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== WORKER APP ==================== -->
+  <div class="screen" id="screen-worker-home" data-role="worker">
+    <div class="screen-header">
+      <div class="screen-header__left">
+        <div class="avatar avatar--sm">R</div>
+        <div>
+          <div class="greeting__hello">Good morning,</div>
+          <div style="font-weight: bold; font-size: var(--fs-sm);">Rajesh K.</div>
+        </div>
+      </div>
+      <div class="screen-header__right">
+        <button class="screen-header__action" onclick="toggleSheet('notifications')">
+          🔔<span class="screen-header__badge">2</span>
+        </button>
+      </div>
+    </div>
+    
+    <div class="screen-body">
+      <!-- Attendance Action -->
+      <button class="btn btn--checkin btn--full">
+        <span>📍</span> Swipe to Check-In
+      </button>
+
+      <!-- Today's Stats -->
+      <div class="stat-row">
+        <div class="stat-card">
+          <div class="stat-card__icon">✅</div>
+          <div class="stat-card__value">3/5</div>
+          <div class="stat-card__label">Tasks Done</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__icon">⏱️</div>
+          <div class="stat-card__value">4.5h</div>
+          <div class="stat-card__label">Shift Logged</div>
+        </div>
+      </div>
+
+      <!-- Urgent Tasks -->
+      <div>
+        <div class="section-title">
+          <div class="section-title__text">Today's Priority</div>
+          <div class="section-title__action">View All</div>
+        </div>
+        <div class="flex-col gap-sm">
+          <div class="task-card">
+            <div class="task-card__priority" style="background: var(--red);"></div>
+            <div class="task-card__header">
+              <div class="task-card__title">Pour Foundation (Sector A)</div>
+              <input type="checkbox" style="width: 20px; height: 20px; accent-color: var(--primary);">
+            </div>
+            <div class="task-card__meta">
+              <span>⏰ 10:00 AM</span>
+              <span>•</span>
+              <span class="text-red">High Priority</span>
+            </div>
+          </div>
+          <div class="task-card">
+            <div class="task-card__priority" style="background: var(--yellow);"></div>
+            <div class="task-card__header">
+              <div class="task-card__title">Unload Cement Trucks</div>
+              <input type="checkbox" style="width: 20px; height: 20px; accent-color: var(--primary);">
+            </div>
+            <div class="task-card__meta">
+              <span>⏰ 12:30 PM</span>
+              <span>•</span>
+              <span class="text-yellow">Medium</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Safety Check -->
+      <div class="card card--elevated">
+        <div class="card__header">
+          <div style="display: flex; gap: 8px; align-items: center;">
+            <span class="card__icon" style="background: var(--yellow-dim); color: var(--yellow);">🛡️</span>
+            <div>
+              <div class="card__title" style="margin:0;">Safety Checklist</div>
+              <div class="card__subtitle">Complete before starting work</div>
+            </div>
+          </div>
+          <button class="btn btn--sm btn--primary">Start</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== ENGINEER APP ==================== -->
+  <div class="screen" id="screen-engineer-home" data-role="engineer">
+    <div class="screen-header">
+      <div class="screen-header__left">
+        <div>
+          <div class="greeting__hello">Project Dashboard</div>
+          <div style="font-weight: bold; font-size: var(--fs-md);">Skyline Towers</div>
+        </div>
+      </div>
+      <div class="screen-header__right">
+        <button class="screen-header__action">🔍</button>
+        <button class="screen-header__action" onclick="toggleSheet('notifications')">
+          🔔<span class="screen-header__badge">5</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="screen-body">
+      <!-- High Level Stats -->
+      <div class="card card--elevated" style="background: linear-gradient(145deg, var(--bg-elevated), #1a1a2e); border-color: var(--blue-dim);">
+        <div class="flex justify-between items-center mb-sm">
+          <div>
+            <div class="text-tertiary text-xs">Overall Progress</div>
+            <div class="card__value text-blue">42%</div>
+          </div>
+          <div class="progress-ring" style="width: 50px; height: 50px;">
+            <svg viewBox="0 0 100 100" width="50" height="50">
+              <circle class="progress-ring__bg" cx="50" cy="50" r="40" stroke="var(--bg-input)"></circle>
+              <circle class="progress-ring__fill" cx="50" cy="50" r="40" stroke="var(--blue)" stroke-dasharray="251" stroke-dashoffset="145"></circle>
+            </svg>
+            <div class="progress-ring__text" style="font-size: 10px;">42%</div>
+          </div>
+        </div>
+        <div class="flex gap-sm">
+          <div class="chip chip--green">On Track</div>
+          <div class="chip chip--blue">Phase 2</div>
+        </div>
+      </div>
+
+      <!-- Quick Actions (Swipeable) -->
+      <div class="h-scroll">
+        <button class="card" onclick="navTo('screen-engineer-drone')" style="width: 140px; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+          <div class="card__icon" style="background: var(--primary-dim); color: var(--primary); font-size: 24px;">🚁</div>
+          <span style="font-size: var(--fs-xs); font-weight: bold;">Drone Feed</span>
+        </button>
+        <button class="card" onclick="navTo('screen-engineer-waste')" style="width: 140px; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+          <div class="card__icon" style="background: var(--red-dim); color: var(--red); font-size: 24px;">♻️</div>
+          <span style="font-size: var(--fs-xs); font-weight: bold;">Waste Auth</span>
+        </button>
+        <button class="card" style="width: 140px; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+          <div class="card__icon" style="background: var(--green-dim); color: var(--green); font-size: 24px;">👥</div>
+          <span style="font-size: var(--fs-xs); font-weight: bold;">Team View</span>
+        </button>
+      </div>
+
+      <!-- Alerts -->
+      <div>
+        <div class="section-title">
+          <div class="section-title__text">AI Insights</div>
+        </div>
+        <div class="flex-col gap-xs">
+          <div class="alert-banner alert-banner--warning">
+            <span class="alert-banner__icon">⚠️</span>
+            <div class="alert-banner__text">
+              <div style="font-weight: bold;">Delay Risk Detected</div>
+              <div class="text-xs text-tertiary" style="margin-top: 2px;">Cement delivery delayed by 2 days. Phase 3 might shift.</div>
+            </div>
+          </div>
+          <div class="alert-banner alert-banner--danger">
+            <span class="alert-banner__icon">🛑</span>
+            <div class="alert-banner__text">
+              <div style="font-weight: bold;">High Steel Wastage</div>
+              <div class="text-xs text-tertiary" style="margin-top: 2px;">Sector B shows 12% excess scrap vs plan.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Engineer Drone Screen -->
+  <div class="screen" id="screen-engineer-drone" data-role="engineer">
+    <div class="screen-header">
+      <div class="screen-header__left">
+        <button class="screen-header__back" onclick="navTo('screen-engineer-home')">←</button>
+        <div class="screen-header__title">Live Feed</div>
+      </div>
+    </div>
+    <div class="screen-body">
+      <div class="tabs mb-sm">
+        <div class="tab active">Cam 1 (Tower A)</div>
+        <div class="tab">Cam 2 (Gate)</div>
+        <div class="tab">Drone</div>
+      </div>
+      
+      <div class="drone-feed">
+        <img src="https://images.unsplash.com/photo-1541888087425-ce81dfc46928?auto=format&fit=crop&w=800&q=80" alt="Construction Site" class="drone-feed__video" style="height: 240px;">
+        <div class="drone-feed__overlay">
+          <div class="drone-feed__live">LIVE REC</div>
+          <div class="drone-feed__controls">
+            <button class="drone-feed__btn">📸 Capture</button>
+            <button class="drone-feed__btn">🔍 Scan AI</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mt-sm">
+        <div class="card__title">AI Analysis</div>
+        <div class="list-item">
+          <div class="list-item__icon" style="background: var(--green-dim); color: var(--green);">👷</div>
+          <div class="list-item__content">
+            <div class="list-item__title">PPE Compliance</div>
+            <div class="list-item__desc">98% workers wearing hardhats</div>
+          </div>
+          <div class="list-item__right text-green">Good</div>
+        </div>
+        <div class="list-item">
+          <div class="list-item__icon" style="background: var(--yellow-dim); color: var(--yellow);">🚧</div>
+          <div class="list-item__content">
+            <div class="list-item__title">Safety Zones</div>
+            <div class="list-item__desc">1 perimeter breach detected</div>
+          </div>
+          <div class="list-item__right text-yellow">Warning</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Engineer Waste Screen -->
+  <div class="screen" id="screen-engineer-waste" data-role="engineer">
+    <div class="screen-header">
+      <div class="screen-header__left">
+        <button class="screen-header__back" onclick="navTo('screen-engineer-home')">←</button>
+        <div class="screen-header__title">Waste Analytics</div>
+      </div>
+    </div>
+    <div class="screen-body">
+      <div class="stat-row mb-sm">
+        <div class="stat-card">
+          <div class="stat-card__icon text-red">📉</div>
+          <div class="stat-card__value">14%</div>
+          <div class="stat-card__label">Total Waste</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__icon text-yellow">💸</div>
+          <div class="stat-card__value">₹2.4L</div>
+          <div class="stat-card__label">Cost Impact</div>
+        </div>
+      </div>
+
+      <div class="card mb-sm">
+        <div class="card__header">
+          <div class="card__title">Material Breakdown</div>
+        </div>
+        <div class="flex-col gap-sm">
+          <div>
+            <div class="flex justify-between text-sm mb-xs"><span>Cement</span><span class="text-red font-bold">18% waste</span></div>
+            <div class="progress-bar"><div class="progress-bar__fill" style="width: 18%; background: var(--red);"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-sm mb-xs"><span>Steel</span><span class="text-yellow font-bold">12% waste</span></div>
+            <div class="progress-bar"><div class="progress-bar__fill" style="width: 12%; background: var(--yellow);"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-sm mb-xs"><span>Tiles</span><span class="text-green font-bold">5% waste</span></div>
+            <div class="progress-bar"><div class="progress-bar__fill" style="width: 5%; background: var(--green);"></div></div>
+          </div>
+        </div>
+      </div>
+      
+      <button class="btn btn--primary btn--full">Scan Pile (AI)</button>
+    </div>
+  </div>
+
+
+  <!-- ==================== CLIENT APP ==================== -->
+  <div class="screen" id="screen-client-home" data-role="client">
+    <div class="screen-header">
+      <div class="screen-header__left">
+        <div>
+          <div class="greeting__hello">My Dream Home</div>
+          <div style="font-weight: bold; font-size: var(--fs-md);">Sharma Residence</div>
+        </div>
+      </div>
+      <div class="screen-header__right">
+        <button class="screen-header__action">✉️</button>
+      </div>
+    </div>
+    <div class="screen-body">
+      <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="House rendering" style="width: 100%; height: 180px; object-fit: cover; border-radius: var(--radius-lg); margin-bottom: -10px;">
+      
+      <div class="card card--elevated" style="position: relative; z-index: 10;">
+        <div class="flex justify-between items-end mb-sm">
+          <div>
+            <div class="text-tertiary text-xs">Completion</div>
+            <div class="card__value">65%</div>
+          </div>
+          <div class="text-right">
+            <div class="text-tertiary text-xs">Est. Handover</div>
+            <div class="font-bold">Oct 2026</div>
+          </div>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-bar__fill" style="width: 65%;"></div>
+        </div>
+      </div>
+
+      <div class="section-title mt-md">
+        <div class="section-title__text">Recent Updates</div>
+        <div class="section-title__action">Gallery</div>
+      </div>
+      <div class="h-scroll">
+        <div class="swipe-card" style="width: 200px; padding: 0; overflow: hidden;">
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=400&q=80" alt="Foundation" style="height: 120px; width: 100%; object-fit: cover;">
+          <div style="padding: 12px;">
+            <div class="font-bold text-sm">Roof Framing Started</div>
+            <div class="text-xs text-tertiary mt-1">2 days ago</div>
+          </div>
+        </div>
+        <div class="swipe-card" style="width: 200px; padding: 0; overflow: hidden;">
+          <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=400&q=80" alt="Walls" style="height: 120px; width: 100%; object-fit: cover;">
+          <div style="padding: 12px;">
+            <div class="font-bold text-sm">Plumbing Phase 1</div>
+            <div class="text-xs text-tertiary mt-1">5 days ago</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stat-row mt-sm">
+        <div class="stat-card">
+          <div class="stat-card__label">Budget Used</div>
+          <div class="stat-card__value text-sm mt-1">₹45L / ₹70L</div>
+          <div class="progress-bar mt-sm" style="height: 4px;"><div class="progress-bar__fill" style="width: 60%; background: var(--green);"></div></div>
+        </div>
+        <div class="stat-card" style="display:flex; flex-direction:column; justify-content:center; align-items:center;">
+          <div class="card__icon" style="background: var(--blue-dim); color: var(--blue);">📄</div>
+          <div class="text-sm font-bold mt-2">Documents</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== ADMIN APP ==================== -->
+  <div class="screen" id="screen-admin-home" data-role="admin">
+    <div class="screen-header">
+      <div class="screen-header__left">
+        <div class="screen-header__title">Global Portfolio</div>
+      </div>
+      <div class="screen-header__right">
+        <button class="screen-header__action">⚙️</button>
+      </div>
+    </div>
+    <div class="screen-body">
+      <div class="stat-row">
+        <div class="stat-card">
+          <div class="stat-card__icon text-blue">🏢</div>
+          <div class="stat-card__value">12</div>
+          <div class="stat-card__label">Active Projects</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__icon text-green">💰</div>
+          <div class="stat-card__value">₹142Cr</div>
+          <div class="stat-card__label">Total Revenue</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__icon text-red">⚠️</div>
+          <div class="stat-card__value">3</div>
+          <div class="stat-card__label">Critical Alerts</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__icon text-yellow">👷</div>
+          <div class="stat-card__value">450</div>
+          <div class="stat-card__label">Active Workers</div>
+        </div>
+      </div>
+
+      <div class="section-title mt-md">
+        <div class="section-title__text">Project Health</div>
+      </div>
+      <div class="flex-col gap-sm">
+        <div class="card flex items-center justify-between">
+          <div>
+            <div class="font-bold">Skyline Towers</div>
+            <div class="text-xs text-tertiary mt-1">Delhi • 42% Complete</div>
+          </div>
+          <div class="chip chip--green">Healthy</div>
+        </div>
+        <div class="card flex items-center justify-between">
+          <div>
+            <div class="font-bold">Metro Line 3</div>
+            <div class="text-xs text-tertiary mt-1">Mumbai • 18% Complete</div>
+          </div>
+          <div class="chip chip--red">Delayed</div>
+        </div>
+        <div class="card flex items-center justify-between">
+          <div>
+            <div class="font-bold">Tech Park Alpha</div>
+            <div class="text-xs text-tertiary mt-1">Bangalore • 89% Complete</div>
+          </div>
+          <div class="chip chip--yellow">Budget Risk</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Worker Tasks Screen -->
+  <div class="screen" id="screen-worker-tasks" data-role="worker">
+    <div class="screen-header">
+      <div class="screen-header__left"><div class="screen-header__title">My Tasks</div></div>
+    </div>
+    <div class="screen-body">
+      <div class="tabs mb-sm">
+        <div class="tab active">Pending</div>
+        <div class="tab">Completed</div>
+      </div>
+      <div class="flex-col gap-sm">
+        <div class="task-card">
+          <div class="task-card__priority" style="background: var(--red);"></div>
+          <div class="task-card__header">
+            <div class="task-card__title">Pour Foundation (Sector A)</div>
+            <input type="checkbox" style="width: 20px; height: 20px; accent-color: var(--primary);">
+          </div>
+          <div class="task-card__meta"><span>⏰ 10:00 AM</span><span>•</span><span class="text-red">High Priority</span></div>
+        </div>
+        <div class="task-card">
+          <div class="task-card__priority" style="background: var(--yellow);"></div>
+          <div class="task-card__header">
+            <div class="task-card__title">Unload Cement Trucks</div>
+            <input type="checkbox" style="width: 20px; height: 20px; accent-color: var(--primary);">
+          </div>
+          <div class="task-card__meta"><span>⏰ 12:30 PM</span><span>•</span><span class="text-yellow">Medium</span></div>
+        </div>
+        <div class="task-card">
+          <div class="task-card__priority" style="background: var(--blue);"></div>
+          <div class="task-card__header">
+            <div class="task-card__title">Clean up Site B</div>
+            <input type="checkbox" style="width: 20px; height: 20px; accent-color: var(--primary);">
+          </div>
+          <div class="task-card__meta"><span>⏰ 04:00 PM</span><span>•</span><span class="text-blue">Low</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Worker Profile Screen -->
+  <div class="screen" id="screen-worker-profile" data-role="worker">
+    <div class="screen-header"><div class="screen-header__left"><div class="screen-header__title">Profile</div></div></div>
+    <div class="screen-body" style="padding-top: 0;">
+      <div class="profile-header">
+        <div class="profile-header__avatar">R</div>
+        <div style="text-align:center;">
+          <div class="profile-header__name">Rajesh Kumar</div>
+          <div class="profile-header__role">Site Worker ID: 4920</div>
+        </div>
+      </div>
+      <div class="profile-menu">
+        <div class="profile-menu__item"><div class="profile-menu__icon">📅</div><div class="profile-menu__label">My Attendance</div><div class="profile-menu__arrow">›</div></div>
+        <div class="profile-menu__item"><div class="profile-menu__icon">💰</div><div class="profile-menu__label">Payroll</div><div class="profile-menu__arrow">›</div></div>
+        <div class="profile-menu__item"><div class="profile-menu__icon">⚙️</div><div class="profile-menu__label">Settings</div><div class="profile-menu__arrow">›</div></div>
+        <div class="profile-menu__item" onclick="switchRole('role-select')"><div class="profile-menu__icon text-red">🚪</div><div class="profile-menu__label text-red">Log Out</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Engineer Plan Screen -->
+  <div class="screen" id="screen-engineer-plan" data-role="engineer">
+    <div class="screen-header"><div class="screen-header__left"><div class="screen-header__title">Plan Verifier</div></div></div>
+    <div class="screen-body">
+      <div class="search-bar mb-sm"><span class="search-bar__icon">🔍</span><input type="text" placeholder="Search IS Codes..."></div>
+      <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=400&q=80" alt="Blueprint" style="width:100%; border-radius: var(--radius-md); filter: grayscale(1) invert(0.8);">
+      <div class="card mt-sm">
+        <div class="card__title">AI Compliance Check</div>
+        <div class="list-item">
+          <div class="list-item__icon" style="background: var(--red-dim); color: var(--red);">❌</div>
+          <div class="list-item__content">
+            <div class="list-item__title">IS:456 Violation</div>
+            <div class="list-item__desc">Slab thickness is 120mm. Min required is 150mm.</div>
+          </div>
+        </div>
+        <div class="list-item">
+          <div class="list-item__icon" style="background: var(--green-dim); color: var(--green);">✅</div>
+          <div class="list-item__content">
+            <div class="list-item__title">IS:1893 Earthquake</div>
+            <div class="list-item__desc">Zone IV requirements met.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Engineer Team Screen -->
+  <div class="screen" id="screen-engineer-team" data-role="engineer">
+    <div class="screen-header"><div class="screen-header__left"><div class="screen-header__title">Site Team</div></div></div>
+    <div class="screen-body">
+      <div class="stat-row mb-sm">
+        <div class="stat-card"><div class="stat-card__value">45</div><div class="stat-card__label">Present Today</div></div>
+        <div class="stat-card"><div class="stat-card__value text-red">5</div><div class="stat-card__label">Absent</div></div>
+      </div>
+      <div class="card flex items-center gap-sm mb-sm">
+        <div class="avatar">A</div><div style="flex:1;"><div class="font-bold">Amit Singh</div><div class="text-xs text-tertiary">Foreman</div></div><div class="chip chip--green">On Site</div>
+      </div>
+      <div class="card flex items-center gap-sm mb-sm">
+        <div class="avatar">R</div><div style="flex:1;"><div class="font-bold">Rajesh K.</div><div class="text-xs text-tertiary">Labor</div></div><div class="chip chip--green">On Site</div>
+      </div>
+      <div class="card flex items-center gap-sm">
+        <div class="avatar">S</div><div style="flex:1;"><div class="font-bold">Suresh M.</div><div class="text-xs text-tertiary">Labor</div></div><div class="chip chip--red">Absent</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Client Budget Screen -->
+  <div class="screen" id="screen-client-budget" data-role="client">
+    <div class="screen-header"><div class="screen-header__left"><div class="screen-header__title">Budget & Payments</div></div></div>
+    <div class="screen-body">
+      <div class="card card--elevated text-center" style="padding: var(--space-xl) var(--space-md);">
+        <div class="text-tertiary text-sm">Total Budget</div>
+        <div style="font-size: var(--fs-3xl); font-weight: var(--fw-extrabold); font-family: var(--font-display);">₹70,00,000</div>
+        <div class="progress-bar mt-md mb-xs"><div class="progress-bar__fill" style="width: 65%;"></div></div>
+        <div class="flex justify-between text-xs text-tertiary"><span>Paid: ₹45.5L</span><span>Rem: ₹24.5L</span></div>
+      </div>
+      <div class="section-title mt-md"><div class="section-title__text">Recent Payments</div></div>
+      <div class="flex-col gap-xs">
+        <div class="card flex justify-between items-center">
+          <div><div class="font-bold">Phase 2: Foundation</div><div class="text-xs text-tertiary mt-1">12 Oct 2025</div></div>
+          <div class="text-right"><div class="font-bold text-green">₹15,00,000</div><div class="text-xs text-tertiary mt-1">Paid</div></div>
+        </div>
+        <div class="card flex justify-between items-center">
+          <div><div class="font-bold">Phase 1: Excavation</div><div class="text-xs text-tertiary mt-1">01 Sep 2025</div></div>
+          <div class="text-right"><div class="font-bold text-green">₹5,50,000</div><div class="text-xs text-tertiary mt-1">Paid</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Client Chat Screen -->
+  <div class="screen" id="screen-client-chat" data-role="client">
+    <div class="screen-header"><div class="screen-header__left"><div class="screen-header__title">Contact Team</div></div></div>
+    <div class="screen-body">
+      <div class="card mb-sm flex items-center gap-sm">
+        <div class="avatar avatar--lg">PM</div>
+        <div><div class="font-bold">Rahul Verma</div><div class="text-xs text-tertiary">Project Manager</div></div>
+        <button class="btn btn--primary btn--sm" style="margin-left: auto;">Call</button>
+      </div>
+      <div class="empty-state">
+        <div class="empty-state__icon">💬</div>
+        <div class="empty-state__title">No messages yet</div>
+        <div class="empty-state__desc">Reach out to your project manager for updates.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin Projects Screen -->
+  <div class="screen" id="screen-admin-projects" data-role="admin">
+    <div class="screen-header"><div class="screen-header__left"><div class="screen-header__title">All Projects</div></div></div>
+    <div class="screen-body">
+      <div class="search-bar mb-sm"><span class="search-bar__icon">🔍</span><input type="text" placeholder="Search projects..."></div>
+      <div class="flex-col gap-sm">
+        <div class="card">
+          <div class="flex justify-between items-start mb-sm">
+            <div><div class="font-bold">Skyline Towers</div><div class="text-xs text-tertiary">Sector 42, Delhi</div></div>
+            <div class="chip chip--green">Active</div>
+          </div>
+          <div class="progress-bar mb-xs"><div class="progress-bar__fill" style="width: 42%;"></div></div>
+          <div class="flex justify-between text-xs text-tertiary"><span>42% Complete</span><span>Budget: On Track</span></div>
+        </div>
+        <div class="card">
+          <div class="flex justify-between items-start mb-sm">
+            <div><div class="font-bold">Metro Line 3</div><div class="text-xs text-tertiary">Andheri, Mumbai</div></div>
+            <div class="chip chip--red">Delayed</div>
+          </div>
+          <div class="progress-bar mb-xs"><div class="progress-bar__fill" style="width: 18%;"></div></div>
+          <div class="flex justify-between text-xs text-tertiary"><span>18% Complete</span><span>Budget: +12% Overrun</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin Reports Screen -->
+  <div class="screen" id="screen-admin-reports" data-role="admin">
+    <div class="screen-header"><div class="screen-header__left"><div class="screen-header__title">Analytics & Reports</div></div></div>
+    <div class="screen-body">
+      <div class="card card--elevated mb-sm">
+        <div class="card__title mb-sm">Revenue vs Cost</div>
+        <div class="mini-chart">
+          <div class="mini-chart__bar" style="height: 40%;"></div>
+          <div class="mini-chart__bar" style="height: 60%; background: var(--green);"></div>
+          <div class="mini-chart__bar" style="height: 30%;"></div>
+          <div class="mini-chart__bar" style="height: 80%; background: var(--green);"></div>
+          <div class="mini-chart__bar" style="height: 50%;"></div>
+          <div class="mini-chart__bar" style="height: 90%; background: var(--green);"></div>
+        </div>
+      </div>
+      <div class="grid" style="display:grid; grid-template-columns: 1fr 1fr; gap:var(--space-sm);">
+        <button class="card flex-col items-center justify-center text-center">
+          <div class="card__icon mb-xs" style="background: var(--blue-dim); color: var(--blue);">📄</div>
+          <div class="font-bold text-sm">Monthly Report</div>
+        </button>
+        <button class="card flex-col items-center justify-center text-center">
+          <div class="card__icon mb-xs" style="background: var(--red-dim); color: var(--red);">♻️</div>
+          <div class="font-bold text-sm">Waste Analysis</div>
+        </button>
+        <button class="card flex-col items-center justify-center text-center">
+          <div class="card__icon mb-xs" style="background: var(--yellow-dim); color: var(--yellow);">⚠️</div>
+          <div class="font-bold text-sm">Risk Report</div>
+        </button>
+        <button class="card flex-col items-center justify-center text-center">
+          <div class="card__icon mb-xs" style="background: var(--green-dim); color: var(--green);">💰</div>
+          <div class="font-bold text-sm">Financials</div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== GLOBAL COMPONENTS ==================== -->
+
+  <!-- Floating Action Buttons -->
+  <button class="fab" id="global-fab" style="display: none;" onclick="triggerFabAction()">+</button>
+  <button class="ai-fab" id="global-ai-fab" style="display: none;" onclick="document.getElementById('ai-chat-screen').classList.add('active')">🤖</button>
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav" id="bottom-nav" style="display: none;">
+    <!-- Items dynamically injected by JS based on role -->
+  </nav>
+
+  <!-- AI Chat Overlay -->
+  <div class="ai-chat-screen" id="ai-chat-screen">
+    <div class="screen-header">
+      <div class="screen-header__left">
+        <div style="font-size: 24px;">🤖</div>
+        <div>
+          <div class="font-bold text-md">BuildIQ Assistant</div>
+          <div class="text-xs text-green">Online</div>
+        </div>
+      </div>
+      <div class="screen-header__right">
+        <button class="screen-header__action" onclick="document.getElementById('ai-chat-screen').classList.remove('active')">✕</button>
+      </div>
+    </div>
+    
+    <div class="ai-chat__messages" id="chat-messages">
+      <div class="ai-msg ai-msg--bot">
+        Hello! I'm your BuildIQ AI assistant. I can analyze plans, predict delays, or answer site questions. How can I help today?
+      </div>
+    </div>
+    
+    <div class="ai-prompts" id="chat-prompts">
+      <button class="ai-prompt-chip">Predict project delays</button>
+      <button class="ai-prompt-chip">Analyze steel waste</button>
+      <button class="ai-prompt-chip">Verify IS code compliance</button>
+    </div>
+    
+    <div class="ai-chat__input">
+      <input type="text" placeholder="Ask BuildIQ anything..." id="chat-input">
+      <button class="ai-chat__send" onclick="sendChat()">↑</button>
+    </div>
+  </div>
+
+  <!-- Notifications Bottom Sheet -->
+  <div class="bottom-sheet-overlay" id="sheet-overlay" onclick="closeSheets()"></div>
+  <div class="bottom-sheet" id="sheet-notifications">
+    <div class="bottom-sheet__handle"></div>
+    <div class="bottom-sheet__title">Notifications</div>
+    <div class="flex-col gap-xs">
+      <div class="notif-item notif-item--unread">
+        <div class="notif-item__icon" style="background: var(--red-dim); color: var(--red);">⚠️</div>
+        <div class="notif-item__content">
+          <div class="notif-item__title">Safety Violation</div>
+          <div class="notif-item__desc">Worker detected without helmet in Sector B.</div>
+          <div class="notif-item__time">2 mins ago</div>
+        </div>
+      </div>
+      <div class="notif-item">
+        <div class="notif-item__icon" style="background: var(--green-dim); color: var(--green);">✅</div>
+        <div class="notif-item__content">
+          <div class="notif-item__title">Material Delivered</div>
+          <div class="notif-item__desc">50 bags of cement arrived at Gate 2.</div>
+          <div class="notif-item__time">1 hour ago</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
