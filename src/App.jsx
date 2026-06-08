@@ -53,6 +53,14 @@ const projects = [
     link: '/flying-dragon/index.html',
     isCreativity: true,
     isPlayable: true
+  },
+  {
+    id: 6,
+    label: 'Management / Presentation',
+    title: 'Construction Management',
+    description: 'A comprehensive project presentation focusing on construction management strategies, workflows, and operations.',
+    image: '/images/project-construction.png',
+    link: 'https://github.com/aaqibuddinhashmi-lab/COmstruction-Management-Presentation'
   }
 ]
 
