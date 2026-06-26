@@ -15,8 +15,8 @@ const ConstructionModal = ({ isOpen, onClose }) => {
         </button>
         <div className="construction-modal-content">
           <iframe 
-            src="/construction-live/index.html" 
-            title="Construction Management Dashboard"
+            src="/construction-ppt/index.html" 
+            title="Construction Management Presentation"
             className="construction-iframe"
             frameBorder="0"
             allowFullScreen
