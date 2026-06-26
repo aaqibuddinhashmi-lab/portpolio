@@ -6,6 +6,7 @@ import { ToolIcons } from './components/ToolIcons'
 import MagazineModal from './components/MagazineModal'
 import InvestEaseModal from './components/InvestEaseModal'
 import IITDelhiLMSModal from './components/IITDelhiLMSModal'
+import ConstructionModal from './components/ConstructionModal'
 
 
 // Project data
@@ -60,7 +61,7 @@ const projects = [
     title: 'Construction Management',
     description: 'A comprehensive project presentation focusing on construction management strategies, workflows, and operations.',
     image: '/images/project-construction.png',
-    link: 'https://github.com/aaqibuddinhashmi-lab/COmstruction-Management-Presentation'
+    isConstruction: true
   }
 ]
 
@@ -134,6 +135,7 @@ function App() {
   const [isMagazineOpen, setIsMagazineOpen] = useState(false)
   const [isInvestEaseOpen, setIsInvestEaseOpen] = useState(false)
   const [isIITDelhiLMSOpen, setIsIITDelhiLMSOpen] = useState(false)
+  const [isConstructionOpen, setIsConstructionOpen] = useState(false)
 
   const processRef = useRef(null)
   const cursorDotRef = useRef(null)
@@ -142,9 +144,9 @@ function App() {
 
   // Toggle modal-open class on body to hide custom cursor over modals
   useEffect(() => {
-    const anyModalOpen = isModalOpen || isMagazineOpen || isInvestEaseOpen || isIITDelhiLMSOpen
+    const anyModalOpen = isModalOpen || isMagazineOpen || isInvestEaseOpen || isIITDelhiLMSOpen || isConstructionOpen
     document.body.classList.toggle('modal-open', anyModalOpen)
-  }, [isModalOpen, isMagazineOpen, isInvestEaseOpen, isIITDelhiLMSOpen])
+  }, [isModalOpen, isMagazineOpen, isInvestEaseOpen, isIITDelhiLMSOpen, isConstructionOpen])
 
   // Scroll effects
   useEffect(() => {
@@ -317,9 +319,10 @@ function App() {
                   if (project.isMagazine) setIsMagazineOpen(true)
                   if (project.isInvestEase) setIsInvestEaseOpen(true)
                   if (project.isIITDelhiLMS) setIsIITDelhiLMSOpen(true)
+                  if (project.isConstruction) setIsConstructionOpen(true)
                   if (project.link) window.open(project.link, '_blank')
                 }}
-                style={(project.isMagazine || project.isInvestEase || project.isIITDelhiLMS || project.link) ? { cursor: 'pointer' } : {}}
+                style={(project.isMagazine || project.isInvestEase || project.isIITDelhiLMS || project.isConstruction || project.link) ? { cursor: 'pointer' } : {}}
               >
                 <div className={`project-image-wrapper ${project.isMagazine ? 'project-image-wrapper--magazine' : ''}`}>
                   <span className="project-index">0{project.id}</span>
@@ -328,7 +331,7 @@ function App() {
                     alt={project.title}
                     className="project-image"
                   />
-                  {(project.isMagazine || project.isInvestEase || project.isIITDelhiLMS || project.link) && (
+                  {(project.isMagazine || project.isInvestEase || project.isIITDelhiLMS || project.isConstruction || project.link) && (
                     <div className="magazine-overlay-hint">
                       <span>{project.isMagazine ? 'Click to Read' : 'Click to View'}</span>
                     </div>
@@ -338,7 +341,7 @@ function App() {
                   <span className="project-label">{project.label}</span>
                   <h3 className="project-title">{project.title}</h3>
                   <p className="project-desc">{project.description}</p>
-                  {(project.isMagazine || project.isInvestEase || project.isIITDelhiLMS || project.link) && (
+                  {(project.isMagazine || project.isInvestEase || project.isIITDelhiLMS || project.isConstruction || project.link) && (
                     <span className="project-cta">View Case Study →</span>
                   )}
                 </div>
@@ -623,6 +626,7 @@ function App() {
       <MagazineModal isOpen={isMagazineOpen} onClose={() => setIsMagazineOpen(false)} />
       <InvestEaseModal isOpen={isInvestEaseOpen} onClose={() => setIsInvestEaseOpen(false)} />
       <IITDelhiLMSModal isOpen={isIITDelhiLMSOpen} onClose={() => setIsIITDelhiLMSOpen(false)} />
+      <ConstructionModal isOpen={isConstructionOpen} onClose={() => setIsConstructionOpen(false)} />
 
       {/* Copy Feedback Toast */}
       <div className={`copy-feedback ${copied ? 'show' : ''}`}>

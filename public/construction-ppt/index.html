@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BuildIQ — AI-Powered Construction Intelligence Platform | UX Case Study</title>
+  <meta name="description" content="BuildIQ is an AI-powered construction intelligence platform that helps teams monitor progress, reduce waste, and verify plans. A comprehensive UX case study by Aaqib Uddin Hashmi.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/base.css?v=3">
+  <link rel="stylesheet" href="styles/layout.css?v=3">
+  <link rel="stylesheet" href="styles/components.css?v=3">
+  <link rel="stylesheet" href="styles/sections.css?v=3">
+  <link rel="stylesheet" href="styles/animations.css?v=3">
+  <link rel="stylesheet" href="styles/ia-diagram.css?v=3">
+  <link rel="stylesheet" href="styles/live-demo.css?v=4">
+</head>
+<body>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav class="navbar" id="navbar">
+  <div class="navbar__inner">
+    <a href="#hero" class="navbar__logo">
+      <div class="navbar__logo-icon">B</div>
+      BuildIQ
+    </a>
+    <div class="navbar__links">
+      <a href="#empathize" class="navbar__link">Empathize</a>
+      <a href="#define" class="navbar__link">Define</a>
+      <a href="#ideate" class="navbar__link">Ideate</a>
+      <a href="#product" class="navbar__link">Product</a>
+      <a href="#live-demo" class="navbar__link">Live Demo</a>
+      <a href="#impact" class="navbar__link">Impact</a>
+    </div>
+    <a href="#cta" class="navbar__cta">Hire Me</a>
+    <button class="navbar__mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#empathize" class="mobile-menu__link">Empathize</a>
+  <a href="#define" class="mobile-menu__link">Define</a>
+  <a href="#ideate" class="mobile-menu__link">Ideate</a>
+  <a href="#product" class="mobile-menu__link">Product</a>
+  <a href="#live-demo" class="mobile-menu__link">Live Demo</a>
+  <a href="#impact" class="mobile-menu__link">Impact</a>
+  <a href="#cta" class="btn btn--primary">Hire Me</a>
+</div>
+
+<!-- ==================== SECTION 1: HERO ==================== -->
+<section class="hero" id="hero">
+  <div class="hero__bg">
+    <img src="assets/images/Onboarding.png" alt="Aerial view of construction site" class="hero__bg-image">
+    <div class="hero__bg-overlay"></div>
+    <div class="hero__bg-grid"></div>
+  </div>
+
+  <div class="hero__float hero__float--left animate-float">
+    <div class="hero__float-card">
+      Project Progress <span class="value value--green">73%</span>
+    </div>
+  </div>
+  <div class="hero__float hero__float--right animate-float-delayed">
+    <div class="hero__float-card">
+      Waste Reduced <span class="value value--yellow">30%</span>
+    </div>
+  </div>
+  <div class="hero__float hero__float--bottom-left animate-float-delayed">
+    <div class="hero__float-card">
+      Delay Risk <span class="value value--blue">Low</span>
+    </div>
+  </div>
+
+  <div class="hero__content">
+    <div class="hero__badge hero-animate">
+      <span class="hero__badge-dot"></span>
+      AI-Powered Construction Intelligence
+    </div>
+    <h1 class="hero__title hero-animate hero-animate--delay-1">
+      Reinventing Construction<br>Through <span class="highlight">AI + UX</span>
+    </h1>
+    <p class="hero__subtitle hero-animate hero-animate--delay-2">
+      Monitor sites in real time, reduce waste, verify plans instantly, and deliver projects faster with one intelligent platform.
+    </p>
+    <div class="hero__ctas hero-animate hero-animate--delay-3">
+      <a href="#empathize" class="btn btn--primary btn--lg">View Case Study</a>
+      <a href="#live-demo" class="btn btn--secondary btn--lg">Launch Live Demo</a>
+      <a href="#product" class="btn btn--ghost btn--lg">Explore Product</a>
+    </div>
+    <div class="hero__tagline-bar hero-animate hero-animate--delay-4">
+      <span class="hero__tagline-item">🏗️ Build Smarter</span>
+      <span class="hero__tagline-item">♻️ Waste Less</span>
+      <span class="hero__tagline-item">⚡ Deliver Faster</span>
+    </div>
+  </div>
+
+  <div class="hero__scroll-indicator hero-animate hero-animate--delay-5">
+    <span class="hero__scroll-text">Scroll to explore</span>
+    <div class="hero__scroll-line"></div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 2: EMPATHIZE ==================== -->
+<section class="section section--darker" id="empathize">
+  <div class="container">
+    <div class="section__header reveal">
+      <div class="section__label"><span class="section__label-number">01</span> EMPATHIZE</div>
+      <h2 class="section__title">Understanding the People Behind Construction</h2>
+      <p class="section__subtitle">Deep research into the daily struggles of construction professionals revealed critical pain points across every role.</p>
+    </div>
+
+    <div class="grid grid-4 empathize-cards">
+      <div class="card reveal stagger-1">
+        <div class="card__role-icon">👷</div>
+        <div class="card__role">Civil Engineer</div>
+        <h4 class="card__title">Rajesh & Team</h4>
+        <div class="pain-points-list">
+          <div class="pain-point"><span class="pain-point__dot"></span> Manual progress updates</div>
+          <div class="pain-point"><span class="pain-point__dot"></span> No centralized tracking</div>
+          <div class="pain-point"><span class="pain-point__dot"></span> Delays hard to identify</div>
+        </div>
+      </div>
+      <div class="card reveal stagger-2">
+        <div class="card__role-icon">🏗️</div>
+        <div class="card__role">Contractor</div>
+        <h4 class="card__title">Builders & Vendors</h4>
+        <div class="pain-points-list">
+          <div class="pain-point"><span class="pain-point__dot"></span> Material wastage daily</div>
+          <div class="pain-point"><span class="pain-point__dot"></span> Labor inefficiency</div>
+          <div class="pain-point"><span class="pain-point__dot"></span> Vendor coordination issues</div>
+        </div>
+      </div>
+      <div class="card reveal stagger-3">
+        <div class="card__role-icon">📐</div>
+        <div class="card__role">Architect</div>
+        <h4 class="card__title">Design Professionals</h4>
+        <div class="pain-points-list">
+          <div class="pain-point"><span class="pain-point__dot"></span> Plan compliance confusion</div>
+          <div class="pain-point"><span class="pain-point__dot"></span> Frequent revisions</div>
+          <div class="pain-point"><span class="pain-point__dot"></span> IS Code verification gaps</div>
+        </div>
+      </div>
+      <div class="card reveal stagger-4">
+        <div class="card__role-icon">🏠</div>
+        <div class="card__role">Client / Home Owner</div>
+        <h4 class="card__title">Mr. Sharma & Family</h4>
+        <div class="pain-points-list">
+          <div class="pain-point"><span class="pain-point__dot"></span> No visibility on progress</div>
+          <div class="pain-point"><span class="pain-point__dot"></span> Hard to read technical drawings</div>
+          <div class="pain-point"><span class="pain-point__dot"></span> Budget surprises</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 3: PRIMARY RESEARCH ==================== -->
+<section class="section section--dark" id="primary-research">
+  <div class="container">
+    <div class="section__header reveal">
+      <div class="section__label"><span class="section__label-number">02</span> PRIMARY RESEARCH</div>
+      <h2 class="section__title">Real Conversations. Real Insights.</h2>
+      <p class="section__subtitle">We interviewed 43 construction professionals and surveyed 120+ stakeholders to uncover the industry's deepest pain points.</p>
+    </div>
+
+    <div class="research-stats reveal">
+      <div class="stat-card">
+        <div class="stat-card__number stat-card__number--yellow" data-count="20">0</div>
+        <div class="stat-card__label">Professionals Interviewed</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card__number stat-card__number--blue" data-count="8">0</div>
+        <div class="stat-card__label">Engineers Consulted</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card__number stat-card__number--orange" data-count="5">0</div>
+        <div class="stat-card__label">Contractors Shadowed</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card__number stat-card__number--green" data-count="6">0</div>
+        <div class="stat-card__label">Homeowners Surveyed</div>
+      </div>
+    </div>
+
+    <div class="research-charts">
+      <div class="chart-container reveal stagger-1">
+        <div class="chart-container__title">Key Survey Findings</div>
+        <canvas id="surveyChart"></canvas>
+      </div>
+      <div class="chart-container reveal stagger-2">
+        <div class="chart-container__title">Current Tools Used</div>
+        <canvas id="toolsChart"></canvas>
+      </div>
+    </div>
+
+    <div class="observations-gallery">
+      <div class="observation-card reveal stagger-1">
+        <img src="assets/images/unmanaged-materials.png" alt="Unmanaged construction materials on site">
+        <div class="observation-card__caption">Unmanaged materials & manual reporting observed on-site</div>
+      </div>
+      <div class="observation-card reveal stagger-2">
+        <img src="assets/images/site-observation.png" alt="Workers using paper documents">
+        <div class="observation-card__caption">Paper-based documentation still prevalent across sites</div>
+      </div>
+      <div class="observation-card reveal stagger-3">
+        <img src="assets/images/safety-storage.png" alt="Safety concerns on site">
+        <div class="observation-card__caption">Safety zones & material storage lacking organization</div>
+      </div>
+    </div>
+
+    <div class="text-center reveal">
+      <a href="#" class="btn btn--secondary">Explore Full Research →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 4: SECONDARY RESEARCH ==================== -->
+<section class="section section--darker" id="secondary-research">
+  <div class="container">
+    <div class="section__header reveal">
+      <div class="section__label"><span class="section__label-number">03</span> SECONDARY RESEARCH</div>
+      <h2 class="section__title">Industry Landscape & Market Gap</h2>
+      <p class="section__subtitle">Benchmarking against global data and competitor analysis revealed clear gaps in the construction technology market.</p>
+    </div>
+
+    <div class="grid grid-4 reveal">
+      <div class="stat-card">
+        <div class="stat-card__number stat-card__number--yellow" data-count="15" data-suffix="-25%">0</div>
+        <div class="stat-card__label">Cost Increase from Delays</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card__number stat-card__number--orange" data-count="35" data-suffix="%">0</div>
+        <div class="stat-card__label">Material Waste Globally</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card__number stat-card__number--blue" data-count="70" data-suffix="%">0</div>
+        <div class="stat-card__label">Projects Face Rework</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card__number stat-card__number--green" data-count="12" data-suffix="%">0</div>
+        <div class="stat-card__label">Industry Digitization</div>
+      </div>
+    </div>
+
+    <div style="margin-top: var(--space-3xl);" class="reveal">
+      <h3 style="margin-bottom: var(--space-lg); font-size: 1.25rem;">Competitor Analysis</h3>
+      <div style="overflow-x: auto;">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Procore</th>
+              <th>Autodesk CC</th>
+              <th>Monday.com</th>
+              <th>Primavera</th>
+              <th style="color: var(--accent-yellow);">BuildIQ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Drone Monitoring</td><td class="cross-icon">✗</td><td class="cross-icon">✗</td><td class="cross-icon">✗</td><td class="cross-icon">✗</td><td class="check-icon">✓</td>
+            </tr>
+            <tr>
+              <td>AI Waste Tracking</td><td class="cross-icon">✗</td><td class="cross-icon">✗</td><td class="cross-icon">✗</td><td class="cross-icon">✗</td><td class="check-icon">✓</td>
+            </tr>
+            <tr>
+              <td>IS Code Checker</td><td class="cross-icon">✗</td><td class="cross-icon">✗</td><td class="cross-icon">✗</td><td class="cross-icon">✗</td><td class="check-icon">✓</td>
+            </tr>
+            <tr>
+              <td>Simplified UX (India)</td><td class="cross-icon">✗</td><td class="cross-icon">✗</td><td class="check-icon">✓</td><td class="cross-icon">✗</td><td class="check-icon">✓</td>
+            </tr>
+            <tr>
+              <td>Project Dashboard</td><td class="check-icon">✓</td><td class="check-icon">✓</td><td class="check-icon">✓</td><td class="check-icon">✓</td><td class="check-icon">✓</td>
+            </tr>
+            <tr>
+              <td>Client Portal</td><td class="check-icon">✓</td><td class="cross-icon">✗</td><td class="cross-icon">✗</td><td class="cross-icon">✗</td><td class="check-icon">✓</td>
+            </tr>
+            <tr class="highlight-row">
+              <td>All-in-One Platform</td><td class="cross-icon">✗</td><td class="cross-icon">✗</td><td class="cross-icon">✗</td><td class="cross-icon">✗</td><td class="check-icon" style="font-size:1.25rem;">✓</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 5: DEFINE ==================== -->
+<section class="section section--dark define-section" id="define">
+  <div class="bg-glow bg-glow--yellow" style="width:500px;height:500px;top:20%;left:-10%;"></div>
+  <div class="container relative">
+    <div class="section__header section__header--center reveal">
+      <div class="section__label"><span class="section__label-number">04</span> DEFINE</div>
+      <h2 class="section__title" style="max-width:100%;">Framing the Core Challenge</h2>
+    </div>
+
+    <div class="define-hmw reveal">
+      <div class="define-hmw__label">How Might We</div>
+      <p class="define-hmw__text">
+        Help construction teams <em>monitor progress</em>, <em>reduce waste</em>, and <em>verify plans</em> — without adding complexity?
+      </p>
+    </div>
+
+    <div class="define-problems">
+      <div class="card reveal stagger-1">
+        <div class="card__icon card__icon--red">⚠️</div>
+        <h4 class="card__title">Reactive, Not Proactive</h4>
+        <p class="card__subtitle">Construction sites react to problems after they occur. No early warning systems exist.</p>
+      </div>
+      <div class="card reveal stagger-2">
+        <div class="card__icon card__icon--orange">👁️</div>
+        <h4 class="card__title">Poor Visibility</h4>
+        <p class="card__subtitle">Progress tracking relies on manual site visits and verbal updates. Data is fragmented.</p>
+      </div>
+      <div class="card reveal stagger-3">
+        <div class="card__icon card__icon--yellow">🗑️</div>
+        <h4 class="card__title">Invisible Waste</h4>
+        <p class="card__subtitle">Material waste goes unnoticed until financial loss accumulates. No measurement exists.</p>
+      </div>
+      <div class="card reveal stagger-4">
+        <div class="card__icon card__icon--blue">📋</div>
+        <h4 class="card__title">Expert-Dependent Compliance</h4>
+        <p class="card__subtitle">IS Code verification requires experienced professionals — creating bottlenecks and errors.</p>
+      </div>
+      <div class="card reveal stagger-5">
+        <div class="card__icon card__icon--purple">🔌</div>
+        <h4 class="card__title">Disconnected Clients</h4>
+        <p class="card__subtitle">Homeowners feel excluded from their own project. No simple way to track progress.</p>
+      </div>
+      <div class="card reveal stagger-6">
+        <div class="card__icon card__icon--green">🧩</div>
+        <h4 class="card__title">Fragmented Tools</h4>
+        <p class="card__subtitle">Teams juggle WhatsApp, Excel, calls, and paper. No unified platform exists for Indian builders.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 6: PERSONAS ==================== -->
+<section class="section section--darker" id="personas">
+  <div class="container">
+    <div class="section__header section__header--center reveal">
+      <div class="section__label"><span class="section__label-number">05</span> USER PERSONAS</div>
+      <h2 class="section__title" style="max-width:100%;">Designing for Real People</h2>
+      <p class="section__subtitle">Three primary personas emerged from our research, each with distinct needs and workflows.</p>
+    </div>
+
+    <div class="grid grid-3">
+      <div class="persona-card reveal stagger-1">
+        <div class="persona-card__avatar">👷</div>
+        <h3 class="persona-card__name">Rajesh Kumar</h3>
+        <div class="persona-card__role">Site Engineer</div>
+        <p class="card__subtitle" style="margin-bottom:var(--space-md); font-size:0.8125rem;">15 years experience. Manages 3 sites simultaneously. Frustrated with manual processes.</p>
+        <div class="persona-card__needs">
+          <div class="persona-card__need">Real-time progress updates</div>
+          <div class="persona-card__need">Faster daily reporting</div>
+          <div class="persona-card__need">Automated delay alerts</div>
+        </div>
+      </div>
+      <div class="persona-card reveal stagger-2">
+        <div class="persona-card__avatar">📐</div>
+        <h3 class="persona-card__name">Priya Mehta</h3>
+        <div class="persona-card__role">Architect</div>
+        <p class="card__subtitle" style="margin-bottom:var(--space-md); font-size:0.8125rem;">8 years experience. Designs residential projects. Needs faster compliance validation.</p>
+        <div class="persona-card__needs">
+          <div class="persona-card__need">Plan validation tools</div>
+          <div class="persona-card__need">Quick compliance checking</div>
+          <div class="persona-card__need">Client communication hub</div>
+        </div>
+      </div>
+      <div class="persona-card reveal stagger-3">
+        <div class="persona-card__avatar">🏠</div>
+        <h3 class="persona-card__name">Mr. Sharma</h3>
+        <div class="persona-card__role">Home Owner</div>
+        <p class="card__subtitle" style="margin-bottom:var(--space-md); font-size:0.8125rem;">First-time builder. Non-technical. Wants simple visibility into his dream home project.</p>
+        <div class="persona-card__needs">
+          <div class="persona-card__need">Understand plans simply</div>
+          <div class="persona-card__need">Track progress visually</div>
+          <div class="persona-card__need">Budget transparency</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 7: JOURNEY MAP ==================== -->
+<section class="section section--dark journey-section" id="journey">
+  <div class="container">
+    <div class="section__header section__header--center reveal">
+      <div class="section__label"><span class="section__label-number">06</span> JOURNEY MAP</div>
+      <h2 class="section__title" style="max-width:100%;">Before vs After BuildIQ</h2>
+      <p class="section__subtitle">Mapping the current chaotic workflow against the streamlined BuildIQ experience.</p>
+    </div>
+
+    <div class="journey-container">
+      <div class="journey-row reveal">
+        <div class="journey-row__title journey-row__title--before">❌ Before BuildIQ — The Painful Reality</div>
+        <div class="journey journey--bad">
+          <div class="journey-step"><div class="journey-step__node journey-step__node--bad">1</div><div class="journey-step__label">Upload Plan via Email</div></div>
+          <div class="journey-step"><div class="journey-step__node journey-step__node--bad">2</div><div class="journey-step__label">Endless Phone Calls</div></div>
+          <div class="journey-step"><div class="journey-step__node journey-step__node--bad">3</div><div class="journey-step__label">Manual Site Visit</div></div>
+          <div class="journey-step"><div class="journey-step__node journey-step__node--bad">4</div><div class="journey-step__label">Paper-based Check</div></div>
+          <div class="journey-step"><div class="journey-step__node journey-step__node--bad">5</div><div class="journey-step__label">Discover Delays</div></div>
+          <div class="journey-step"><div class="journey-step__node journey-step__node--bad">6</div><div class="journey-step__label">Confusion & Blame</div></div>
+          <div class="journey-step"><div class="journey-step__node journey-step__node--bad">7</div><div class="journey-step__label">Cost Overrun</div></div>
+        </div>
+      </div>
+      <div class="journey-row reveal">
+        <div class="journey-row__title journey-row__title--after">✅ After BuildIQ — Intelligent Workflow</div>
+        <div class="journey journey--good">
+          <div class="journey-step"><div class="journey-step__node journey-step__node--good">1</div><div class="journey-step__label">Upload Plan</div></div>
+          <div class="journey-step"><div class="journey-step__node journey-step__node--good">2</div><div class="journey-step__label">AI Validation</div></div>
+          <div class="journey-step"><div class="journey-step__node journey-step__node--good">3</div><div class="journey-step__label">Drone Monitoring</div></div>
+          <div class="journey-step"><div class="journey-step__node journey-step__node--good">4</div><div class="journey-step__label">Daily AI Insights</div></div>
+          <div class="journey-step"><div class="journey-step__node journey-step__node--good">5</div><div class="journey-step__label">Smart Alerts</div></div>
+          <div class="journey-step"><div class="journey-step__node journey-step__node--good">6</div><div class="journey-step__label">Faster Delivery</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 8: IDEATE ==================== -->
+<section class="section section--darker" id="ideate">
+  <div class="container">
+    <div class="section__header reveal">
+      <div class="section__label"><span class="section__label-number">07</span> IDEATE</div>
+      <h2 class="section__title">Exploring Solutions</h2>
+      <p class="section__subtitle">We brainstormed multiple approaches before converging on a unified intelligence platform.</p>
+    </div>
+
+    <div class="ideate-wall">
+      <div class="sticky-note reveal stagger-1" style="--rotation: -3deg;">
+        Site cameras linked to WhatsApp? 📹
+      </div>
+      <div class="sticky-note reveal stagger-2" style="--rotation: 2deg;">
+        Mobile reporting app for site engineers? 📱
+      </div>
+      <div class="sticky-note reveal stagger-3" style="--rotation: -1deg;">
+        Dashboard only for managers? 📊
+      </div>
+      <div class="sticky-note reveal stagger-4" style="--rotation: 4deg;">
+        AI chatbot for compliance? 🤖
+      </div>
+      <div class="sticky-note reveal stagger-5" style="--rotation: 0deg; z-index: 2;">
+        Drone monitoring for visual truth 🚁
+      </div>
+      <div class="sticky-note reveal stagger-6" style="--rotation: -2deg; z-index: 2;">
+        Automated Code Checking Engine 📄
+      </div>
+    </div>
+
+    <div class="ideate-solution reveal">
+      <div class="ideate-solution__label">Final Chosen Solution</div>
+      <div class="ideate-solution__title">Unified Construction Intelligence Platform</div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 9: FULL IA ==================== -->
+<section class="section section--dark" id="ia">
+<div class="container">
+<div class="section__header section__header--center reveal">
+<div class="section__label"><span class="section__label-number">08</span> INFORMATION ARCHITECTURE</div>
+<h2 class="section__title" style="max-width:100%;">Structuring the Complexity</h2>
+</div>
+<div class="ia-full reveal">
+<!-- Title -->
+<div class="ia-full__title-block">
+<div class="ia-full__title">BuildIQ Information Architecture</div>
+<div class="ia-full__subtitle">AI Powered Construction Intelligence Platform</div>
+<div class="ia-full__tagline">Designed for Smart Monitoring • Waste Control • Plan Verification • Project Management</div>
+</div>
+
+<!-- Legend -->
+<div class="ia-legend">
+<div class="ia-legend__title">LEGEND</div>
+<div class="ia-legend__list">
+<div class="ia-legend__item"><span class="ia-legend__swatch ia-legend__swatch--worker"></span> WORKER</div>
+<div class="ia-legend__item"><span class="ia-legend__swatch ia-legend__swatch--engineer"></span> ENGINEER</div>
+<div class="ia-legend__item"><span class="ia-legend__swatch ia-legend__swatch--admin"></span> ADMIN</div>
+<div class="ia-legend__item"><span class="ia-legend__swatch ia-legend__swatch--shared"></span> SHARED</div>
+<div class="ia-legend__item"><span class="ia-legend__swatch ia-legend__swatch--integration"></span> INTEGRATION</div>
+<div class="ia-legend__item"><span class="ia-legend__line ia-legend__line--solid"></span> NORMAL</div>
+<div class="ia-legend__item"><span class="ia-legend__line ia-legend__line--dashed"></span> DATA FLOW</div>
+</div>
+</div>
+
+<div class="ia-roles-container">
+<!-- User Roles -->
+<div class="ia-roles">
+<div class="ia-role"><div class="ia-role__icon ia-role__icon--worker">👷</div><div class="ia-role__label">Worker</div><div class="ia-role__sublabel">(Site Worker / Labor)</div></div>
+<div class="ia-role"><div class="ia-role__icon ia-role__icon--engineer">👨‍💼</div><div class="ia-role__label">Engineer</div><div class="ia-role__sublabel">(Site Engineer / PM)</div></div>
+<div class="ia-role"><div class="ia-role__icon ia-role__icon--admin">👤</div><div class="ia-role__label">Admin</div><div class="ia-role__sublabel">(Admin / Company)</div></div>
+<div class="ia-role"><div class="ia-role__icon ia-role__icon--client">🏠</div><div class="ia-role__label">Client</div><div class="ia-role__sublabel">(Client / Owner)</div></div>
+</div>
+
+<div class="ia-vline"></div>
+<div class="ia-login-node"><span class="ia-login-node__icon">🔐</span> LOGIN / ACCESS PORTAL</div>
+<div class="ia-vline"></div>
+<div class="ia-routing-bar">ROLE BASED DASHBOARD / ROUTING</div>
+<div class="ia-vline--short ia-vline"></div>
+<div class="ia-hline"></div>
+<!-- Portal drop-down connectors -->
+<div class="ia-portal-connectors">
+<div class="ia-portal-connector"></div>
+<div class="ia-portal-connector"></div>
+<div class="ia-portal-connector"></div>
+<div class="ia-portal-connector"></div>
+<div class="ia-portal-connector"></div>
+</div>
+</div>
+<!-- ===== PORTALS ===== -->
+<div class="ia-portals">
+<!-- WORKER PORTAL -->
+<div class="ia-portal ia-portal--worker">
+<div class="ia-portal__header"><span class="ia-portal__header-icon">👷</span> WORKER PORTAL<span class="ia-portal__header-sub">(For Workers / Labor)</span></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--green"><span class="ia-module__title-icon">📊</span> DASHBOARD</div><div class="ia-module__items"><span class="ia-module__item">Today's Tasks</span><span class="ia-module__item">Shift & Attendance</span><span class="ia-module__item">Announcements</span><span class="ia-module__item">Quick Actions</span></div></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--green"><span class="ia-module__title-icon">📍</span> ATTENDANCE</div><div class="ia-module__items"><span class="ia-module__item">Check-in / Check-out</span><span class="ia-module__item">Geo-location Punch</span><span class="ia-module__item">Attendance History</span><span class="ia-module__item">Weekly Overview</span></div></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--green"><span class="ia-module__title-icon">✅</span> TASKS</div><div class="ia-module__items"><span class="ia-module__item">Assigned Tasks</span><span class="ia-module__item">Task Details</span><span class="ia-module__item">Mark as Complete</span><span class="ia-module__item">Upload Work Photo</span></div></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--green"><span class="ia-module__title-icon">📦</span> MATERIAL REQUESTS</div><div class="ia-module__items"><span class="ia-module__item">Request Materials</span><span class="ia-module__item">Request Tools</span><span class="ia-module__item">Request Approval</span><span class="ia-module__item">Request History</span></div></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--green"><span class="ia-module__title-icon">🛡️</span> SAFETY & COMPLIANCE</div><div class="ia-module__items"><span class="ia-module__item">PPE Checklist</span><span class="ia-module__item">Safety Alerts</span><span class="ia-module__item">Hazard Report</span><span class="ia-module__item">Safety Training</span></div></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--green"><span class="ia-module__title-icon">💬</span> COMMUNICATION</div><div class="ia-module__items"><span class="ia-module__item">Team Chat</span><span class="ia-module__item">Raise Issue</span><span class="ia-module__item">Site Announcements</span><span class="ia-module__item">Help & Support</span></div></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--green"><span class="ia-module__title-icon">👤</span> PROFILE</div><div class="ia-module__items"><span class="ia-module__item">Personal Details</span><span class="ia-module__item">Work History</span><span class="ia-module__item">Performance</span><span class="ia-module__item">Payroll / Earnings</span></div></div>
+</div>
+<!-- ENGINEER PORTAL -->
+<div class="ia-portal ia-portal--engineer">
+<div class="ia-portal__header"><span class="ia-portal__header-icon">👨‍💼</span> ENGINEER PORTAL<span class="ia-portal__header-sub">(For Engineers / PM)</span></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--orange"><span class="ia-module__title-icon">📊</span> DASHBOARD</div><div class="ia-module__items"><span class="ia-module__item">Project Overview</span><span class="ia-module__item">Progress vs Plan</span><span class="ia-module__item">Delay Risk</span><span class="ia-module__item">Budget Snapshot</span></div></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--orange"><span class="ia-module__title-icon">📈</span> PROJECT MONITORING</div><div class="ia-module__items"><span class="ia-module__item">Daily Progress Update</span><span class="ia-module__item">Milestones</span><span class="ia-module__item">Planned vs Actual</span><span class="ia-module__item">Progress Reports</span></div></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--orange"><span class="ia-module__title-icon">🚁</span> DRONE MONITORING</div><div class="ia-module__items"><span class="ia-module__item">Live Drone Feed</span><span class="ia-module__item">Capture & Compare</span><span class="ia-module__item">Time-lapse</span><span class="ia-module__item">Safety Zone Detection</span></div></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--orange"><span class="ia-module__title-icon">♻️</span> WASTE ANALYTICS</div><div class="ia-module__items"><span class="ia-module__item">Cement Waste</span><span class="ia-module__item">Steel Waste</span><span class="ia-module__item">Sand Waste</span><span class="ia-module__item">Tile Breakage</span><span class="ia-module__item">Waste Reports</span></div></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--orange"><span class="ia-module__title-icon">📋</span> PLAN VERIFICATION</div><div class="ia-module__items"><span class="ia-module__item">Upload Drawing</span><span class="ia-module__item">IS Code Checks</span><span class="ia-module__item">Compliance Results</span><span class="ia-module__item">Issue Management</span></div></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--orange"><span class="ia-module__title-icon">👥</span> TEAM MANAGEMENT</div><div class="ia-module__items"><span class="ia-module__item">Team Attendance</span><span class="ia-module__item">Productivity Reports</span><span class="ia-module__item">Shift Allocation</span><span class="ia-module__item">Worker Directory</span></div></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--orange"><span class="ia-module__title-icon">📝</span> TASK MANAGEMENT</div><div class="ia-module__items"><span class="ia-module__item">Create Tasks</span><span class="ia-module__item">Assign Tasks</span><span class="ia-module__item">Track Tasks</span><span class="ia-module__item">Review & Approve</span></div></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--orange"><span class="ia-module__title-icon">📄</span> REPORTS</div><div class="ia-module__items"><span class="ia-module__item">Daily Site Report</span><span class="ia-module__item">Weekly Reports</span><span class="ia-module__item">Progress Report</span><span class="ia-module__item">Export Reports</span></div></div>
+</div>
+<!-- CORE PLATFORM -->
+<div class="ia-portal ia-portal--core">
+<div class="ia-portal__header"><span class="ia-portal__header-icon">⚙️</span> CORE PLATFORM<span class="ia-portal__header-sub">(Shared Services)</span></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--blue"><span class="ia-module__title-icon">👤</span> USER MANAGEMENT</div><div class="ia-module__items"><span class="ia-module__item">Role Management</span><span class="ia-module__item">User Profiles</span><span class="ia-module__item">Permissions</span><span class="ia-module__item">User Directory</span></div></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--blue"><span class="ia-module__title-icon">🏗️</span> PROJECT MANAGEMENT</div><div class="ia-module__items"><span class="ia-module__item">Project Creation</span><span class="ia-module__item">Project Settings</span><span class="ia-module__item">Project Timeline</span><span class="ia-module__item">Project Members</span></div></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--blue"><span class="ia-module__title-icon">📁</span> DOCUMENT MANAGEMENT</div><div class="ia-module__items"><span class="ia-module__item">Document Library</span><span class="ia-module__item">File Upload / Download</span><span class="ia-module__item">Version Control</span><span class="ia-module__item">Document Sharing</span></div></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--blue"><span class="ia-module__title-icon">🔔</span> NOTIFICATIONS</div><div class="ia-module__items"><span class="ia-module__item">In-app Notifications</span><span class="ia-module__item">Email Alerts</span><span class="ia-module__item">SMS / Push Alerts</span><span class="ia-module__item">Alert Preferences</span></div></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--blue"><span class="ia-module__title-icon">💬</span> COMMUNICATION HUB</div><div class="ia-module__items"><span class="ia-module__item">Internal Messaging</span><span class="ia-module__item">Comment & Replies</span><span class="ia-module__item">Broadcast Messages</span><span class="ia-module__item">Message History</span></div></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--blue"><span class="ia-module__title-icon">📋</span> ACTIVITY LOGS</div><div class="ia-module__items"><span class="ia-module__item">User Activity</span><span class="ia-module__item">System Logs</span><span class="ia-module__item">Audit Trail</span><span class="ia-module__item">Change History</span></div></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--blue"><span class="ia-module__title-icon">🎨</span> DASHBOARD CUSTOMIZATION</div><div class="ia-module__items"><span class="ia-module__item">Widget Management</span><span class="ia-module__item">Layout Settings</span><span class="ia-module__item">Personal Preferences</span><span class="ia-module__item">Saved Views</span></div></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--blue"><span class="ia-module__title-icon">🔗</span> INTEGRATION CENTER</div><div class="ia-module__items"><span class="ia-module__item">Third-party Integrations</span><span class="ia-module__item">API Connections</span><span class="ia-module__item">Webhooks</span><span class="ia-module__item">Data Sync</span></div></div>
+</div>
+<!-- ADMIN PORTAL -->
+<div class="ia-portal ia-portal--admin">
+<div class="ia-portal__header"><span class="ia-portal__header-icon">👤</span> ADMIN PORTAL<span class="ia-portal__header-sub">(For Admin / Company)</span></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--red"><span class="ia-module__title-icon">📊</span> ADMIN DASHBOARD</div><div class="ia-module__items"><span class="ia-module__item">Company Overview</span><span class="ia-module__item">All Projects Overview</span><span class="ia-module__item">Key Metrics</span><span class="ia-module__item">Alerts & Approvals</span></div></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--red"><span class="ia-module__title-icon">👥</span> USER MANAGEMENT</div><div class="ia-module__items"><span class="ia-module__item">Add / Manage Users</span><span class="ia-module__item">Role & Permissions</span><span class="ia-module__item">Bulk Upload (Excel)</span><span class="ia-module__item">User Activity</span></div></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--red"><span class="ia-module__title-icon">🏗️</span> PROJECT MANAGEMENT</div><div class="ia-module__items"><span class="ia-module__item">Create Projects</span><span class="ia-module__item">Manage Projects</span><span class="ia-module__item">Project Templates</span><span class="ia-module__item">Project Archive</span></div></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--red"><span class="ia-module__title-icon">💰</span> BUDGET MANAGEMENT</div><div class="ia-module__items"><span class="ia-module__item">Budget Allocation</span><span class="ia-module__item">Budget Tracking</span><span class="ia-module__item">Cost Analysis</span><span class="ia-module__item">Vendor Payments</span></div></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--red"><span class="ia-module__title-icon">♻️</span> WASTE MANAGEMENT</div><div class="ia-module__items"><span class="ia-module__item">Waste Overview</span><span class="ia-module__item">Cost of Waste</span><span class="ia-module__item">Waste Trend Analysis</span><span class="ia-module__item">Sustainability Score</span></div></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--red"><span class="ia-module__title-icon">✅</span> PLAN COMPLIANCE</div><div class="ia-module__items"><span class="ia-module__item">Global Compliance</span><span class="ia-module__item">IS Code Library</span><span class="ia-module__item">Compliance Reports</span><span class="ia-module__item">Violation Alerts</span></div></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--red"><span class="ia-module__title-icon">📈</span> REPORTS & ANALYTICS</div><div class="ia-module__items"><span class="ia-module__item">Project Reports</span><span class="ia-module__item">Financial Reports</span><span class="ia-module__item">Waste Reports</span><span class="ia-module__item">Performance Analytics</span></div></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--red"><span class="ia-module__title-icon">⚙️</span> SYSTEM SETTINGS</div><div class="ia-module__items"><span class="ia-module__item">General Settings</span><span class="ia-module__item">Company Settings</span><span class="ia-module__item">Notification Rules</span><span class="ia-module__item">Security Settings</span></div></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--red"><span class="ia-module__title-icon">🔑</span> PERMISSIONS & ROLES</div><div class="ia-module__items"><span class="ia-module__item">Define Roles</span><span class="ia-module__item">Module Access</span><span class="ia-module__item">Data Permissions</span><span class="ia-module__item">Approval Workflows</span></div></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--red"><span class="ia-module__title-icon">🎧</span> SUPPORT SYSTEM</div><div class="ia-module__items"><span class="ia-module__item">Support Tickets</span><span class="ia-module__item">Escalations</span><span class="ia-module__item">FAQ Management</span><span class="ia-module__item">Helpdesk Settings</span></div></div>
+</div>
+<!-- CLIENT PORTAL -->
+<div class="ia-portal ia-portal--client">
+<div class="ia-portal__header"><span class="ia-portal__header-icon">🏠</span> CLIENT PORTAL<span class="ia-portal__header-sub">(Client / Owner View)</span></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--purple"><span class="ia-module__title-icon">📊</span> DASHBOARD</div><div class="ia-module__items"><span class="ia-module__item">Project Progress</span><span class="ia-module__item">Milestones</span><span class="ia-module__item">Budget Summary</span><span class="ia-module__item">Updates</span></div></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--purple"><span class="ia-module__title-icon">📸</span> PROJECT UPDATES</div><div class="ia-module__items"><span class="ia-module__item">Progress Photos</span><span class="ia-module__item">Timeline Updates</span><span class="ia-module__item">Site Reports</span><span class="ia-module__item">Announcements</span></div></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--purple"><span class="ia-module__title-icon">📁</span> DOCUMENTS</div><div class="ia-module__items"><span class="ia-module__item">Shared Documents</span><span class="ia-module__item">Drawings</span><span class="ia-module__item">Approvals</span><span class="ia-module__item">Downloads</span></div></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--purple"><span class="ia-module__title-icon">💳</span> PAYMENT OVERVIEW</div><div class="ia-module__items"><span class="ia-module__item">Payment Schedule</span><span class="ia-module__item">Payments Made</span><span class="ia-module__item">Payment History</span><span class="ia-module__item">Invoices</span></div></div>
+<div class="ia-module"><div class="ia-module__title ia-module__title--purple"><span class="ia-module__title-icon">💬</span> COMMUNICATION</div><div class="ia-module__items"><span class="ia-module__item">Message Admin</span><span class="ia-module__item">Raise Query</span><span class="ia-module__item">Feedback</span><span class="ia-module__item">Support</span></div></div>
+</div>
+</div><!-- end portals -->
+
+<!-- AI & Intelligence Services -->
+<div class="ia-ai-bar">
+<div class="ia-ai-bar__title">🤖 AI & INTELLIGENCE SERVICES</div>
+<div class="ia-ai-bar__grid">
+<div class="ia-ai-card"><div class="ia-ai-card__icon">🤖</div><div class="ia-ai-card__title">AI ASSISTANT</div><div class="ia-ai-card__items">Smart Recommendations<br>Q&A Assistant<br>Delay Prediction<br>Risk Detection</div></div>
+<div class="ia-ai-card"><div class="ia-ai-card__icon">📊</div><div class="ia-ai-card__title">PREDICTIVE ANALYTICS</div><div class="ia-ai-card__items">Delay Prediction<br>Cost Overrun Prediction<br>Resource Optimization<br>Risk Scoring</div></div>
+<div class="ia-ai-card"><div class="ia-ai-card__icon">📷</div><div class="ia-ai-card__title">IMAGE ANALYTICS</div><div class="ia-ai-card__items">Progress Detection<br>Object Recognition<br>Safety Violation Detection<br>Waste Detection</div></div>
+<div class="ia-ai-card"><div class="ia-ai-card__icon">💡</div><div class="ia-ai-card__title">INSIGHTS ENGINE</div><div class="ia-ai-card__items">Performance Insights<br>Trend Analysis<br>Anomaly Detection<br>Smart Alerts</div></div>
+</div>
+</div>
+
+<div class="ia-section-connector"><div class="ia-section-connector__line"></div><div class="ia-section-connector__arrow"></div></div>
+
+<!-- Integration Layer -->
+<div class="ia-integration-bar">
+<div class="ia-integration-bar__title">INTEGRATION LAYER (ERP / API INTEGRATION)</div>
+<div class="ia-integration-bar__items">
+<div class="ia-integration-bar__item">ERP Integration</div><span class="ia-integration-bar__arrow">→</span>
+<div class="ia-integration-bar__item">Accounting Systems</div><span class="ia-integration-bar__arrow">→</span>
+<div class="ia-integration-bar__item">Inventory Systems</div><span class="ia-integration-bar__arrow">→</span>
+<div class="ia-integration-bar__item">HR / Payroll Systems</div><span class="ia-integration-bar__arrow">→</span>
+<div class="ia-integration-bar__item">Third-party APIs</div><span class="ia-integration-bar__arrow">→</span>
+<div class="ia-integration-bar__item">Government Portals</div>
+</div>
+</div>
+
+<div class="ia-section-connector"><div class="ia-section-connector__line"></div><div class="ia-section-connector__arrow"></div></div>
+
+<!-- Central Database -->
+<div class="ia-db-bar">
+<div class="ia-db-bar__title">🗄️ CENTRAL DATABASE & CLOUD INFRASTRUCTURE</div>
+<div class="ia-db-bar__items">
+<div class="ia-db-bar__item">User Data</div>
+<div class="ia-db-bar__item">Project Data</div>
+<div class="ia-db-bar__item">Documents</div>
+<div class="ia-db-bar__item">Analytics Data</div>
+<div class="ia-db-bar__item">Logs & Audit</div>
+<div class="ia-db-bar__item">Backup & Restore</div>
+</div>
+</div>
+
+<div class="ia-section-connector"><div class="ia-section-connector__line"></div><div class="ia-section-connector__arrow"></div></div>
+
+<!-- Cross-System Workflow -->
+<div class="ia-workflow">
+<div class="ia-workflow__title">CROSS-SYSTEM CONNECTIVITY & WORKFLOW</div>
+<div class="ia-workflow__rows">
+<div class="ia-workflow__row">
+<div class="ia-workflow__actor ia-workflow__actor--admin">👤 Admin<br><small>Creates Project</small></div>
+<span class="ia-workflow__arrow">→</span><div class="ia-workflow__step">Assigns Team</div>
+<span class="ia-workflow__arrow">→</span><div class="ia-workflow__step">Allocates Budget</div>
+<span class="ia-workflow__arrow">→</span><div class="ia-workflow__step">Sets Timeline</div>
+<span class="ia-workflow__arrow">→</span><div class="ia-workflow__step">Approvals</div>
+<span class="ia-workflow__arrow">→</span><div class="ia-workflow__step">Project Live</div>
+</div>
+<div class="ia-workflow__row">
+<div class="ia-workflow__actor ia-workflow__actor--engineer">👨‍💼 Engineer<br><small>Updates Progress</small></div>
+<span class="ia-workflow__arrow">→</span><div class="ia-workflow__step">Monitors Site</div>
+<span class="ia-workflow__arrow">→</span><div class="ia-workflow__step">Assigns Tasks</div>
+<span class="ia-workflow__arrow">→</span><div class="ia-workflow__step">Tracks Resources</div>
+<span class="ia-workflow__arrow">→</span><div class="ia-workflow__step">Reviews Work</div>
+<span class="ia-workflow__arrow">→</span><div class="ia-workflow__step">Generates Reports</div>
+</div>
+<div class="ia-workflow__row">
+<div class="ia-workflow__actor ia-workflow__actor--worker">👷 Worker<br><small>Views Tasks</small></div>
+<span class="ia-workflow__arrow">→</span><div class="ia-workflow__step">Works on Site</div>
+<span class="ia-workflow__arrow">→</span><div class="ia-workflow__step">Marks Complete</div>
+<span class="ia-workflow__arrow">→</span><div class="ia-workflow__step">Uploads Proof</div>
+<span class="ia-workflow__arrow">→</span><div class="ia-workflow__step">Requests Material</div>
+<span class="ia-workflow__arrow">→</span><div class="ia-workflow__step">Receives Feedback</div>
+</div>
+</div>
+<div class="ia-workflow__legend">
+<div class="ia-workflow__legend-item"><span class="ia-workflow__legend-line ia-workflow__legend-line--normal"></span> Normal Flow</div>
+<div class="ia-workflow__legend-item"><span class="ia-workflow__legend-line ia-workflow__legend-line--data"></span> Data Sync</div>
+<div class="ia-workflow__legend-item"><span class="ia-workflow__legend-line ia-workflow__legend-line--worker-action"></span> Worker Actions</div>
+<div class="ia-workflow__legend-item"><span class="ia-workflow__legend-line ia-workflow__legend-line--engineer-action"></span> Engineer Actions</div>
+<div class="ia-workflow__legend-item"><span class="ia-workflow__legend-line ia-workflow__legend-line--admin-action"></span> Admin Actions</div>
+<div class="ia-workflow__legend-item"><span class="ia-workflow__legend-line ia-workflow__legend-line--client"></span> Client View</div>
+<div class="ia-workflow__legend-item"><span class="ia-workflow__legend-swatch ia-workflow__legend-swatch--system"></span> System Core</div>
+</div>
+</div>
+
+</div><!-- end ia-full -->
+</div>
+</section>
+
+
+<!-- ==================== SECTION 10: PRODUCT INTRO ==================== -->
+<section class="section section--elevated product-intro" id="product">
+  <div class="container relative">
+    <div class="product-intro__content mx-auto">
+      <div class="product-intro__eyebrow reveal">Meet BuildIQ</div>
+      <h2 class="product-intro__title reveal-scale">
+        A Complete Operating System for Modern Construction.
+      </h2>
+      <p class="product-intro__subtitle reveal stagger-1">
+        Translating complex site data into simple, actionable insights. Zero jargon. Pure intelligence. Scroll down to experience the live product.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 10B: LIVE PRODUCT DEMO ==================== -->
+<section class="live-demo-section section" id="live-demo">
+  <div class="demo-ambient-glow"></div>
+  <div class="demo-ambient-glow demo-ambient-glow--secondary"></div>
+  <div class="container">
+    <div class="demo-header reveal">
+      <div class="demo-header__eyebrow">
+        <span class="demo-header__live-dot"></span>
+        <span class="section__label-number">09B</span> LIVE PRODUCT
+      </div>
+      <h2 class="demo-header__title">Experience BuildIQ — <span class="demo-header__title-accent">Live</span></h2>
+      <p class="demo-header__subtitle">
+        This isn't a mockup. It's the fully functional BuildIQ platform. Select a role, explore the dashboards, interact with every module.
+      </p>
+    </div>
+
+    <div class="demo-roles reveal stagger-1">
+      <div class="demo-role-pill demo-role-pill--admin">
+        <span class="demo-role-pill__icon">🛡️</span>
+        <span class="demo-role-pill__label">Admin Portal</span>
+        <span class="demo-role-pill__tag">Full Control</span>
+      </div>
+      <div class="demo-role-pill demo-role-pill--engineer">
+        <span class="demo-role-pill__icon">👨‍💼</span>
+        <span class="demo-role-pill__label">Engineer Portal</span>
+        <span class="demo-role-pill__tag">Site Command</span>
+      </div>
+      <div class="demo-role-pill demo-role-pill--worker">
+        <span class="demo-role-pill__icon">👷</span>
+        <span class="demo-role-pill__label">Worker Portal</span>
+        <span class="demo-role-pill__tag">Field Actions</span>
+      </div>
+      <div class="demo-role-pill demo-role-pill--client">
+        <span class="demo-role-pill__icon">🏠</span>
+        <span class="demo-role-pill__label">Client Portal</span>
+        <span class="demo-role-pill__tag">Transparency</span>
+      </div>
+    </div>
+
+    <div class="demo-browser-wrapper reveal-scale">
+      <div class="demo-browser-glow"></div>
+      <div class="demo-browser">
+        <div class="demo-browser__topbar">
+          <div class="demo-browser__dots">
+            <span class="demo-browser__dot demo-browser__dot--red"></span>
+            <span class="demo-browser__dot demo-browser__dot--yellow"></span>
+            <span class="demo-browser__dot demo-browser__dot--green"></span>
+          </div>
+          <div class="demo-browser__url">
+            <span class="demo-browser__url-lock">🔒</span>
+            <span class="demo-browser__url-text">app.buildiq.ai/dashboard</span>
+          </div>
+          <div class="demo-browser__actions">
+            <div class="demo-browser__status">
+              <span class="demo-browser__status-dot"></span>
+              <span class="demo-browser__status-text">Live</span>
+            </div>
+            <a href="Construction Management- UI/index.html" target="_blank" class="demo-browser__action-btn demo-browser__action-btn--primary">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Open Full Screen
+            </a>
+          </div>
+        </div>
+        <div class="demo-browser__viewport">
+          <div class="demo-browser__loading" id="demo-loading">
+            <div class="demo-browser__spinner"></div>
+            <div class="demo-browser__loading-text">Initializing BuildIQ Engine...</div>
+            <div class="demo-browser__loading-sub">Connecting to AI services</div>
+          </div>
+          <iframe
+            src="Construction Management- UI/index.html"
+            title="BuildIQ Live Dashboard"
+            id="demo-iframe"
+            loading="lazy"
+            allow="fullscreen"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-caption reveal stagger-2">
+      <p class="demo-caption__text">
+        Interact with the <em>real product</em> — navigate modules, switch roles, explore AI alerts, drone feeds, and waste analytics. Every button, chart, and interaction is live.
+      </p>
+      <span class="demo-caption__hint">
+        <span class="demo-caption__hint-dot"></span>
+        Interactive — Click inside the frame to explore
+      </span>
+    </div>
+
+    <div class="demo-features reveal-up">
+      <div class="demo-feature-card">
+        <div class="demo-feature-card__glow demo-feature-card__glow--blue"></div>
+        <div class="demo-feature-card__icon">🚁</div>
+        <div class="demo-feature-card__title">Drone Control</div>
+        <div class="demo-feature-card__desc">Live feed switching, AI detection overlays, and flight telemetry</div>
+        <div class="demo-feature-card__stat">4 Active Drones</div>
+      </div>
+      <div class="demo-feature-card">
+        <div class="demo-feature-card__glow demo-feature-card__glow--green"></div>
+        <div class="demo-feature-card__icon">♻️</div>
+        <div class="demo-feature-card__title">Waste Analytics</div>
+        <div class="demo-feature-card__desc">Material waste tracking with real-time cost impact analysis</div>
+        <div class="demo-feature-card__stat">-30% Waste Saved</div>
+      </div>
+      <div class="demo-feature-card">
+        <div class="demo-feature-card__glow demo-feature-card__glow--yellow"></div>
+        <div class="demo-feature-card__icon">📋</div>
+        <div class="demo-feature-card__title">Plan Verification</div>
+        <div class="demo-feature-card__desc">AI-powered IS Code compliance checker with blueprint overlay</div>
+        <div class="demo-feature-card__stat">IS 456 Compliant</div>
+      </div>
+      <div class="demo-feature-card">
+        <div class="demo-feature-card__glow demo-feature-card__glow--purple"></div>
+        <div class="demo-feature-card__icon">🤖</div>
+        <div class="demo-feature-card__title">AI Assistant</div>
+        <div class="demo-feature-card__desc">Contextual AI chat for site queries, delays, and budget insights</div>
+        <div class="demo-feature-card__stat">Always Available</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Fullscreen Demo Overlay -->
+<div class="demo-fullscreen-overlay" id="demo-fullscreen">
+  <div class="demo-fullscreen-overlay__topbar">
+    <div class="demo-fullscreen-overlay__title">
+      <span style="width:28px;height:28px;background:var(--gradient-primary);border-radius:6px;display:inline-flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:800;color:#000;">B</span>
+      BuildIQ — Live Product Demo
+    </div>
+    <button class="demo-fullscreen-overlay__close" id="demo-fullscreen-close">✕ Close Demo</button>
+  </div>
+  <div class="demo-fullscreen-overlay__frame">
+    <iframe src="about:blank" id="demo-fullscreen-iframe" title="BuildIQ Full Demo"></iframe>
+  </div>
+</div>
+
+<!-- ==================== SECTION 11: KEY FEATURES ==================== -->
+<section class="section section--dark features-section" id="features">
+  <div class="container">
+    <div class="section__header section__header--center reveal">
+      <div class="section__label"><span class="section__label-number">09</span> KEY FEATURES</div>
+      <h2 class="section__title" style="max-width:100%;">Intelligent by Design</h2>
+    </div>
+
+    <!-- Feature 1: Drone -->
+    <div class="feature-block">
+      <div class="feature-showcase">
+        <div class="feature-showcase__content reveal-left">
+          <div class="feature-showcase__number">FEATURE 01</div>
+          <h3 class="feature-showcase__title">Drone Monitoring System</h3>
+          <p class="feature-showcase__desc">Capture daily site imagery automatically. BuildIQ compares planned vs. actual progress, detects unsafe zones, and generates heatmaps of inactivity areas.</p>
+          <div class="flex gap-md flex-wrap mt-4">
+            <span class="badge badge--blue">Live Feed</span>
+            <span class="badge badge--yellow">Progress Heatmap</span>
+            <span class="badge badge--red">Safety Alerts</span>
+          </div>
+        </div>
+        <div class="feature-showcase__visual reveal-right">
+          <img src="assets/images/Drone moniter.png" alt="Drone Monitoring UI mockup">
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature 2: Waste -->
+    <div class="feature-block">
+      <div class="feature-showcase feature-showcase--reverse">
+        <div class="feature-showcase__content reveal-right">
+          <div class="feature-showcase__number">FEATURE 02</div>
+          <h3 class="feature-showcase__title">Material Waste Tracking</h3>
+          <p class="feature-showcase__desc">Stop financial bleed before it happens. AI generates end-of-day smart reports tracking cement, steel, sand, and wood—translating waste percentages into real monetary costs.</p>
+        </div>
+        <div class="feature-showcase__visual reveal-left">
+          <img src="assets/images/Waste Analitics.png" alt="Material Waste Monitoring UI mockup">
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature 3: Smart Dashboard -->
+    <div class="feature-block">
+      <div class="feature-showcase">
+        <div class="feature-showcase__content reveal-left">
+          <div class="feature-showcase__number">FEATURE 03</div>
+          <h3 class="feature-showcase__title">Smart Project Dashboard</h3>
+          <p class="feature-showcase__desc">The command center for your site. See project completion, delay risks, budget utilization, and live site feeds in one unified, scannable interface.</p>
+        </div>
+        <div class="feature-showcase__visual reveal-right">
+          <img src="assets/images/Dashboard.png" alt="Smart Project Dashboard UI mockup">
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature 4: Plan Verification -->
+    <div class="feature-block">
+      <div class="feature-showcase feature-showcase--reverse">
+        <div class="feature-showcase__content reveal-right">
+          <div class="feature-showcase__number">FEATURE 04</div>
+          <h3 class="feature-showcase__title">AI Plan Verification</h3>
+          <p class="feature-showcase__desc">Upload AutoCAD or PDF plans. The AI instantly compares them against Indian Standard (IS) Codes for structural spacing, ventilation, safety, and fire exits.</p>
+          <div class="compliance-item compliance-item--fail mt-4">
+            <div class="compliance-item__status">❌</div>
+            <div class="compliance-item__text">
+              <div class="compliance-item__label">Stair width unsafe</div>
+              <div class="compliance-item__detail">Current: 1050mm | Required: 1200mm</div>
+            </div>
+          </div>
+          <div class="compliance-item compliance-item--pass mt-2">
+            <div class="compliance-item__status">✅</div>
+            <div class="compliance-item__text">
+              <div class="compliance-item__label">Fire exit compliance met</div>
+            </div>
+          </div>
+        </div>
+        <div class="feature-showcase__visual reveal-left">
+           <img src="assets/images/Ai Monitering.png" alt="AI Monitoring UI">
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+<!-- ==================== SECTION 12: PROTOTYPE ==================== -->
+<section class="section section--darker" id="prototype">
+  <div class="container">
+    <div class="section__header reveal">
+      <div class="section__label"><span class="section__label-number">10</span> PROTOTYPING PROCESS</div>
+      <h2 class="section__title">From Sketch to Reality</h2>
+      <p class="section__subtitle">Iterative design process ensuring the interface is intuitive for non-technical users.</p>
+    </div>
+
+    <div class="proto-timeline reveal-up">
+      <div class="proto-step">
+        <span class="proto-step__badge proto-step__badge--low">Low Fidelity</span>
+        <div class="proto-step__visual">
+           <img src="assets/images/wireframe-progression.png" alt="Wireframe Sketch" style="object-position: left;">
+        </div>
+        <h4 class="proto-step__title">Information Architecture</h4>
+        <p class="proto-step__desc">Mapping the core user flows and layout structure on paper.</p>
+      </div>
+      <div class="proto-step">
+        <span class="proto-step__badge proto-step__badge--mid">Mid Fidelity</span>
+        <div class="proto-step__visual">
+           <img src="assets/images/wireframe-progression.png" alt="Digital Wireframe" style="object-position: center;">
+        </div>
+        <h4 class="proto-step__title">Component Validation</h4>
+        <p class="proto-step__desc">Testing grayscale layouts for scannability and data hierarchy.</p>
+      </div>
+      <div class="proto-step">
+        <span class="proto-step__badge proto-step__badge--high">High Fidelity</span>
+        <div class="proto-step__visual">
+           <img src="assets/images/Dashboard.png" alt="High Fidelity UI" style="object-fit: cover; object-position: top;">
+        </div>
+        <h4 class="proto-step__title">Visual Design</h4>
+        <p class="proto-step__desc">Applying the premium dark-mode aesthetic and final data visualizations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 13: TESTING ==================== -->
+<section class="section section--dark" id="testing">
+  <div class="container">
+    <div class="section__header reveal">
+      <div class="section__label"><span class="section__label-number">11</span> USABILITY TESTING</div>
+      <h2 class="section__title">Feedback & Iterations</h2>
+    </div>
+
+    <div class="testing-grid">
+      <div class="testing-feedback reveal-left">
+        <h3 class="font-semibold mb-4 text-primary text-xl">User Feedback</h3>
+        <div class="feedback-item">
+          <p class="feedback-item__quote">The drone visuals are incredible, but the dashboard originally had too many numbers. I just need to know if we are delayed.</p>
+        </div>
+        <div class="feedback-item">
+          <p class="feedback-item__quote">The compliance checker is a lifesaver. It replaces 3 hours of manual document reading.</p>
+        </div>
+      </div>
+      <div class="testing-iterations reveal-right">
+        <h3 class="font-semibold mb-4 text-primary text-xl">Key Iterations Made</h3>
+        <div class="flex flex-col gap-sm">
+          <div class="iteration-item">
+            <span class="iteration-item__text">Simplified the main dashboard with larger KPI cards.</span>
+          </div>
+          <div class="iteration-item">
+            <span class="iteration-item__text">Added color-coded alert badges (Red/Yellow/Green) for instant scanning.</span>
+          </div>
+          <div class="iteration-item">
+            <span class="iteration-item__text">Made data charts interactive for deeper dives, keeping the top level clean.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 14: DESIGN SYSTEM ==================== -->
+<section class="section section--darker" id="design-system">
+  <div class="container">
+    <div class="section__header reveal">
+      <div class="section__label"><span class="section__label-number">12</span> DESIGN SYSTEM</div>
+      <h2 class="section__title">Visual Language</h2>
+      <p class="section__subtitle">A modern, premium aesthetic designed to foster trust and feel like a high-end SaaS product rather than legacy software.</p>
+    </div>
+
+    <div class="design-system-colors reveal stagger-1">
+      <div class="color-swatch">
+        <div class="color-swatch__preview" style="background:#0A0A0F;"></div>
+        <div class="color-swatch__name">Void Black</div>
+        <div class="color-swatch__hex">#0A0A0F</div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-swatch__preview" style="background:#12121A;"></div>
+        <div class="color-swatch__name">Elevated Dark</div>
+        <div class="color-swatch__hex">#12121A</div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-swatch__preview" style="background:#F5A623;"></div>
+        <div class="color-swatch__name">Construct Yellow</div>
+        <div class="color-swatch__hex">#F5A623</div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-swatch__preview" style="background:#E8642C;"></div>
+        <div class="color-swatch__name">Safety Orange</div>
+        <div class="color-swatch__hex">#E8642C</div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-swatch__preview" style="background:#3B82F6;"></div>
+        <div class="color-swatch__name">Intelligence Blue</div>
+        <div class="color-swatch__hex">#3B82F6</div>
+      </div>
+    </div>
+
+    <div class="design-system-typo reveal stagger-2">
+      <div class="typo-sample">
+        <div class="typo-sample__label">Display / Headings</div>
+        <div style="font-family:'Space Grotesk'; font-size:2rem; font-weight:700;">Space Grotesk</div>
+      </div>
+      <div class="typo-sample">
+        <div class="typo-sample__label">Body / UI</div>
+        <div style="font-family:'Inter'; font-size:1.125rem; font-weight:400;">Inter — Clear, legible, highly functional.</div>
+      </div>
+      <div class="typo-sample border-none pb-0">
+         <div class="typo-sample__label">Data / Code</div>
+         <div style="font-family:'JetBrains Mono'; font-size:1rem; font-weight:500;">JetBrains Mono — 0123456789</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 15: BUSINESS MODEL ==================== -->
+<section class="section section--dark" id="business-model">
+  <div class="container">
+    <div class="section__header section__header--center reveal">
+      <div class="section__label"><span class="section__label-number">13</span> BUSINESS MODEL</div>
+      <h2 class="section__title" style="max-width:100%;">Pricing for Every Scale</h2>
+    </div>
+
+    <div class="grid grid-3 reveal-up">
+      <div class="pricing-card">
+        <div class="pricing-card__tier">Starter</div>
+        <h3 class="pricing-card__name">Small Builders</h3>
+        <div class="pricing-card__desc">Perfect for independent contractors managing 1-3 sites.</div>
+        <div class="pricing-card__price">$299<span>/mo</span></div>
+        <div class="pricing-card__features">
+          <div class="pricing-card__feature">Basic Dashboard</div>
+          <div class="pricing-card__feature">Mobile Reporting App</div>
+          <div class="pricing-card__feature">Standard Support</div>
+        </div>
+        <a href="#" class="btn btn--secondary">Choose Starter</a>
+      </div>
+      <div class="pricing-card pricing-card--featured" style="transform: scale(1.05); z-index: 2;">
+        <div class="pricing-card__tier">Pro</div>
+        <h3 class="pricing-card__name">Mid Construction Firms</h3>
+        <div class="pricing-card__desc">For growing firms needing drone analytics and compliance tech.</div>
+        <div class="pricing-card__price">$899<span>/mo</span></div>
+        <div class="pricing-card__features">
+          <div class="pricing-card__feature">Everything in Starter</div>
+          <div class="pricing-card__feature">Drone Footage Analytics</div>
+          <div class="pricing-card__feature">AI Plan Verification (10/mo)</div>
+          <div class="pricing-card__feature">Waste Tracking</div>
+        </div>
+        <a href="#" class="btn btn--primary">Choose Pro</a>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-card__tier">Enterprise</div>
+        <h3 class="pricing-card__name">Large Developers</h3>
+        <div class="pricing-card__desc">Full ecosystem access for managing large-scale infrastructure.</div>
+        <div class="pricing-card__price">Custom</div>
+        <div class="pricing-card__features">
+          <div class="pricing-card__feature">Unlimited Sites</div>
+          <div class="pricing-card__feature">White-label Licensing</div>
+          <div class="pricing-card__feature">Dedicated Drone Pilots</div>
+          <div class="pricing-card__feature">24/7 Priority Support</div>
+        </div>
+        <a href="#" class="btn btn--secondary">Contact Sales</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 16: IMPACT ==================== -->
+<section class="section section--darker impact-section" id="impact">
+  <div class="bg-glow bg-glow--orange" style="width:600px;height:600px;top:-100px;right:-100px;"></div>
+  <div class="container relative">
+    <div class="section__header section__header--center reveal">
+      <div class="section__label"><span class="section__label-number">14</span> IMPACT</div>
+      <h2 class="section__title" style="max-width:100%;">Real Results, Real Revenue</h2>
+    </div>
+
+    <div class="impact-counters">
+      <div class="impact-counter reveal stagger-1">
+        <div class="impact-counter__number text-gradient" data-count="30" data-suffix="%">0</div>
+        <div class="impact-counter__label">Less Material Waste</div>
+      </div>
+      <div class="impact-counter reveal stagger-2">
+        <div class="impact-counter__number text-gradient" data-count="40" data-suffix="%">0</div>
+        <div class="impact-counter__label">Faster Monitoring</div>
+      </div>
+      <div class="impact-counter reveal stagger-3">
+        <div class="impact-counter__number text-gradient" data-count="25" data-suffix="%">0</div>
+        <div class="impact-counter__label">Fewer Project Delays</div>
+      </div>
+      <div class="impact-counter reveal stagger-4">
+        <div class="impact-counter__number text-gradient" data-count="100" data-suffix="%">0</div>
+        <div class="impact-counter__label">Client Trust</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 17: WHY THIS MATTERS ==================== -->
+<section class="section section--elevated why-section" id="why-it-matters">
+  <div class="container">
+    <p class="why-section__statement reveal">
+      Construction is one of the largest industries globally, yet one of the least digitized. BuildIQ brings <span class="text-gradient">intelligence</span>, <span class="text-gradient">simplicity</span>, and <span class="text-gradient">transparency</span> to an industry that desperately needs it.
+    </p>
+  </div>
+</section>
+
+<!-- ==================== SECTION 18: CTA ==================== -->
+<section class="cta-section bg-primary" id="cta">
+  <div class="cta-section__glow"></div>
+  <div class="container cta-section__content">
+    <h2 class="cta-section__title reveal-up">Ready to Build Smarter?</h2>
+    <div class="btn-group flex-center reveal-up stagger-1">
+      <a href="#live-demo" class="btn btn--primary btn--lg">Launch Live Demo</a>
+      <a href="Construction Management- UI/index.html" target="_blank" class="btn btn--secondary btn--lg">Open Full Product</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer section--dark">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__credit">
+        Designed & Built by <a href="http://localhost:5173/">Aaqib Uddin Hashmi</a>
+      </div>
+      <div class="footer__links">
+        <a href="#" class="footer__link">LinkedIn</a>
+        <a href="#" class="footer__link">Behance</a>
+        <a href="#" class="footer__link">Dribbble</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="scripts/main.js"></script>
+<script src="scripts/charts.js"></script>
+<script src="scripts/counters.js"></script>
+<script src="scripts/animations.js"></script>
+<script src="scripts/demo.js"></script>
+</body>
+</html>
