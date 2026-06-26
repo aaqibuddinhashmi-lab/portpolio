@@ -1,0 +1,122 @@
+/* ═══════ CARDS ═══════ */
+.card {
+    position: relative; overflow: hidden;
+    padding: 24px; border: 1px solid var(--border); border-radius: var(--radius-lg);
+    background: var(--glass-card), var(--bg-secondary);
+    box-shadow: var(--shadow-sm); transition: var(--transition);
+}
+.card:hover { transform: translateY(-4px); border-color: rgba(255, 122, 26, 0.3); box-shadow: var(--shadow-lg), var(--shadow-glow); }
+.card::before {
+    content: ""; position: absolute; inset: 0 0 auto; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+}
+
+.card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+.card-top i { width: 18px; height: 18px; color: var(--text-muted); }
+.card-top span { font-size: 13px; font-weight: 800; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.8px; }
+
+/* ═══════ BUTTONS ═══════ */
+.btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    height: 44px; padding: 0 20px; border-radius: var(--radius-md);
+    font-size: 15px; font-weight: 700; transition: var(--transition);
+    letter-spacing: 0.3px;
+}
+.btn.primary { background: linear-gradient(180deg, var(--accent), #d85f0e); color: #160b04; box-shadow: 0 8px 24px rgba(255, 122, 26, 0.25); }
+.btn.primary:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(255, 122, 26, 0.35); }
+.btn.ghost { border: 1px solid var(--border); color: var(--text-secondary); }
+.btn.ghost:hover { background: var(--glass-bg); color: var(--text-primary); border-color: var(--border-strong); }
+
+/* ═══════ BADGES ═══════ */
+.badge {
+    padding: 6px 10px; border-radius: var(--radius-sm); font-size: 11px; font-weight: 800;
+    text-transform: uppercase; letter-spacing: 0.8px; border: 1px solid transparent;
+}
+.badge.success { background: rgba(53, 208, 127, 0.1); color: var(--success); border-color: rgba(53, 208, 127, 0.2); }
+.badge.warning { background: rgba(255, 209, 102, 0.1); color: var(--warning); border-color: rgba(255, 209, 102, 0.2); }
+.badge.danger { background: rgba(255, 90, 95, 0.1); color: var(--danger); border-color: rgba(255, 90, 95, 0.2); }
+.badge.info { background: rgba(57, 167, 255, 0.1); color: var(--info); border-color: rgba(57, 167, 255, 0.2); }
+
+/* ═══════ CHARTS SHELLS ═══════ */
+.chart-shell { position: relative; height: 160px; display: grid; place-items: center; }
+.chart-center { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; }
+.chart-center strong { font-size: 28px; font-family: "Outfit", sans-serif; }
+.chart-center span { font-size: 11px; color: var(--text-muted); font-weight: 700; margin-top: 4px; }
+
+/* ═══════ KPI LISTS ═══════ */
+.metric-row { display: flex; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid var(--border); }
+.metric-row:last-child { border-bottom: none; }
+.metric-row span { color: var(--text-muted); font-size: 14px; font-weight: 500; }
+.metric-row strong { color: var(--text-primary); font-size: 15px; font-weight: 700; }
+
+/* ═══════ DRONE HERO ═══════ */
+.drone-hero {
+    position: relative; height: 340px; border-radius: var(--radius-lg);
+    background: #000; overflow: hidden;
+}
+.drone-hero img { width: 100%; height: 100%; object-fit: cover; opacity: 0.7; }
+.drone-hud {
+    position: absolute; inset: 16px; pointer-events: none;
+    display: flex; flex-direction: column; justify-content: space-between;
+}
+.hud-top, .hud-bottom { display: flex; justify-content: space-between; color: #fff; font-size: 12px; font-weight: 800; font-family: monospace; text-shadow: 0 0 10px rgba(0,0,0,0.8); }
+.scanline {
+    position: absolute; left: 0; right: 0; height: 2px;
+    background: var(--accent); box-shadow: 0 0 15px var(--accent);
+    opacity: 0.5; animation: scan 4s linear infinite;
+}
+
+/* ═══════ PROGRESS ═══════ */
+.progress-bar { height: 8px; background: rgba(255,255,255,0.08); border-radius: 10px; overflow: hidden; margin-top: 8px; }
+.progress-fill { height: 100%; border-radius: 10px; background: linear-gradient(90deg, var(--accent), var(--accent-2)); animation: growBar 1s ease both; }
+
+/* ═══════ TABLES ═══════ */
+.data-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+.data-table th { text-align: left; padding: 12px; font-size: 12px; color: var(--text-dim); border-bottom: 1px solid var(--border); }
+.data-table td { padding: 14px 12px; font-size: 14px; border-bottom: 1px solid var(--border); }
+.data-table tr:last-child td { border-bottom: none; }
+
+/* ═══════ WORKER CARDS ═══════ */
+.shift-card { background: linear-gradient(135deg, rgba(53, 208, 127, 0.15), transparent); border-color: rgba(53, 208, 127, 0.3); }
+.task-card-mini { display: flex; align-items: center; gap: 14px; padding: 14px; border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--glass-bg); margin-bottom: 10px; }
+.task-card-mini i { width: 20px; height: 20px; color: var(--accent-2); }
+.task-card-mini .info { flex: 1; }
+.task-card-mini h4 { font-size: 15px; margin-bottom: 2px; }
+.task-card-mini p { font-size: 12px; color: var(--text-muted); }
+
+/* ═══════ AI STUFF ═══════ */
+.ai-alert-item { padding: 12px; border-radius: var(--radius-md); border-left: 3px solid transparent; background: rgba(255,255,255,0.03); display: flex; gap: 12px; }
+.ai-alert-item.warning { border-left-color: var(--warning); }
+.ai-alert-item.danger { border-left-color: var(--danger); }
+.ai-alert-item.success { border-left-color: var(--success); }
+.ai-alert-item i { width: 18px; height: 18px; margin-top: 2px; }
+
+/* ═══════ ROLE CONTEXT ═══════ */
+.role-banner {
+    padding: 16px 20px; border-radius: var(--radius-lg);
+    background: linear-gradient(90deg, rgba(255,122,26,0.15), transparent);
+    border: 1px solid rgba(255,122,26,0.2); margin-bottom: 24px;
+    display: flex; align-items: center; justify-content: space-between;
+}
+.role-banner h3 { font-size: 20px; color: var(--accent-2); }
+.role-banner p { font-size: 13px; color: var(--text-secondary); }
+
+/* ═══════ FEED RAILS ═══════ */
+.mini-feed {
+    height: 100px; border-radius: var(--radius-md); overflow: hidden; position: relative;
+    border: 1px solid var(--border); cursor: pointer; transition: var(--transition);
+}
+.mini-feed:hover { border-color: var(--accent); }
+.mini-feed img { width: 100%; height: 100%; object-fit: cover; opacity: 0.6; }
+.mini-feed span { position: absolute; bottom: 8px; left: 10px; font-size: 12px; font-weight: 800; color: #fff; }
+
+/* ═══════ PLAN CHECKER ═══════ */
+.plan-blueprint {
+    height: 400px; background: #0b1114; border: 1px solid var(--info); border-radius: var(--radius-md);
+    position: relative; background-image: radial-gradient(rgba(57, 167, 255, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+.blueprint-overlay { position: absolute; inset: 0; padding: 20px; color: var(--info); font-family: monospace; font-size: 11px; }
+.check-marker { position: absolute; width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center; color: #000; font-weight: 900; font-size: 10px; }
+.check-marker.fail { background: var(--danger); box-shadow: 0 0 15px var(--danger); }
+.check-marker.pass { background: var(--success); box-shadow: 0 0 15px var(--success); }

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildIQ | AI Construction Platform</title>
+    <meta name="description" content="BuildIQ - AI powered construction intelligence for premium construction dashboards.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="login-screen" class="login-screen">
+        <div class="loading-state">
+            <div class="spinner"></div>
+            <p>Initializing BuildIQ Engine...</p>
+        </div>
+    </div>
+
+    <!-- Main App Container -->
+    <div id="app" class="app-container hidden">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <div class="logo-icon"></div>
+                    <div class="logo-text">
+                        <span>BuildIQ</span>
+                        <small>Smarter. Faster. Better.</small>
+                    </div>
+                </div>
+                <div class="sidebar-role" id="current-role-badge">
+                    <div class="role-dot" style="background: var(--accent);"></div>
+                    <span id="user-role-label">Enterprise Access</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav" id="sidebar-nav">
+                <!-- Nav items injected by app.js -->
+            </nav>
+
+            <div style="padding: 20px; border-top: 1px solid var(--border);">
+                <button class="btn ghost" id="logout-btn" style="width: 100%;">
+                    <i data-lucide="log-out"></i>
+                    <span>Sign Out</span>
+                </button>
+            </div>
+        </aside>
+
+        <main class="main-wrapper">
+            <header class="top-bar">
+                <div class="top-bar-left">
+                    <h1 id="module-title">Overview</h1>
+                    <p id="module-kicker">Predictive intelligence active</p>
+                </div>
+
+                <div class="top-bar-right">
+                    <div class="search-box">
+                        <i data-lucide="search"></i>
+                        <input type="text" placeholder="Search site, tasks, docs...">
+                    </div>
+
+                    <div class="top-bar-actions">
+                        <button class="icon-btn"><i data-lucide="bell"></i><span class="notif-dot"></span></button>
+                        <button class="icon-btn" id="ai-trigger"><i data-lucide="sparkles"></i></button>
+                    </div>
+
+                    <div class="user-btn">
+                        <div class="avatar" id="user-avatar">AM</div>
+                        <div class="u-info">
+                            <div class="u-name" id="user-name">Aarav Mehta</div>
+                            <div class="u-role">Project Lead</div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div id="workspace" class="workspace">
+                <!-- Content injected by app.js -->
+            </div>
+        </main>
+
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav" id="mobile-nav">
+            <!-- Nav items injected by app.js -->
+        </nav>
+    </div>
+
+    <!-- AI Chat Window -->
+    <div id="ai-chat" class="ai-chat">
+        <div class="ai-chat-head">
+            <span><i data-lucide="sparkles"></i> BuildIQ Assistant</span>
+            <button onclick="document.getElementById('ai-chat').classList.remove('open')"><i data-lucide="x"></i></button>
+        </div>
+        <div class="ai-chat-body" id="ai-messages">
+            <div class="ai-msg ai">Hello! I am tracking 4 active sites. Skyline Tower has a 2.1% cement waste spike. How can I help?</div>
+        </div>
+        <div class="ai-chat-input">
+            <input type="text" placeholder="Ask about site delays, waste, budget...">
+            <button><i data-lucide="send"></i></button>
+        </div>
+    </div>
+
+    <!-- Floating AI Trigger -->
+    <button class="ai-fab" id="ai-trigger-fab" onclick="document.getElementById('ai-chat').classList.toggle('open')">
+        <i data-lucide="sparkles"></i>
+    </button>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/interactions.js"></script>
+</body>
+</html>
