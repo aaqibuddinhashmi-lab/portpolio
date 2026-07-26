@@ -42,6 +42,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
@@ -133,6 +134,7 @@ h6 {
   width: var(--container-width);
   max-width: 1400px;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 /* Section Base */
@@ -355,19 +357,36 @@ section {
 @media (max-width: 768px) {
   :root {
     --section-padding: clamp(60px, 10vh, 100px);
+    --container-width: 92vw;
   }
 
   .display-xl {
-    font-size: clamp(2rem, 12vw, 4rem);
+    font-size: clamp(2rem, 10vw, 3.5rem);
   }
 
   .display-lg {
-    font-size: clamp(1.75rem, 8vw, 3rem);
+    font-size: clamp(1.75rem, 7vw, 2.75rem);
+  }
+
+  .display-md {
+    font-size: clamp(1.25rem, 5vw, 2rem);
   }
 
   .btn {
     padding: 14px 24px;
     font-size: 0.875rem;
+  }
+
+  .bg-number {
+    font-size: clamp(4rem, 15vw, 8rem);
+    overflow: hidden;
+  }
+
+  /* Hide custom cursor on touch devices */
+  .cursor-dot,
+  .cursor-ring,
+  .cursor-spotlight {
+    display: none !important;
   }
 }
 
